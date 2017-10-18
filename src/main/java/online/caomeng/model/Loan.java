@@ -19,19 +19,19 @@ public class Loan {
 	private Long id;
 	
 	//出借人姓名
-	private String locanname;
+	private String loanname;
 	
 	//出借时间
-	private Date locantime;
+	private Date loantime;
 	
 	//归还时间
 	private Date returntime;
 	
-	//出借状态   固定为locan（出借）
-	private Integer locanstatus;
+	//出借状态   固定为loan（出借）
+	private Integer loanstatus;
 	
 	//出借金额
-	private Double locanamount;
+	private Double loanamount;
 
 	public Long getId() {
 		return id;
@@ -41,20 +41,20 @@ public class Loan {
 		this.id = id;
 	}
 
-	public String getLocanname() {
-		return locanname;
+	public String getLoanname() {
+		return loanname;
 	}
 
-	public void setLocanname(String locanname) {
-		this.locanname = locanname;
+	public void setLoanname(String loanname) {
+		this.loanname = loanname;
 	}
 
-	public Date getLocantime() {
-		return locantime;
+	public Date getLoantime() {
+		return loantime;
 	}
 
-	public void setLocantime(Date locantime) {
-		this.locantime = locantime;
+	public void setLoantime(Date loantime) {
+		this.loantime = loantime;
 	}
 
 	public Date getReturntime() {
@@ -65,30 +65,23 @@ public class Loan {
 		this.returntime = returntime;
 	}
 
-	public Integer getLocanstatus() {
-		return locanstatus;
+	public Integer getLoanstatus() {
+		return loanstatus;
 	}
 
-	public void setLocanstatus(Integer locanstatus) {
-		this.locanstatus = locanstatus;
+	public void setLoanstatus(Integer loanstatus) {
+		this.loanstatus = loanstatus;
 	}
 
-	public Double getLocanamount() {
-		return locanamount;
+	public Double getLoanamount() {
+		return loanamount;
 	}
 
-	public void setLocanamount(Double locanamount) {
-		this.locanamount = locanamount;
-	}
-
-	public Loan(String locanname, Date locantime, Date returntime, Integer locanstatus, Double locanamount) {
-		super();
-		this.locanname = locanname;
-		this.locantime = locantime;
-		this.returntime = returntime;
-		this.locanstatus = locanstatus;
-		this.locanamount = locanamount;
+	public void setLoanamount(Double loanamount) {
+		this.loanamount = loanamount;
 	}
 	
+	
+
 	
 }
