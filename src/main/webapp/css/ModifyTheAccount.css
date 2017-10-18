@@ -1,0 +1,25 @@
+#ModifyTheAccount-div{
+    width: 90%;
+    margin-left: 5%;
+}
+#ModifyTheAccount-div-onep{
+    font-weight: bold;
+    font-size: 25px;
+}
+#ModifyTheAccount-form p{
+    margin-top: 20px;
+}
+.ModifyTheAccount-form-p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.ModifyTheAccount-form-two{
+    opacity: 0.5;
+    color: red;
+}
+.ModifyTheAccount-button{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 25%;
+}

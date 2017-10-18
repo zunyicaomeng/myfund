@@ -1,0 +1,10 @@
+#background{
+    text-align: center;
+    background: #F7FAFC;
+    overflow: hidden;
+    background: #fff;
+    position: absolute;
+}
+#content{
+    position: relative;
+}
