@@ -9,6 +9,7 @@
 #AccountSetting-top-div-one{
     font-weight: bold;
     font-size: 25px;
+    font-weight: normal;
 }
 #AccountSetting-form .AccountSetting-top-div-account{
     font-size: 20px;
@@ -23,3 +24,13 @@
      margin-top: 20px;
      margin-left: 25%;
  }
+.AccountSetting_pt{
+    width: 250px;
+    height: 30px;
+    border-radius: 6px;
+    margin-top: 40px;
+}
+#hidden{
+    height: 40px;
+    visibility: hidden;
+}
