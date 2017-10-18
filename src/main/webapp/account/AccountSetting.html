@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户设置</title>
+    <link type="text/css" href="../css/AccountSettings.css" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/all.js" type="text/javascript"></script>
+    <script src="../js/AccountSetting.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/bg.css" rel="stylesheet">
+    <script src="../js/bg.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/footer.css" rel="stylesheet">
+    <link type="text/css" href="../css/top.css" rel="stylesheet">
+</head>
+<body>
+<div id="background">
+    <canvas id="Mycanvas"></canvas>
+</div>
+<div id="content">
+    <div id="top">
+        <span id="login" class="top_style">&nbsp;欢迎&nbsp;</span>
+        <a href="../account/account.html" id="register" class="top_style">&nbsp;xxxx&nbsp;</a>
+    </div>
+    <div id="head">
+        <div id="images"></div>
+        <span id="subheading">Bayminimal集团旗下网贷</span>
+        <div id="mainmenus">
+            <ul class="nav">
+                <li><a href="../index.html" class="fonts">首页</a></li>
+                <ul class="menus">
+                    <li></li>
+                </ul>
+                <li><a href="javascript:void(0)" class="fonts" id="loan">我要出借</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">优选出借计划</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">精选标</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">债券转让</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">我要借款</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">玖富叮当</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">蜡笔分期</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">信息披露</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">网贷知识</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">出借人提示</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">借款人提示</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">关于我们</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts" id="survey">集团介紹</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="about">核心团队</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="partner">合作伙伴</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="contactUs">联系我們</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="account-middle">
+        <div id="account-middle-left">
+            <div id="account-middle-left-div"></div>
+            <button onclick="account();">我的账号</button>
+            <button onclick="lend();">我的出错</button>
+            <button onclick="AccountSetting();">账号设置</button>
+            <button onclick="ModifyTheAccount();">修改账号</button>
+        </div>
+        <div id="account-middle-right">
+            <div id="AccountSetting-top-div">
+                <p id="AccountSetting-top-div-one">账号设置</p>
+                <form id="AccountSetting-form">
+                    <p class="AccountSetting-top-div-account">个人信息</p>
+                    <hr>
+                    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text"></p>
+                    <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text"></p>
+                    <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别： <input type="radio" name="user.gender" checked="checked" value="male">男
+                        <input type="radio" name="user.gender" value="female">女</p>
+                    <p>出生年月日：<input type="text" placeholder="yyyy/mm/dd"></p>
+                    <p class="AccountSetting-top-div-account">设置交易密码</p>
+                    <hr>
+                    <p class="AccountSetting-top-div-two">使用快捷支付进行账户资金提现时，需要验证交易密码。</p>
+                    <p class="AccountSetting-top-div-two">为保障您的账户资金安全，请您设置交易密码。交易密码需与微理财登录密码不一致。</p>
+                    <p>交&nbsp;易&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的密码" id="input2" name="user.password"></p>
+                    <p> 重&nbsp;复&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的确认秘密" id="input3" name="user.repeatPassword"></p>
+                   <p class="AccountSetting-top-div-account">设置银行卡号</p>
+                    <hr>
+                    <p class="AccountSetting-top-div-two">请谨慎输入您的银行卡号。</p>
+                    <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name=""></p>
+                    <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="footer">
+        <div class="clearfix">
+            <div class="fl">
+                <img src="../images/timg.jpg">
+                <div>
+                    <p style="color: #666369">联系邮箱：</p>
+                    <p style="color: #666369">lxbh@vip.qq.com</p>
+                </div>
+            </div>
+            <div class="fr">
+                <div class="ulbox clearfix">
+                    <dl>
+                        <dt class="dt_head">新手引导</dt>
+                        <dd><a href="">注册登录</a></dd>
+                        <dd><a href="">出借服务</a></dd>
+                        <dd><a href="">安全保障</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">我要出借</dt>
+                        <dd><a href="">优选出借计划</a></dd>
+                        <dd><a href="">精选标</a></dd>
+                        <dd><a href="">债权转让</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">我要借款</dt>
+                        <dd><a href="">蜡笔分期</a></dd>
+                        <dd><a href="">玖富叮当</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">友情链接</dt>
+                        <dd><a target="_blank" href="http://www.nifa.org.cn/nifa/index.html">中国互联网金融协会</a></dd>
+                        <dd><a target="_blank" href="http://www.pbc.gov.cn/">中国人民银行官网</a></dd>
+                        <dd><a target="_blank" href="http://www.cbrc.gov.cn/index.html">中国银监会官网</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="../js/team.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/bg.js"></script>
+</html>

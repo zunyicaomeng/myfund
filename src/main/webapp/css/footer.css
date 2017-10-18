@@ -1,0 +1,35 @@
+#footer{
+    width: auto;
+    height: 160px;
+    background: #1f2b3c;
+    padding: 20px 0 5px;
+}
+.clearfix{
+    padding-bottom: 10px;
+    width: 1150px;
+    margin: 0 auto;
+}
+.fl{
+    width: 220px;
+    position: relative;
+}
+.fr{
+    width: 930px;
+    margin-top: -112.8px;
+    float: right;
+}
+.ulbox dl{
+    list-style: none;
+    color: #869791;
+    float: left;
+    margin-left: 80px;
+}
+.dt_head{
+    font-size: 18px;
+}
+dd{
+    padding: 10px 0;
+}
+dd a{
+    color: #869791;
+}
