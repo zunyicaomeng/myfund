@@ -1,5 +1,7 @@
 package online.caomeng.model;
 
+import java.sql.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,38 +15,33 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	//登录名
+	private String loginName;
+	
+	//用户名
 	private String username;
 	
+	//用户密码
 	private String password;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
-	}
+	//出生年月
+	private Date birthday;
+	
+	//创建时间
+	private Date createDate;
+	
+	//账户状态
+	private String status;
+	
+	//余额
+	private Double balance;
+	
+	//交易密码
+	private Integer transactionpassword;
+	
+	//银行卡号
+	private Integer bankId;
+	
 	
 	
 }
