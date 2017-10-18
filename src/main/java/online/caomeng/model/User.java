@@ -1,8 +1,12 @@
 package online.caomeng.model;
 
+
 import java.util.Date;
 
 import javax.persistence.Column;
+
+
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,6 +20,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="user_id")
 	private Long id;
+
 
 	// 登录名
 	private String loginName;
@@ -263,6 +268,6 @@ public class User {
 				+ ", transactionpassword=" + transactionpassword + ", bankId=" + bankId + ", creationTime="
 				+ creationTime + ", thawingTime=" + thawingTime + ", userState=" + userState + "]";
 	}
-	
+
 
 }
