@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>出借</title>
+    <link type="text/css" href="../css/lend.css" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/all.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/bg.css" rel="stylesheet">
+    <script src="../js/bg.js" type="text/javascript"></script>
+    <link type="text/css" href="../css/footer.css" rel="stylesheet">
+    <link type="text/css" href="../css/top.css" rel="stylesheet">
+</head>
+<body>
+<div id="background">
+    <canvas id="Mycanvas"></canvas>
+</div>
+<div id="content">
+    <div id="top">
+        <span id="login" class="top_style">&nbsp;欢迎&nbsp;</span>
+        <a href="../account/account.html" id="register" class="top_style">&nbsp;xxxx&nbsp;</a>
+    </div>
+    <div id="head">
+        <div id="images"></div>
+        <span id="subheading">Bayminimal集团旗下网贷</span>
+        <div id="mainmenus">
+            <ul class="nav">
+                <li><a href="../index.html" class="fonts">首页</a></li>
+                <ul class="menus">
+                    <li></li>
+                </ul>
+                <li><a href="javascript:void(0)" class="fonts" id="loan">我要出借</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">优选出借计划</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">精选标</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">债券转让</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">我要借款</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">玖富叮当</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">蜡笔分期</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">信息披露</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts">网贷知识</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">出借人提示</a></li>
+                            <li><a href="javascript:void(0)" class="fonts">借款人提示</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" class="fonts">关于我们</a>
+                    <div class="my">
+                        <ul class="menus">
+                            <li><a href="javascript:void(0)" class="fonts" id="survey">集团介紹</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="about">核心团队</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="partner">合作伙伴</a></li>
+                            <li><a href="javascript:void(0)" class="fonts" id="contactUs">联系我們</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="account-middle">
+        <div id="account-middle-left">
+            <div id="account-middle-left-div"></div>
+            <button onclick="account();">我的账号</button>
+            <button onclick="lend();">我的出错</button>
+            <button onclick="AccountSetting();">账号设置</button>
+            <button onclick="ModifyTheAccount();">修改账号</button>
+        </div>
+        <div id="account-middle-right">
+            <h2>出借记录 </h2>
+            <ul class="lend-ul">
+                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span">0</span></li>
+                <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
+                <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
+            </ul>
+            <hr>
+            <div id="lend-ul-two">
+                <ul class="lend-ul ">
+                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
+                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
+                    <li style="width: 40%">出借总额(含续投本金)<span>￥0.00</span></li>
+                </ul>
+            </div>
+            <div id="lend-ul-two-div">
+                <table id="lend-ul-two-div-table">
+                    <tr >
+                        <td>出借人</td>
+                        <td>(出/借）</td>
+                        <td>出借金额</td>
+                        <td>出借时间</td>
+                        <td>归还时间</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="clearfix">
+            <div class="fl">
+                <img src="../images/timg.jpg">
+                <div>
+                    <p style="color: #666369">联系邮箱：</p>
+                    <p style="color: #666369">lxbh@vip.qq.com</p>
+                </div>
+            </div>
+            <div class="fr">
+                <div class="ulbox clearfix">
+                    <dl>
+                        <dt class="dt_head">新手引导</dt>
+                        <dd><a href="">注册登录</a></dd>
+                        <dd><a href="">出借服务</a></dd>
+                        <dd><a href="">安全保障</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">我要出借</dt>
+                        <dd><a href="">优选出借计划</a></dd>
+                        <dd><a href="">精选标</a></dd>
+                        <dd><a href="">债权转让</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">我要借款</dt>
+                        <dd><a href="">蜡笔分期</a></dd>
+                        <dd><a href="">玖富叮当</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">友情链接</dt>
+                        <dd><a target="_blank" href="http://www.nifa.org.cn/nifa/index.html">中国互联网金融协会</a></dd>
+                        <dd><a target="_blank" href="http://www.pbc.gov.cn/">中国人民银行官网</a></dd>
+                        <dd><a target="_blank" href="http://www.cbrc.gov.cn/index.html">中国银监会官网</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script src="../js/team.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/bg.js"></script>
+</html>
