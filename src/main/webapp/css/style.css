@@ -1,0 +1,445 @@
+#owl-demo {
+    width:100%;
+    height: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 0;
+}
+#owl-demo .item {
+    display: block;
+    height: 360px;
+}
+#owl-demo img {
+    display: block;
+    width: 100%;
+}
+#ben_login{
+    width: 330px;
+    height: 250px;
+    background-color: gray;
+    opacity: 0.8;
+    border-radius: 5%;
+    margin-top: -20%;
+    margin-left: 60%;
+    position: absolute;
+    z-index: 1;
+}
+#ben_login_top p{
+    position: relative;
+    top: 10px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+#ben_login_info{
+    width: 330px;
+    height: 50px;
+    margin-top: 20px;
+    position: absolute;
+}
+#ben_login_info span{
+    font-size: 25px;
+    padding: 30px;
+    color: #FFE142;
+}
+#ben_login_info p{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+}
+#ben_login_btn{
+    width: 330px;
+    margin-top: 140px;
+    position: relative;
+}
+#ben_login_btn_register{
+    margin-left: 60px;
+    height: 50px;
+    text-decoration: none;
+    color: #F1EFF1;
+    background-color: #FA7C2F;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+}
+#ben_login_btn_login{
+    text-decoration: none;
+    margin-left: 180px;
+    font-size: 13px;
+}
+#botton{
+    height: 50px;
+    margin-top: 30px;
+}
+#botton ul li{
+    float: left;
+    line-height: 50px;
+    text-decoration: none;
+    list-style: none;
+    padding:0 150px;
+    border-right: 2px dashed gray;
+}
+#botton p{
+    height: 40px;
+}
+.botton_img{
+    width: 40px;
+    height: 40px;
+    float: left;
+
+}
+.botton_info{
+    padding-left: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+.fo-mo{
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+}
+.fo-mw{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+#account-middle {
+    width: 60%;
+    height: 805px;
+    margin-left: 20%;
+}
+
+#account-underneath {
+    width: 100%;
+    height: 35px;
+    background-color: #0F0000;
+}
+
+#account-middle-left {
+    width: 20%;
+    height: 805px;
+    background-color: #ebebeb;
+    float: left;
+    border-radius: 10%;
+}
+
+#account-middle-right {
+    width: 80%;
+    height: 805px;
+    background-color: #f6f6f6;
+    float: left;
+    border-radius: 5%;
+}
+
+#account-middle-left-div {
+    width: 100%;
+    height: 30px;
+
+}
+#account-middle-left button {
+    width: 90%;
+    height: 70px;
+    background: transparent;
+    border: none;
+    border-radius: 15%;
+}
+
+#account-middle-left button:hover {
+    background-color: deepskyblue;
+}
+.survey_top{
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+h1{
+    margin: auto 179.8px;
+    width: 240px;
+    height: 35px;
+    border-bottom: 1px solid #cecece;
+    line-height: 35px;
+    font-size: 18px;
+    color: #996633;
+    font-weight: normal;
+}
+.wire{
+    width: 93px;
+    height: 2px;
+    background: #ff9900;
+    margin: auto 179.8px;
+}
+.wire2{
+    margin-top: 10px;
+    margin-left: 18%;
+}
+.survey_content{
+    margin-top:25px;
+    width: 100%;
+    height: 700px;
+    background: url("../images/background.jpg");
+}
+.survey_left{
+    float: left;
+    width: 550px;
+    color: #777777;
+    margin-left: 10%;
+}
+.zai{
+    color: #f6a900;
+    font-size: 60px;
+    margin: 50px auto 6px;
+    line-height: normal;
+}
+.hao{
+    color: #b28a00;
+    font-size: 24px;
+    font-weight: bold;
+    margin:20px auto 33px;
+}
+.contents{
+    color: #b28a00;
+    line-height: 28px;
+    margin-bottom: 15px;
+    width: 470px;
+    margin: 118px auto 0;
+    font-size: 14px;
+}
+.survey_right{
+    float: right;
+    margin-top: 100px;
+    width: 592px;
+    height: 330px;
+    margin-right: 100px;
+}
+.person{
+    width: 170px;
+    height: 170px;
+    margin-top: 155px;
+    float: left;
+    background: url("../images/person.jpg");
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+#restrict{
+    float: right;
+    margin-right: 200px;
+    margin-top: 100px;
+}
+h4{
+    color: #996633;
+    margin-top: 5px;
+    margin-left: 25%;
+}
+.team_all{
+    width: 320px;
+    height: 400px;
+}
+#team_1{
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+#team_2{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#team_3{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#team_4{
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+#team_5{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#team_6{
+    float: left;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+#team_7{
+    float: left;
+    margin-left: 20%;
+    margin-top: 20px;
+}
+.picture{
+    width: 250px;
+    height: 250px;
+    margin: 5px auto;
+    background: url("../images/person.jpg");
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+h2{
+    text-align: center;
+}
+.p_font{
+    font-weight: normal;
+    color: #777;
+    font-size:12px;
+    margin: 0 15px;
+}
+.bg{
+    width: 320px;
+    height: 150px;
+    background-color: #f0eae6;
+}
+#div_pt{
+    width: 1150px;
+    height: 454px;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+.div_ps{
+    width: 1049px;
+    height: 240px;
+    margin: 0 auto;
+    border-bottom: 1px dashed #d2d2d2;
+}
+.div_p{
+    padding: 60px 0;
+    width: 250px;
+    height: 259px;
+}
+#pt_h2{
+    float: right;
+    font-size: 18px;
+    margin-top: -300px;
+    margin-right: 500px;
+    color: #2597c9;
+}
+.pt_p{
+    float: right;
+    margin-top: -270px;
+    margin-left: 300px;
+    color: #4e4e4e;
+    font-size: 14px;
+    line-height: 25px;
+}
+#div_pt_t{
+    width: 1150px;
+    height: 900px;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+#ctus_left{
+    float: left;
+    margin-left: 10%;
+    margin-top: 20px;
+    width: 731px;
+    height: 700px;
+    /* border: 1px solid green; */
+}
+#ad_map{
+    width: 731px;
+    height: 520px;
+    margin-top: 20px;
+    background: url("../images/map.jpg");
+    background-size: 100% 100%;
+}
+#ctus_right{
+    float: right;
+    margin-right:200px;
+    margin-top: 20px;
+    width: 355px;
+    height: 700px;
+    /* border: 1px solid green; */
+}
+.address{
+    padding: 18px 0 0 56px;
+    width: 675px;
+    height: 90px;
+    position: relative;
+    /* border: 1px solid green; */
+}
+#address_1{
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: 27px;
+    left: 0px;
+    background: url("https://image-www-9fbank-com.alikunlun.com/images/helpimg/conUsicon.png");
+}
+#ad_h2{
+    height: 34px;
+    line-height: 34px;
+    font-weight: normal;
+    font-family: "simbei";
+    font-size: 18px;
+    color: #868686;
+}
+.ad_p{
+    line-height: 28px;
+    color: #868686;
+}
+.address_2{
+    width: 357px;
+    height: 187px;
+}
+.phone{
+    width: 38px;
+    height: 30px;
+    background: url("../images/phone.jpg");
+    background-size: 100% 100%;
+    left: 0px;
+    margin-top: 28px;
+    border-radius: 50%;
+}
+#add_h2{
+    height: 30px;
+    line-height: 30px;
+    color: #2597c9;
+    font-family: "simbei";
+    font-size: 18px;
+    font-weight: normal;
+    float: right;
+    margin-right: 200px;
+    margin-top: -28px;
+}
+.ad_p2{
+    line-height: 28px;
+    color: #868686;
+    float: left;
+    margin-left: 50px;
+}
+.media{
+    width: 38px;
+    height: 30px;
+    background: url("../images/media.jpg");
+    background-size: 100% 100%;
+    left: 0px;
+    margin-top: 28px;
+    border-radius: 50%;
+}
+.business{
+    width: 38px;
+    height: 30px;
+    background: url("../images/business.jpg");
+    background-size: 100% 100%;
+    left: 0px;
+    margin-top: 28px;
+    border-radius: 50%;
+}
+#add_all{
+    width: 100%;
+    height: 700px;
+}
+#add_all_1{
+    width: 100%;
+    height: 1300px;
+}
+

@@ -1,0 +1,46 @@
+#logn_form{
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10%;
+    margin-left: 45%;
+    margin-top: 5%;
+    opacity: 0.75;
+}
+#logn_form_fl{
+    width: 200px;
+    height: 400px;
+    float: left;
+}
+#logn_form_fr{
+    width: 400px;
+    height: 400px;
+    float: right;
+}
+#logn_form_logo{
+    line-height: 400px;
+}
+#login_form{
+    text-align: center;
+    margin-top: 20%;
+}
+.inputinfo{
+    width: 200px;
+    height: 32px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#input_name{
+    background: url("../images/user.png") 100% 0 no-repeat;
+}#input_pwd{
+     background: url("../images/password.png") 100% 0 no-repeat;
+ }
+#btn_login{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #666369;
+    margin-left: 5%;
+    margin-top: 20px;
+    color: honeydew;
+}
