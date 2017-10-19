@@ -2,15 +2,21 @@ package online.caomeng.model;
 
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 
 
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -67,7 +73,15 @@ public class User {
 	// 用户状态  
 	private Integer userState;
 	
+	//特殊属性   一个用户对多个出借用户
+	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
+	@JoinColumn(name="user_id")
+    private Set<Lend> lends=new HashSet<Lend>();
 	
+	//特殊属性    一个用户对多个借款用户
+	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
+	@JoinColumn(name="user_id")
+	private Set<Loan> loans=new HashSet<Loan>();
 
 	public Long getId() {
 		return id;
