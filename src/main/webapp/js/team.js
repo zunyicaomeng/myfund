@@ -15,21 +15,21 @@ $(document).ready(function () {
 
 $(document).ready(function(){
 	$("#survey").click(function(){
-		window.location.href="survey.html";
+		window.location.href="survey.jsp";
 	})
 	$("#about").click(function(){
-		window.location.href="about.html";
+		window.location.href="about.jsp";
 	})
 	$("#partner").click(function(){
-		window.location.href="partner.html";
+		window.location.href="partner.jsp";
 	})
 	$("#contactUs").click(function(){
-		window.location.href="contactUs.html";
+		window.location.href="contactUs.jsp";
 	})
 	$("#login").click(function(){
-		window.location.href="login.html";
+		window.location.href="login.jsp";
 	})
 	$("#register").click(function(){
-		window.location.href="Register.html";
+		window.location.href="Register.jsp";
 	})
 })

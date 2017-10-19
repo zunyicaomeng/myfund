@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册</title>
-    <link href="css/top.css" rel="stylesheet">
-    <link href="css/register.css" rel="stylesheet">
-    <link href="css/bg.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bg.js" type="text/javascript"></script>
-    <script src="js/team.js"></script>
+    <link href="/My-Fund/css/top.css" rel="stylesheet">
+    <link href="/My-Fund/css/register.css" rel="stylesheet">
+    <link href="/My-Fund/css/bg.css" rel="stylesheet">
+    <link href="/My-Fund/css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
+    <script src="/My-Fund/js/jquery.min.js"></script>
+    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
+    <script src="/My-Fund/js/team.js"></script>
 </head>
 <body>
 <div id="background">
@@ -32,7 +32,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="/My-Fund/index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>

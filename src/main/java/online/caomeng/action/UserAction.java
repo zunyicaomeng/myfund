@@ -61,5 +61,20 @@ public class UserAction {
 		userServiceImpl.saveUser(loginName,password,email);
 		return "success";
 	}
+	//登录查询
+	public String getLoginUser(){
+		list =userServiceImpl.getLoginUser();
+		for (User users : list) {
+			String LoginName=users.getLoginName();
+			String password=users.getPassword();
+			System.out.println(LoginName+password);
+			System.out.println(user.getLoginName()+user.getPassword());
+			if(LoginName.equals(user.getLoginName())&&password.equals(user.getPassword())){
+				return "LoginSuccess";
+			}
+		}
+		return "LoigFail";
+	}
+
 	
 }

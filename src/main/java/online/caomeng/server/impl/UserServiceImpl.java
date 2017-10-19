@@ -21,5 +21,10 @@ public class UserServiceImpl {
 	public void saveUser(String loginName,String password,String email) {
 		userDaoImpl.saveUser(loginName,password,email);
 	}
+	//登录用户名密码
+		public List<User> getLoginUser(){
+			return userDaoImpl.getLoginUser();
+		}
+
 
 }

@@ -139,3 +139,10 @@
     height: 35px;
     border-radius: 5px;
 }
+#account-middle-right-middle-text #account-middle-right-middle-text-p{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+}

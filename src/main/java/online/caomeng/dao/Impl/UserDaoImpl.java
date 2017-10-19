@@ -18,11 +18,16 @@ public class UserDaoImpl {
 	public List<User> getUser(){
 		return (List<User>) userDao.getHibernateTemplate().find("from User");
 	}
-
+//注册
 	public void saveUser(String loginName,String password,String email) {
 		System.out.println("name:"+loginName+"password:"+password+"email:"+email);
 		userDao.getHibernateTemplate().save(new User(loginName, null, password, 
 				null, null, null, email, new Date(), "2", null, null, null, null, 2));
 		
 	}
+	//查询用户名密码
+		public List<User> getLoginUser(){
+			return (List<User>) userDao.getHibernateTemplate().find("from User");
+		}
+
 }

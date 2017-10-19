@@ -18,18 +18,18 @@ $(document).ready(function () {
 
 $(document).ready(function(){
     $("#survey").click(function(){
-        window.location.href="../survey.html";
+        window.location.href="/My-Fund/survey.jsp";
     })
     $("#about").click(function(){
-        window.location.href="../about.html";
+        window.location.href="/My-Fund/about.jsp";
     })
     $("#partner").click(function(){
-        window.location.href="../partner.html";
+        window.location.href="/My-Fund/partner.jsp";
     })
     $("#contactUs").click(function(){
-        window.location.href="../contactUs.html";
+        window.location.href="/My-Fund/contactUs.jsp";
     })
     $("#pay").click(function(){
-        window.location.href="pay.html";
+        window.location.href="pay.jsp";
     })
 })

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -23,7 +24,7 @@
 <div id="content">
     <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -122,7 +123,7 @@
         <div id="account-middle-right">
             <div id="account-middle-right-div">
                 <div id="account-middle-right-image"></div>
-                <div id="account-middle-right-text">Hello,<br>XXX</div>
+                <div id="account-middle-right-text">Hello,<br><s:property value="user.loginName" /></div>
                 <hr>
             </div>
             <div id="account-middle-right-middle">
