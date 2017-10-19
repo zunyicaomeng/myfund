@@ -129,3 +129,10 @@
 .account-div p {
     color: #ffaf78;
 }
+#account-middle-right-middle-text #account-middle-right-middle-text-p{
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    top: 30px;
+}

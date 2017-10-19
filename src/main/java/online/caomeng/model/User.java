@@ -18,9 +18,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "db_user")
+@Table(name = "db_user",uniqueConstraints={@UniqueConstraint(columnNames="user_loginName")})
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +30,7 @@ public class User {
 
 
 	// 登录名
+	@Column(name="user_loginName")
 	private String loginName;
 
 	// 用户名
