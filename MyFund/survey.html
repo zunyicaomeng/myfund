@@ -7,62 +7,99 @@
 	<link rel="stylesheet" type="text/css" href="css/bg.css">
 	<link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link rel="stylesheet" type="text/css" href="css/top.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
 <div id="background">
 	<canvas id="Mycanvas"></canvas>
 </div>
 <div id="content">
-	<div id="top">
-		<a href="login.html" id="login" class="top_style">&nbsp;登录&nbsp;</a>
-		<a href="Register.html" id="register" class="top_style">&nbsp;快速注册&nbsp;</a>
+	<div id="menu_top">
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
 	</div>
-	<div id="head">
-		<div id="images"></div>
-		<span id="subheading">我的基金旗下网贷</span>
-		<div id="mainmenus">
-			<ul class="nav">
-				<li><a href="index.html" class="fonts">首页</a></li>
-					<ul class="menus">
-						<li></li>
-					</ul>
-				<li><a href="javascript:void(0)" class="fonts" id="loan">我要出借</a>
-				<div class="my">
-					<ul class="menus">
-						<li><a href="javascript:void(0)" class="fonts">优选出借计划</a></li>
-						<li><a href="javascript:void(0)" class="fonts">精选标</a></li>
-						<li><a href="javascript:void(0)" class="fonts">债券转让</a></li>
-					</ul>
-				</div>
-				</li>
-				<li><a href="javascript:void(0)" class="fonts">我要借款</a>
-				<div class="my">
-					<ul class="menus">
-						<li><a href="javascript:void(0)" class="fonts">玖富叮当</a></li>
-						<li><a href="javascript:void(0)" class="fonts">蜡笔分期</a></li>
-					</ul>
-				</div>
-				</li>
-				<li><a href="javascript:void(0)" class="fonts">信息披露</a>
-				<div class="my">
-					<ul class="menus">
-						<li><a href="javascript:void(0)" class="fonts">网贷知识</a></li>
-						<li><a href="javascript:void(0)" class="fonts">出借人提示</a></li>
-						<li><a href="javascript:void(0)" class="fonts">借款人提示</a></li>
-					</ul>
-				</div>
-				</li>
-				<li><a href="javascript:void(0)" class="fonts">关于我们</a>
-				<div class="my">
-					<ul class="menus">
-						<li><a href="javascript:void(0)" class="fonts" id="survey">集团介紹</a></li>
-						<li><a href="javascript:void(0)" class="fonts" id="about">核心团队</a></li>
-						<li><a href="javascript:void(0)" class="fonts" id="partner">合作伙伴</a></li>
-						<li><a href="javascript:void(0)" class="fonts" id="contactUs">联系我們</a></li>
-					</ul>
-				</div>
-				</li>
-			</ul>
+	<div id="menu_head">
+		<div id="head_1">
+			<div id="imgs"></div>
+			<h2>我的基金旗下网贷</h2>
+		</div>
+		<div id="head_2">
+			<div style="position: relative;">
+				<ul class="navs">
+					<li id="menuEntryHome" class="dropdown">
+						<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div style="position: relative;">
+				<ul class="nav" id="nav_x1">
+					<li id="menuEntryHome" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
+							<span class="caret">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
+							</span>
+						</a>
+						<ul class="dropdown_menu" role="menu">
+							<li><a href="Preferred lending plan.html">优选出借计划</a></li>
+							<li><a href="javascript:void(0)">精选标</a></li>
+							<li><a href="javascript:void(0)">债券转让</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div style="position: relative;">
+				<ul class="nav" id="nav_x2">
+					<li id="menuEntryHome" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">我要借款
+							<span class="caret">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
+							</span>
+						</a>
+						<ul class="dropdown_menu" role="menu">
+							<li><a href="#">基金招财</a></li>
+							<li><a href="#">蜡笔分期</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div style="position: relative;">
+				<ul class="nav" id="nav_x3">
+					<li id="menuEntryHome" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">信息披露
+							<span class="caret">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
+							</span>
+						</a>
+						<ul class="dropdown_menu" role="menu">
+							<li><a href="#">网贷知识</a></li>
+							<li><a href="#">出借人提示</a></li>
+							<li><a href="#">借款人提示</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div style="position: relative;">
+				<ul class="nav" id="nav_x4">
+					<li id="menuEntryHome" class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">关于我们
+							<span class="caret">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
+								<img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
+							</span>
+						</a>
+						<ul class="dropdown_menu" role="menu">
+							<li><a href="#" id="survey">集团介绍</a></li>
+							<li><a href="#" id="about">核心团队</a></li>
+							<li><a href="#" id="partner">合作伙伴</a></li>
+							<li><a href="#" id="contactUs">联系我们</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="survey_top">
@@ -108,7 +145,7 @@
                     </dl>
                     <dl>
                         <dt class="dt_head">我要出借</dt>
-                        <dd><a href="">优选出借计划</a></dd>
+                        <dd><a href="Preferred lending plan.html">优选出借计划</a></dd>
                         <dd><a href="">精选标</a></dd>
                         <dd><a href="">债权转让</a></dd>
                     </dl>
