@@ -18,15 +18,15 @@ $(document).ready(function () {
 
 $(document).ready(function(){
     $("#survey").click(function(){
-        window.location.href="../survey.html";
+        window.location.href="/My-Fund/survey.html";
     })
     $("#about").click(function(){
-        window.location.href="../about.html";
+        window.location.href="/My-Fund/about.html";
     })
     $("#partner").click(function(){
-        window.location.href="../partner.html";
+        window.location.href="/My-Fund/partner.html";
     })
     $("#contactUs").click(function(){
-        window.location.href="../contactUs.html";
+        window.location.href="/My-Fund/contactUs.html";
     })
 })

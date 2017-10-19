@@ -2,8 +2,6 @@ package online.caomeng.action;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -22,9 +20,6 @@ public class UserAction {
 	
 	public String getUsers(){
 		list = userServiceImpl.getUsers();
-		for (User user : list) {
-			System.out.println(user.toString());
-		}
 		return "success";
 	}
 
@@ -61,5 +56,20 @@ public class UserAction {
 		userServiceImpl.saveUser(loginName,password,email);
 		return "success";
 	}
+	
+	public String getLoginUser(){
+		list =userServiceImpl.getLoginUser();
+		for (User users : list) {
+			String LoginName=users.getLoginName();
+			String password=users.getPassword();
+			System.out.println(LoginName+password);
+			System.out.println(user.getLoginName()+user.getPassword());
+			if(LoginName.equals(user.getLoginName())&&password.equals(user.getPassword())){
+				return "LoginSuccess";
+			}
+		}
+		return "LoigFail";
+	}
+
 	
 }

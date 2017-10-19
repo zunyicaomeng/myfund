@@ -25,4 +25,9 @@ public class UserDaoImpl {
 				null, null, null, email, new Date(), "2", null, null, null, null, 2));
 		
 	}
+	//查询用户名密码
+		@SuppressWarnings("unchecked")
+		public List<User> getLoginUser(){
+			return (List<User>) userDao.getHibernateTemplate().find("from User");
+		}
 }
