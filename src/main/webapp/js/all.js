@@ -14,3 +14,9 @@ function AccountSetting() {
 function ModifyTheAccount() {
     document.location="ModifyTheAccount.html";
 }
+function LendParticulars() {
+    document.location="LendParticulars.html";
+}
+function borrow() {
+    document.location="borrow.html";
+}

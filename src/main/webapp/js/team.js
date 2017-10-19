@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	var navli=document.querySelectorAll('.nav>li')
-	var menu=document.querySelectorAll('.nav .menus')
+	var menu=document.querySelectorAll('.nav .dropdown_menu')
 	navli.forEach(function(item,index){
 		item.onmouseenter=function(){
 			menu[index].style.display='block'
@@ -25,5 +25,11 @@ $(document).ready(function(){
 	})
 	$("#contactUs").click(function(){
 		window.location.href="contactUs.html";
+	})
+	$("#login").click(function(){
+		window.location.href="login.html";
+	})
+	$("#register").click(function(){
+		window.location.href="Register.html";
 	})
 })
