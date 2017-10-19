@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>注册</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>注册</title>
     <link href="css/top.css" rel="stylesheet">
     <link href="css/register.css" rel="stylesheet">
     <link href="css/bg.css" rel="stylesheet">
@@ -11,7 +13,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bg.js" type="text/javascript"></script>
     <script src="js/team.js"></script>
-    <script type="text/javascript" src="js/check.js"></script>
 </head>
 <body>
 <div id="background">
@@ -113,18 +114,25 @@
             </div>
         </div>
         <div id="res_form_fr">
-            <form action="login.html" method="post" id="register_form">
+            <form action="register" method="post" id="register_form">
+            <script type="text/javascript">
+    	var msg = "${msg}";
+    	if(msg!=""){
+    		alert(msg);
+    		msg="";
+    	}
+    </script>
                 <div id="input_username">
-                    <input type="username" placeholder="用户名" class="inputinfo" id="input_name">
+                    <input type="text" placeholder="用户名" class="inputinfo" id="input_name" name="user.loginName">
                 </div>
                 <div id="input_password">
-                    <input type="password" placeholder="密码" class="inputinfo" id="input_pwd">
+                    <input type="password" placeholder="密码" class="inputinfo" id="input_pwd" name="user.password">
                 </div>
                 <div id="input_email">
-                    <input type="email" placeholder="邮箱" class="inputinfo" id="input_em">
+                    <input type="email" placeholder="邮箱" class="inputinfo" id="input_em" name="user.email">
                 </div>
                 <div id="input_btn_register">
-                    <input type="submit" value="注册" id="btn_register" class="btn" onclick="return register()">
+                    <input type="submit" value="注册" id="btn_register" class="btn">
                 </div>
             </form>
         </div>

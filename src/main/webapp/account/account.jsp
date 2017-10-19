@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>注册</title>
-    <link href="css/top.css" rel="stylesheet">
-    <link href="css/register.css" rel="stylesheet">
-    <link href="css/bg.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bg.js" type="text/javascript"></script>
-    <script src="js/team.js"></script>
-    <script type="text/javascript" src="js/check.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <title>我的账户</title>
+    <link type="text/css" href="../css/account.css" rel="stylesheet">
+    <link type="text/css" href="../css/style.css" rel="stylesheet">
+    <link type="text/css" href="../css/bg.css" rel="stylesheet">
+    <link type="text/css" href="../css/footer.css" rel="stylesheet">
+    <link type="text/css" href="../css/top.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/all.js" type="text/javascript"></script>
+    <script src="../js/account-team.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../js/bg.js"></script>
 </head>
 <body>
 <div id="background">
@@ -19,8 +22,8 @@
 </div>
 <div id="content">
     <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -31,7 +34,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -106,33 +109,61 @@
             </div>
         </div>
     </div>
-    <div id="res_form">
-        <div id="res_form_fl">
-            <div id="res_form_logo">
-                <img src="images/timg.png" style="margin-left: 20%">
-            </div>
+    <div id="account-middle">
+        <div id="account-middle-left">
+            <div id="account-middle-left-div"></div>
+            <button onclick="account();">我的账号</button>
+            <button onclick="lend();">我的出借</button>
+            <button onclick="AccountSetting();">账号设置</button>
+            <button onclick="ModifyTheAccount();">修改账号</button>
+            <button onclick="LendParticulars();">当前借出</button>
+            <button onclick="borrow();">目前借款</button>
         </div>
-        <div id="res_form_fr">
-            <form action="login.html" method="post" id="register_form">
-                <div id="input_username">
-                    <input type="username" placeholder="用户名" class="inputinfo" id="input_name">
+        <div id="account-middle-right">
+            <div id="account-middle-right-div">
+                <div id="account-middle-right-image"></div>
+                <div id="account-middle-right-text">Hello,<br>XXX</div>
+                <hr>
+            </div>
+            <div id="account-middle-right-middle">
+                <p>账户总览</p>
+                <div id="account-middle-right-middle-div">
+                    <div class="account-div">
+                        <div class="account-div-imageone"></div>
+                        <div class="account-div-text"><p>0.00</p><span>持有中出借本金</span></div>
+                    </div>
+                    <div class="account-div">
+                        <div class="account-div-imagetwo"></div>
+                        <div class="account-div-text"><p>0.00</p><span>可提现总额</span></div>
+                    </div>
+                    <div class="account-div">
+                        <div class="account-div-imagethree"></div>
+                        <div class="account-div-text"><p>0.00</p><span>借款总额</span></div>
+                    </div>
                 </div>
-                <div id="input_password">
-                    <input type="password" placeholder="密码" class="inputinfo" id="input_pwd">
+                <div id="account-middle-right-middle-text">
+                    <p>●持有中出借本金：用户持有中出借计划的本金总额。</p>
+                    <p>●可提现总额：当前可进行提现操作的金额总数。</p>
+                    <p>●期望回报总额：截至目前，无不确定事件发生的情况下，用户持有的所有出借计划的期望回报总额。（暂不统计精选标收益)</p>
+                    <p>●已累计回报总额：用户所有已提现的出借计划的回报总额。（暂不统计精选标收益）</p>
                 </div>
-                <div id="input_email">
-                    <input type="email" placeholder="邮箱" class="inputinfo" id="input_em">
+                <hr>
+            </div>
+            <div id="account-middle-right-right">
+                <div id="account-middle-right-right-one"><p>持有中出借服务计划</p></div>
+                <div id="account-middle-right-right-image"></div>
+                <div id="account-middle-right-right-two">
+                    <div><p>持有中出个数</p><span>0个</span></div>
+                    <div><p>出借总额(含续投本金)</p><span>￥0.00</span></div>
+                    <div><p>当前累计期望回报</p><span>￥0.00</span></div>
                 </div>
-                <div id="input_btn_register">
-                    <input type="submit" value="注册" id="btn_register" class="btn" onclick="return register()">
-                </div>
-            </form>
+            </div>
         </div>
     </div>
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="images/timg.png">
+                <img src="../images/timg.jpg">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
@@ -166,6 +197,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 </body>
