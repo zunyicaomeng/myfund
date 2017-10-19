@@ -64,13 +64,10 @@ public class User {
 	// 银行卡号
 	private Integer bankId;
 
-	// 创建时间
-	private Date creationTime;
-
 	// 解冻时间
 	private Date thawingTime;
 
-	// 用户状态  
+	// 用户状态  //1、优质用户 2、普通用户 3、失信用户
 	private Integer userState;
 	
 	//特殊属性   一个用户对多个出借用户
@@ -162,15 +159,7 @@ public class User {
 	public void setBankId(Integer bankId) {
 		this.bankId = bankId;
 	}
-
-	public Date getCreationTime() {
-		return creationTime;
-	}
-
-	public void setCreationTime(Date creationTime) {
-		this.creationTime = creationTime;
-	}
-
+	
 	public Date getThawingTime() {
 		return thawingTime;
 	}
@@ -252,11 +241,10 @@ public class User {
 		super();
 	}
 
-	public User(Long id, String loginName, String username, String password, Integer age, Integer gender, Date birthday,
+	public User(String loginName, String username, String password, Integer age, Integer gender, Date birthday,
 			String email, Date createDate, String status, Double balance, Integer transactionpassword, Integer bankId,
-			Date creationTime, Date thawingTime, Integer userState) {
+			Date thawingTime, Integer userState) {
 		super();
-		this.id = id;
 		this.loginName = loginName;
 		this.username = username;
 		this.password = password;
@@ -269,7 +257,6 @@ public class User {
 		this.balance = balance;
 		this.transactionpassword = transactionpassword;
 		this.bankId = bankId;
-		this.creationTime = creationTime;
 		this.thawingTime = thawingTime;
 		this.userState = userState;
 	}
@@ -279,8 +266,7 @@ public class User {
 		return "User [id=" + id + ", loginName=" + loginName + ", username=" + username + ", password=" + password
 				+ ", age=" + age + ", gender=" + gender + ", birthday=" + birthday + ", email=" + email
 				+ ", createDate=" + createDate + ", status=" + status + ", balance=" + balance
-				+ ", transactionpassword=" + transactionpassword + ", bankId=" + bankId + ", creationTime="
-				+ creationTime + ", thawingTime=" + thawingTime + ", userState=" + userState + "]";
+				+ ", transactionpassword=" + transactionpassword + ", bankId=" + bankId + ", thawingTime=" + thawingTime + ", userState=" + userState + "]";
 	}
 
 
