@@ -26,4 +26,10 @@ $(document).ready(function(){
 	$("#contactUs").click(function(){
 		window.location.href="contactUs.html";
 	})
+	$("#login").click(function(){
+		window.location.href="login.html";
+	})
+	$("#register").click(function(){
+		window.location.href="Register.html";
+	})
 })
