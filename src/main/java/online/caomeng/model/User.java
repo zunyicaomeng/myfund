@@ -75,12 +75,12 @@ public class User {
 	
 	//特殊属性   一个用户对多个出借用户
 	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
-	@JoinColumn(name="lend_id")
+	@JoinColumn(name="user_id")
     private Set<Lend> lends=new HashSet<Lend>();
 	
 	//特殊属性    一个用户对多个借款用户
 	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
-	@JoinColumn(name="locan_id")
+	@JoinColumn(name="user_id")
 	private Set<Loan> loans=new HashSet<Loan>();
 
 	public Long getId() {
