@@ -29,4 +29,7 @@ $(document).ready(function(){
     $("#contactUs").click(function(){
         window.location.href="/My-Fund/contactUs.html";
     })
+    $("#pay").click(function(){
+        window.location.href="pay.html";
+    })
 })
