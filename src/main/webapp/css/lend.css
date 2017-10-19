@@ -12,22 +12,22 @@
     float: left;
     list-style: none;
 }
-#lend-ul-two{
+.lend-ul-two{
     width: 90%;
     height: 30px;
     margin-left: 5%;
     background-color: #f6f6f6;
 }
-#lend-ul-two span{
+.lend-ul-two span{
     color: #ffaf78;
 }
-#lend-ul-two-div{
+.lend-ul-two-div{
     width: 90%;
     height: 50%;
     margin-left: 5%;
     /*ackground-color: red;*/
 }
-#lend-ul-two-div-table{
+.lend-ul-two-div-table{
     width: 100%;
     text-align: center;
     border: 1px solid black;
@@ -35,14 +35,14 @@
     font-weight: bold;
 
 }
-#lend-ul-two-div-table tr,td{
+.lend-ul-two-div-table tr,td{
     border: 1px solid black;
     border-collapse:collapse;
 }
-#lend-ul-two-div-table td{
+.lend-ul-two-div-table td{
     height: 50px;
 }
-#lend-ul-two-div P{
+.lend-ul-two-div P{
     color: #ffaf78;
 }
 #account-middle-right .lend-ul-span{
