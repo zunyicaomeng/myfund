@@ -18,9 +18,10 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "db_user")
+@Table(name = "db_user",uniqueConstraints={@UniqueConstraint(columnNames="user_loginName")})
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,6 +30,7 @@ public class User {
 
 
 	// 登录名
+	@Column(name="user_loginName")
 	private String loginName;
 
 	// 用户名
@@ -75,12 +77,12 @@ public class User {
 	
 	//特殊属性   一个用户对多个出借用户
 	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
-	@JoinColumn(name="lend_id")
+	@JoinColumn(name="user_id")
     private Set<Lend> lends=new HashSet<Lend>();
 	
 	//特殊属性    一个用户对多个借款用户
 	@OneToMany(cascade={CascadeType.ALL},fetch=FetchType.EAGER)
-	@JoinColumn(name="locan_id")
+	@JoinColumn(name="user_id")
 	private Set<Loan> loans=new HashSet<Loan>();
 
 	public Long getId() {
