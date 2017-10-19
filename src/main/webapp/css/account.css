@@ -129,3 +129,13 @@
 .account-div p {
     color: #ffaf78;
 }
+#pay{
+    float: right;
+    margin-top: -80px;
+    border-bottom: 1px gray solid;
+}
+.part_input{
+    width: 200px;
+    height: 35px;
+    border-radius: 5px;
+}
