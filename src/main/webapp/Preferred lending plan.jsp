@@ -151,7 +151,7 @@
     </dl>
     <dl style="margin-left:109px;" class="fk-4">
       <dt>关于我的基金</dt>
-      <dd><a href="about.html" target="_self" rel="nofollow">集团简介</a></dd>
+      <dd><a href="/My-Fund/about.jsp" target="_self" rel="nofollow">集团简介</a></dd>
       <dd><a href="" target="_self">媒体报道</a></dd>
       <dd><a href="" target="_self" rel="nofollow">企业荣誉</a></dd>
       <dd><a href="" target="_self" rel="nofollow">联系我们</a></dd>
@@ -160,7 +160,7 @@
       <dt>友情链接</dt>
       <dd><a href="http://www.nifa.org.cn" rel="nofollow" target="_blank"> 中国互联网金融协会 </a></dd>
       <dd><a href="http://www.cbrc.gov.cn" rel="nofollow" target="_blank">中国银监会官网 </a></dd>
-      <dd><a href="login.html" rel="nofollow" target="_blank">My|Fund控股集团</br>有限责任公司</a></dd>
+      <dd><a href="/My-Fund/login.jsp" rel="nofollow" target="_blank">My|Fund控股集团</br>有限责任公司</a></dd>
       <dd><a href="https://www.antgroup.com" target="_blank">蚂蚁金服</a></dd>
 	  <dd><a href="https://www.antgroup.com/page/alipay.htm" target="_blank">支付宝</a></dd>
 	  <dd><a href="https://www.antgroup.com/page/xiaodai.htm" target="_blank">蚂蚁小贷</a></dd>
