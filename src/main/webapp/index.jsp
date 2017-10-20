@@ -19,8 +19,8 @@
 </head>
 <body onload="getTime()">
 <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
+        <a href="/My-Fund/login.jsp" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
+        <a href="/My-Fund/register.jsp" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -31,7 +31,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="/My-Fund/index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -39,16 +39,16 @@
             <div style="position: relative;">
                 <ul class="nav">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
+                        <a href="/My-Fund/Preferred lending plan.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
                             <span class="caret">
                                 <img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
                                 <img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
                             </span>
                         </a>
                         <ul class="dropdown_menu" role="menu">
-                            <li><a href="javascript:void(0)">优选出借计划</a></li>
-                            <li><a href="javascript:void(0)">精选标</a></li>
-                            <li><a href="javascript:void(0)">债券转让</a></li>
+                            <li><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></li>
+                            <li><a href="/My-Fund/Selection.jsp">精选标</a></li>
+                            <li><a href="/My-Fund/Bonds.jsp">债券转让</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,8 +63,8 @@
                             </span>
                         </a>
                         <ul class="dropdown_menu" role="menu">
-                            <li><a href="#">基金招财</a></li>
-                            <li><a href="#">蜡笔分期</a></li>
+                            <li><a href="https://f.alipay.com">西瓜分期</a></li>
+                            <li><a href="/My-Fund/Mmoney.jsp">蜡笔分期</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -125,8 +125,8 @@
                 <p>My·Fund Your most carefree choice</p>
             </div>
             <div id="ben_login_btn">
-                <a href="Register.html" id="ben_login_btn_register">立即注册</a><br>
-                <a href="login.html" id="ben_login_btn_login">已有账号，立即登陆</a>
+                <a href="/My-Fund/register.jsp" id="ben_login_btn_register">立即注册</a><br>
+                <a href="/My-Fund/login.jsp" id="ben_login_btn_login">已有账号，立即登陆</a>
             </div>
         </div>
     </div>
@@ -177,7 +177,7 @@
                 <div class="ulbox clearfix">
                     <dl>
                         <dt class="dt_head">新手引导</dt>
-                        <dd><a href="Register.html">注册登录</a></dd>
+                        <dd><a href="/My-Fund/register.jsp">注册登录</a></dd>
                         <dd><a href="">出借服务</a></dd>
                         <dd><a href="">安全保障</a></dd>
                     </dl>

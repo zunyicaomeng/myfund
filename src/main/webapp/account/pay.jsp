@@ -44,7 +44,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 				</div>
 				<div style="position: relative;">
 					<ul class="nav" id="nav_x1">
-						<li id="menuEntryHome" class="dropdown"><a href="#"
+						<li id="menuEntryHome" class="dropdown"><a href="/My-Fund/Preferred lending plan.jsp"
 							class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
 								<span class="caret"> <img
 									src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg"
@@ -54,9 +54,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 							</span>
 						</a>
 							<ul class="dropdown_menu" role="menu">
-								<li><a href="javascript:void(0)">优选出借计划</a></li>
-								<li><a href="javascript:void(0)">精选标</a></li>
-								<li><a href="javascript:void(0)">债券转让</a></li>
+								<li><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></li>
+								<li><a href="/My-Fund/Selection.jsp">精选标</a></li>
+								<li><a href="/My-Fund/Bonds.jsp">债券转让</a></li>
 							</ul></li>
 					</ul>
 				</div>
@@ -72,8 +72,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 							</span>
 						</a>
 							<ul class="dropdown_menu" role="menu">
-								<li><a href="#">基金招财</a></li>
-								<li><a href="#">蜡笔分期</a></li>
+								<li><a href="https://f.alipay.com">西瓜分期</a></li>
+								<li><a href="/My-Fund/Mmoney.jsp">蜡笔分期</a></li>
 							</ul></li>
 					</ul>
 				</div>
