@@ -35,6 +35,6 @@ $(document).ready(function(){
 			$("#part_a_1").css("border","none")
 	})
 	$("#return").click(function(){
-		window.location.href="account.jsp";
+		window.location.href="/My-Fund/account/account.jsp";
 	})
 })

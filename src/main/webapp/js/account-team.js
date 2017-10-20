@@ -30,6 +30,6 @@ $(document).ready(function(){
         window.location.href="/My-Fund/contactUs.jsp";
     })
     $("#pay").click(function(){
-        window.location.href="pay.jsp";
+        window.location.href="/My-Fund/account/pay.jsp";
     })
 })
