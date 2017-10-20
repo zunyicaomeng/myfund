@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>核心团队</title>
+<title>债卷</title>
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/bg.css">
@@ -17,8 +17,8 @@
 </div>
 <div id="content">
 	<div id="menu_top">
-		<a href="javascript:void(0)" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
-		<a href="javascript:void(0)" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
 	</div>
 	<div id="menu_head">
 		<div id="head_1">
@@ -29,7 +29,7 @@
 			<div style="position: relative;">
 				<ul class="navs">
 					<li id="menuEntryHome" class="dropdown">
-						<a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+						<a href="/My-Fund/index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
 						</a>
 					</li>
 				</ul>
@@ -44,9 +44,9 @@
 							</span>
 						</a>
 						<ul class="dropdown_menu" role="menu">
-							<li><a href="javascript:void(0)">优选出借计划</a></li>
-							<li><a href="javascript:void(0)">精选标</a></li>
-							<li><a href="javascript:void(0)">债券转让</a></li>
+							<li><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></li>
+							<li><a href="/My-Fund/Selection.jsp">精选标</a></li>
+							<li><a href="/My-Fund/Bonds.jsp">债券转让</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -103,71 +103,30 @@
 				</ul>
 			</div>
 		</div>
-	</div>
-	<div class="survey_top" style="background-color: #f7f7f7;">
-		<h1>集团简介</h1>
-		<p class="wire"></p>
-		<p class="wire2">首页>核心团队</p>
-	</div>
-	<div id="add_all_1">
-	<h4>基金团队高管</h4>
-	<hr />
-	<div>
-		<div class="team_all" id="team_1">
-			<div class="picture" id="a000"></div>
-			<div class="bg">
-				<h2>袁廷汉</h2>
-				<p class="p_font">博士 厦门大学会计学博士、经济学硕士，英国剑桥大学工商管理硕士MBA</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_2">
-			<div class="picture" id="a001"></div>
-			<div class="bg">
-				<h2>郑扬</h2>
-				<p class="p_font">学士，北京大学光华管理学院EMBA，上海财经大学金融学与经济统计学双学士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_3">
-			<div class="picture" id="a010"></div>
-			<div class="bg">
-				<h2>熊彪</h2>
-				<p class="p_font">硕士 中国社会科学院金融学硕士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_4">
-			<div class="picture" id="a011"></div>
-			<div class="bg">
-				<h2>张文亮</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_5">
-			<div class="picture" id="a100"></div>
-			<div class="bg">
-				<h2>林海</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_6">
-			<div class="picture" id="a101"></div>
-			<div class="bg">
-				<h2>赵宇</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_7">
-			<div class="picture" id="a110"></div>
-			<div class="bg">
-				<h2>韩嘉欣</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-	</div>
-	</div>
+          <p><h3>&nbsp;基金全称&nbsp;&nbsp;鑫元兴利债券型证券投资基金&nbsp;基金代码&nbsp;002265&nbsp;<br>
+                 &nbsp;基金简称&nbsp;	鑫元兴利&nbsp;&nbsp;	成立日期&nbsp;	2016-01-13&nbsp;<br>
+                 &nbsp;基金类型&nbsp;&nbsp;	债券型&nbsp;&nbsp;	基金经理&nbsp;	熊彪经理&nbsp;<br>
+                 &nbsp;投资目标&nbsp;	本基金将宏观分析和信用分析相结合，积极配置优质债券，并合理安排组合期限，在保证资产安全性的基础上力争获取稳定的超额收益。&nbsp;<br>
+                 &nbsp;投资范围&nbsp;	本基金的投资范围为具有良好流动性的固定收益类金融工具，包括国内依法发行上市的国债、金融债、央行票据、企业债、公司债、中期票据、地方政府债、次级债、中小企业私募债、证券公司短期债、可分离交易可转债的纯债部分、短期融资券、资产支持证券、债券回购、同业存款、通知存款、银行存款等固定收益类金融工具以及法律法规或中国证监会允许基金投资的其他固定收益类金融工具(但须符合中国证监会相关规定)。如法律法规或监管机构以后允许基金投资的其他品种，基金管理人在履行适当程序后，可以将其纳入投资范围。&nbsp;<br>
+                 &nbsp;投资基准&nbsp;	中证全债指数收益率。&nbsp;<br>
+                 &nbsp;投资策略&nbsp;	本基金为债券型基金，对债券的投资比例不低于基金资产的80%。在此约束下，本基金通过对宏观经济趋势、金融货币政策、供求因素、估值因素、市场行为因素等进行评估分析，对固定收益类资产和货币资产等的预期收益进行动态跟踪，从而决定其配置比例。&nbsp;<br>
+                 &nbsp;定期定额&nbsp;	暂未开通</h3></p>
+                 &nbsp;<br>
+                 &nbsp;<br>
+
+                 <h3><p>&nbsp;基金全称&nbsp;鑫元双债增强债券型证券投资基金A&nbsp;基金代码&nbsp;002632&nbsp;<br>
+                 &nbsp;基金简称&nbsp;	鑫元双债A&nbsp;	成立日期&nbsp;	2016-04-21&nbsp;<br>
+                 &nbsp;基金类型&nbsp;	债券型&nbsp;	基金经理&nbsp;	郑杨经理&nbsp;<br>
+                 &nbsp;投资目标	&nbsp;本基金以信用债和可转债为主要投资对象，在适度承担信用风险并保证资产流动性的条件下，通过积极主动的投资管理，力争取得超越基金业绩比较基准的收益，实现基金资产长期、稳定的增长。&nbsp;<br>
+                 &nbsp;投资范围	&nbsp;本基金的投资范围为具有良好流动性的金融工具，包括国内依法发行上市的固定收益类金融工具（包括国内依法发行和上市交易的国债、金融债、企业债、公司债、证券公司发行的短期公司债、地方政府债、次级债、中小企业私募债、可转换债券含分离交易可转债、央行票据、中期票据、短期融资券、资产支持证券、债券回购、协议存款、通知存款、银行存款等）和股票（包括中小板、创业板及其他经中国证监会核准上市的股票）、权证等权益类金融工具以及法律法规或中国证监会允许基金投资的其他金融工具（但须符合中国证监会相关规定）。&nbsp;<br>
+                 &nbsp;投资基准&nbsp;	中债综合全价指数收益率×80%+沪深300指数收益率×20%&nbsp;<br>
+                 &nbsp;投资策略&nbsp;	本基金为债券型基金，对债券的投资比例不低于基金资产的80%。在严格把控投资风险的基础上，适度参与权益类资产的投资从而提高投资收益。本基金紧密跟踪债券市场与股票市场的运行情况和风险收益特征，结合对宏观经济环境、国家政策趋向及利率变化趋势等重点分析，判断债券市场和股票市场的相对投资价值，在债券资产与股票资产之间进行动态调整。&nbsp;<br>
+                 &nbsp;定期定额	&nbsp;暂未开通&nbsp;<br></p></h3>
+
 		<div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="images/timg.jpg">
+                <img src="/My-Fund/images/timg.jpg">
                 <div>
 					<p style="color: #666369">联系邮箱：</p>
 					<p style="color: #666369">lxbh@vip.qq.com</p>
@@ -181,27 +140,17 @@
                         <dd><a href="">出借服务</a></dd>
                         <dd><a href="">安全保障</a></dd>
                     </dl>
+                   <dl>
+                        <dt class="dt_head">我要出借</dt>
+                        <dd><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></dd>
+                        <dd><a href="/My-Fund/Selection.jsp">精选标</a></dd>
+                        <dd><a href="/My-Fund/Bonds.jsp">债权转让</a></dd>
+                    </dl>
                     <dl>
-							<dt class="dt_head">我要出借</dt>
-							<dd>
-								<a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Selection.jsp">精选标</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Bonds.jsp">债权转让</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt class="dt_head">我要借款</dt>
-							<dd>
-								<a href="/My-Fund/fenqi.jsp">蜡笔分期</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Mmoney.jsp">玖富叮当</a>
-							</dd>
-						</dl>
+                        <dt class="dt_head">我要借款</dt>
+                        <dd><a href="/My-Fund/fenqi.jsp">蜡笔分期</a></dd>
+                        <dd><a href="/My-Fund/Mmoney.jsp">玖富叮当</a></dd>
+                    </dl>
                     <dl>
                         <dt class="dt_head">友情链接</dt>
                         <dd><a target="_blank" href="http://www.nifa.org.cn/nifa/index.html">中国互联网金融协会</a></dd>
@@ -211,6 +160,7 @@
                 </div>
             </div>
         </div>
+</div>        
 </div>
 </div>
 </body>

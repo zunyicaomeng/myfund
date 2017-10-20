@@ -1,22 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-      <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>账户设置</title>
-    <link type="text/css" href="/My-Fund/css/AccountSettings.css" rel="stylesheet">
-    <link type="text/css" href="/My-Fund/css/style.css" rel="stylesheet">
-    <script src="/My-Fund/js/jquery.min.js"></script>
-    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
-    <script src="/My-Fund/js/AccountSetting.js" type="text/javascript"></script>
-    <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
-    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
-    <link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
-    <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
+ <title>登录</title>
+    <link href="/My-Fund/css/top.css" rel="stylesheet">
+    <link href="/My-Fund/css/bg.css" rel="stylesheet">
+    <link href="/My-Fund/css/footer.css" rel="stylesheet">
+    <link href="/My-Fund/css/login.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
-    <script src="/My-Fund/js/account-team.js" type="text/javascript"></script>
+    <script src="/My-Fund/js/jquery.min.js"></script>
+    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
+    <script src="/My-Fund/js/team.js"></script>
 </head>
 <body>
 <div id="background">
@@ -24,8 +20,8 @@
 </div>
 <div id="content">
     <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -36,7 +32,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="/My-Fund/index.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -51,9 +47,9 @@
                             </span>
                         </a>
                         <ul class="dropdown_menu" role="menu">
-                            <li><a href="javascript:void(0)">优选出借计划</a></li>
-                            <li><a href="javascript:void(0)">精选标</a></li>
-                            <li><a href="javascript:void(0)">债券转让</a></li>
+                            <li><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></li>
+                            <li><a href="/My-Fund/Selection.jsp">精选标</a></li>
+                            <li><a href="/My-Fund/Bonds.jsp">债券</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,8 +64,8 @@
                             </span>
                         </a>
                         <ul class="dropdown_menu" role="menu">
-                            <li><a href="#">基金招财</a></li>
-                            <li><a href="#">蜡笔分期</a></li>
+                            <li><a href="/My-Fund/Mmoney.jsp">基金招财</a></li>
+                            <li><a href="/My-Fund/fenqi.jsp">傻瓜分期</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,47 +107,25 @@
             </div>
         </div>
     </div>
-    <div id="account-middle">
-        <div id="account-middle-left">
-            <div id="account-middle-left-div"></div>
-            <button onclick="account();">我的账号</button>
-            <button onclick="lend();">我的出错</button>
-            <button onclick="AccountSetting();">账号设置</button>
-            <button onclick="ModifyTheAccount();">修改账号</button>
-            <button onclick="LendParticulars();">当前借出</button>
-            <button onclick="borrow();">目前借款</button>
-        </div>
-        <div id="account-middle-right">
-            <div id="AccountSetting-top-div">
-                <p id="AccountSetting-top-div-one">账号设置</p>
-                <form id="AccountSetting-form">
-                    <p class="AccountSetting-top-div-account">个人信息</p>
-                    <hr>
-                    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text"></p>
-                    <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text"></p>
-                    <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别： <input type="radio" name="user.gender" checked="checked" value="male">男
-                        <input type="radio" name="user.gender" value="female">女</p>
-                    <p>出生年月日：<input type="text" placeholder="yyyy/mm/dd"></p>
-                    <p class="AccountSetting-top-div-account">设置交易密码</p>
-                    <hr>
-                    <p class="AccountSetting-top-div-two">使用快捷支付进行账户资金提现时，需要验证交易密码。</p>
-                    <p class="AccountSetting-top-div-two">为保障您的账户资金安全，请您设置交易密码。交易密码需与微理财登录密码不一致。</p>
-                    <p>交&nbsp;易&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的密码" id="input2" name="user.password"></p>
-                    <p> 重&nbsp;复&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的确认秘密" id="input3" name="user.repeatPassword"></p>
-                   <p class="AccountSetting-top-div-account">设置银行卡号</p>
-                    <hr>
-                    <p class="AccountSetting-top-div-two">请谨慎输入您的银行卡号。</p>
-                    <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name=""></p>
-                    <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
-                </form>
+    <div id="logn_form">
+        <div id="logn_form_fl">
+            <div>
+                <img src="/My-Fund/images/汽车13.png">
             </div>
         </div>
-
+        <div>
+            <h3>2010年，IPHONE4掀起了全球智能手机的潮流，开启了手机智能时代，但是因为售价昂贵，被中国消费者戏称需要“卖肾”才能买得起IPHONE。2011年8月，小米手机第一代横空出世，在当时HTC等手机都在4000元档位的时候，1999元的劲爆价格，让小米从毫不知名迅速成为当年最火爆的手机。
+       
+        有人说，互联网和娱乐产业天生就是一对，互联网科技越发达，娱乐产业也会越蓬勃。与此同时，随着人均消费水平的不断提高，大众对于精神层面的消费追求愈加丰富，我国的文化娱乐产业也迎来了最好的发展时期。
+       
+        当一个传统的行业，“国”字头的项目想要嫁接新零售，会碰撞出怎样的火花？
+        2017年9月初，通路快建助力“中国家纺”以新零售的模式连开两场招商会，成绩斐然，现场超过80%的签约率，回款超过400万。</h3>
+        </div>
     </div>
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="/My-Fund/images/timg.jpg">
+                <img src="/My-Fund/images/timg.png">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
@@ -169,12 +143,12 @@
                         <dt class="dt_head">我要出借</dt>
                         <dd><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></dd>
                         <dd><a href="/My-Fund/Selection.jsp">精选标</a></dd>
-                        <dd><a href="/My-Fund/Bonds.jsp">债权转让</a></dd>
+                        <dd><a href="/My-Fund/Bonds.jsp">债权</a></dd>
                     </dl>
                     <dl>
                         <dt class="dt_head">我要借款</dt>
-                        <dd><a href="/My-Fund/fenqi.jsp">蜡笔分期</a></dd>
-                        <dd><a href="/My-Fund/Mmoney.jsp">玖富叮当</a></dd>
+                        <dd><a href="/My-Fund/fenqi.jsp">傻瓜分期</a></dd>
+                        <dd><a href="/My-Fund/Mmoney.jsp">基金招财</a></dd>
                     </dl>
                     <dl>
                         <dt class="dt_head">友情链接</dt>
@@ -185,9 +159,7 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 </body>
-
 </html>

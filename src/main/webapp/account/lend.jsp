@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+      <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -24,7 +25,7 @@
 <div id="content">
    <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -200,16 +201,16 @@
                         <dd><a href="">出借服务</a></dd>
                         <dd><a href="">安全保障</a></dd>
                     </dl>
-                    <dl>
+                   <dl>
                         <dt class="dt_head">我要出借</dt>
-                        <dd><a href="">优选出借计划</a></dd>
-                        <dd><a href="">精选标</a></dd>
-                        <dd><a href="">债权转让</a></dd>
+                        <dd><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></dd>
+                        <dd><a href="/My-Fund/Selection.jsp">精选标</a></dd>
+                        <dd><a href="/My-Fund/Bonds.jsp">债权转让</a></dd>
                     </dl>
                     <dl>
                         <dt class="dt_head">我要借款</dt>
-                        <dd><a href="">蜡笔分期</a></dd>
-                        <dd><a href="">玖富叮当</a></dd>
+                        <dd><a href="/My-Fund/fenqi.jsp">蜡笔分期</a></dd>
+                        <dd><a href="/My-Fund/Mmoney.jsp">玖富叮当</a></dd>
                     </dl>
                     <dl>
                         <dt class="dt_head">友情链接</dt>

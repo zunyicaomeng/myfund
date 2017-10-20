@@ -4,12 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>核心团队</title>
+<title>精选标</title>
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/style.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/bg.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/top.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
+	<link rel="stylesheet" type="text/css" href="/My-Fund/css/Selection.css"> 
 </head>
 <body>
 <div id="background">
@@ -17,8 +18,8 @@
 </div>
 <div id="content">
 	<div id="menu_top">
-		<a href="javascript:void(0)" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
-		<a href="javascript:void(0)" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
+		<a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
 	</div>
 	<div id="menu_head">
 		<div id="head_1">
@@ -44,7 +45,7 @@
 							</span>
 						</a>
 						<ul class="dropdown_menu" role="menu">
-							<li><a href="javascript:void(0)">优选出借计划</a></li>
+							<li><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></li>
 							<li><a href="javascript:void(0)">精选标</a></li>
 							<li><a href="javascript:void(0)">债券转让</a></li>
 						</ul>
@@ -104,70 +105,34 @@
 			</div>
 		</div>
 	</div>
-	<div class="survey_top" style="background-color: #f7f7f7;">
-		<h1>集团简介</h1>
-		<p class="wire"></p>
-		<p class="wire2">首页>核心团队</p>
-	</div>
-	<div id="add_all_1">
-	<h4>基金团队高管</h4>
-	<hr />
-	<div>
-		<div class="team_all" id="team_1">
-			<div class="picture" id="a000"></div>
-			<div class="bg">
-				<h2>袁廷汉</h2>
-				<p class="p_font">博士 厦门大学会计学博士、经济学硕士，英国剑桥大学工商管理硕士MBA</p>
-			</div>
+		<div style="position: relative;" class="fz-1">
+			<div><h1>暗影岛开发项目</h1></div>
+			<p><h3>预计年收益：5.001%&nbsp;&nbsp;
+			       持有时间：125天&nbsp;&nbsp;
+			       起投金额：100万&nbsp;&nbsp;<br>
+			       申购日期截至：2017/12/10&nbsp;&nbsp;<br>
+			       剩下额度：10份 
+			    </h3></p> 
 		</div>
-		<div class="team_all" id="team_2">
-			<div class="picture" id="a001"></div>
-			<div class="bg">
-				<h2>郑扬</h2>
-				<p class="p_font">学士，北京大学光华管理学院EMBA，上海财经大学金融学与经济统计学双学士</p>
-			</div>
+		<div style="position: relative;" class="fz-2" >
+			<div><h1>产品介绍</h1></div>
+			<p><h3>产品名称：暗影岛开发项目</h3></p>
+			<p><h3>产品类型：定向投资&nbsp;&nbsp;<br>
+			       产品需说明：企业理财作为该产品的网络平台，不参与投资，不承担投资风险，请仔细阅读《产品说明书》、《产品协议》、《申购说明书》、《投资者承诺书》等相关信息。&nbsp;&nbsp;<br>
+			       产品注意：百度联合国有金融资产交易所，知名银行，券商，信托公司，保险公司等金融机构，为用户提供多重安全保障。&nbsp;&nbsp;<br>
+                   本产品投资于金融资产收益权，该金融资产是符合监管要求的优质债权等低风险资产。上述金融资产由专业投资团队按照严谨规范的投资流程进行投资管理，建立了良好的风险控制机制并设计了多重的安全保障，在力求资金安全的前提下追求稳健的投资收益。 
+			</h3></p>
 		</div>
-		<div class="team_all" id="team_3">
-			<div class="picture" id="a010"></div>
-			<div class="bg">
-				<h2>熊彪</h2>
-				<p class="p_font">硕士 中国社会科学院金融学硕士</p>
-			</div>
+		<div> 
+         <div><h1>问题和风险</h1></div>	
+         <p><h3>《常见问题》《风险提示》</h3></p>
 		</div>
-		<div class="team_all" id="team_4">
-			<div class="picture" id="a011"></div>
-			<div class="bg">
-				<h2>张文亮</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_5">
-			<div class="picture" id="a100"></div>
-			<div class="bg">
-				<h2>林海</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_6">
-			<div class="picture" id="a101"></div>
-			<div class="bg">
-				<h2>赵宇</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-		<div class="team_all" id="team_7">
-			<div class="picture" id="a110"></div>
-			<div class="bg">
-				<h2>韩嘉欣</h2>
-				<p class="p_font">美国德州大学-奥斯汀工商管理硕士MBA、生物学博士</p>
-			</div>
-		</div>
-	</div>
-	</div>
-		<div id="footer">
+
+	
+	<div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="images/timg.jpg">
+                <img src="/My-Fund/images/timg.jpg">
                 <div>
 					<p style="color: #666369">联系邮箱：</p>
 					<p style="color: #666369">lxbh@vip.qq.com</p>
@@ -182,26 +147,16 @@
                         <dd><a href="">安全保障</a></dd>
                     </dl>
                     <dl>
-							<dt class="dt_head">我要出借</dt>
-							<dd>
-								<a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Selection.jsp">精选标</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Bonds.jsp">债权转让</a>
-							</dd>
-						</dl>
-						<dl>
-							<dt class="dt_head">我要借款</dt>
-							<dd>
-								<a href="/My-Fund/fenqi.jsp">蜡笔分期</a>
-							</dd>
-							<dd>
-								<a href="/My-Fund/Mmoney.jsp">玖富叮当</a>
-							</dd>
-						</dl>
+                        <dt class="dt_head">我要出借</dt>
+                        <dd><a href="/My-Fund/Preferred lending plan.jsp">优选出借计划</a></dd>
+                        <dd><a href="/My-Fund/Selection.jsp">精选标</a></dd>
+                        <dd><a href="/My-Fund/Bonds.jsp">债权转让</a></dd>
+                    </dl>
+                    <dl>
+                        <dt class="dt_head">我要借款</dt>
+                        <dd><a href="/My-Fund/fenqi.jsp">蜡笔分期</a></dd>
+                        <dd><a href="/My-Fund/Mmoney.jsp">玖富叮当</a></dd>
+                    </dl>
                     <dl>
                         <dt class="dt_head">友情链接</dt>
                         <dd><a target="_blank" href="http://www.nifa.org.cn/nifa/index.html">中国互联网金融协会</a></dd>
