@@ -15,7 +15,6 @@
     <script src="/My-Fund/js/team.js"></script>
     <script type="text/javascript" src="/My-Fund/js/check.js"></script>
 </head>
-
 <body>
 <div id="background">
     <canvas id="Mycanvas"></canvas>

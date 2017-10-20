@@ -6,10 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>核心团队</title>
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/style.css">
-	<link rel="stylesheet" type="text/css" href="/My-Fund//footer.css">
-	<link rel="stylesheet" type="text/css" href="/My-Fund//bg.css">
-	<link rel="stylesheet" type="text/css" href="/My-Fund//top.css">
-	<link rel="stylesheet" type="text/css" href="/My-Fund//home.css">
+	<link rel="stylesheet" type="text/css" href="/My-Fund/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="/My-Fund/css/bg.css">
+	<link rel="stylesheet" type="text/css" href="/My-Fund/css/top.css">
+	<link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
 </head>
 <body>
 <div id="background">

@@ -1,21 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <title>我的账户</title>
-    <title>我的账户</title>
-    <link type="text/css" href="/My-Fund/css/account.css" rel="stylesheet">
+<title>出借</title>
+    <link type="text/css" href="/My-Fund/css/lend.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/style.css" rel="stylesheet">
+    <script src="/My-Fund/js/jquery.min.js"></script>
+    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
     <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
+    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
     <link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
-    <script src="/My-Fund/js/jquery.min.js"></script>
-    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
-    <script src="/My-Fund/js/account-team.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/My-Fund/js/account-team.js"></script>
     <script type="text/javascript" src="/My-Fund/js/bg.js"></script>
 </head>
 <body>
@@ -23,9 +22,9 @@
     <canvas id="Mycanvas"></canvas>
 </div>
 <div id="content">
-    <div id="menu_top">
+   <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -36,7 +35,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="/My-Fund/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -122,44 +121,65 @@
             <button onclick="borrow();">目前借款</button>
         </div>
         <div id="account-middle-right">
-            <div id="account-middle-right-div">
-                <div id="account-middle-right-image"></div>
-                <div id="account-middle-right-text">Hello,<br><s:property value="user.loginName" /></div>
-                <a id="pay">账号充值</a>
-                <hr>
+            <h2>出借记录 </h2>
+            <ul class="lend-ul">
+                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span">0</span></li>
+                <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
+                <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
+            </ul>
+            <hr>
+            <div class="lend-ul-two">
+                <ul class="lend-ul ">
+                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
+                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
+                    <li style="width: 40%">出借总额(含续投本金)<span>￥0.00</span></li>
+                </ul>
             </div>
-            <div id="account-middle-right-middle">
-                <p>账户总览</p>
-                <div id="account-middle-right-middle-div">
-                    <div class="account-div">
-                        <div class="account-div-imageone"></div>
-                        <div class="account-div-text"><p>0.00</p><span>持有中出借本金</span></div>
-                    </div>
-                    <div class="account-div">
-                        <div class="account-div-imagetwo"></div>
-                        <div class="account-div-text"><p>0.00</p><span>可提现总额</span></div>
-                    </div>
-                    <div class="account-div">
-                        <div class="account-div-imagethree"></div>
-                        <div class="account-div-text"><p>0.00</p><span>借款总额</span></div>
-                    </div>
-                </div>
-                <div id="account-middle-right-middle-text">
-                    <p>●持有中出借本金：用户持有中出借计划的本金总额。</p>
-                    <p>●可提现总额：当前可进行提现操作的金额总数。</p>
-                    <p>●期望回报总额：截至目前，无不确定事件发生的情况下，用户持有的所有出借计划的期望回报总额。（暂不统计精选标收益)</p>
-                    <p>●已累计回报总额：用户所有已提现的出借计划的回报总额。（暂不统计精选标收益）</p>
-                </div>
-                <hr>
+            <div class="lend-ul-two-div">
+                <table class="lend-ul-two-div-table">
+                    <tr >
+                        <td>出借人</td>
+                        <td>(出/借）</td>
+                        <td>出借金额</td>
+                        <td>出借时间</td>
+                        <td>归还时间</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
-            <div id="account-middle-right-right">
-                <div id="account-middle-right-right-one"><p>持有中出借服务计划</p></div>
-                <div id="account-middle-right-right-image"></div>
-                <div id="account-middle-right-right-two">
-                    <div><p>持有中出个数</p><span>0个</span></div>
-                    <div><p>出借总额(含续投本金)</p><span>￥0.00</span></div>
-                    <div><p>当前累计期望回报</p><span>￥0.00</span></div>
-                </div>
+              <hr>
+            <div class="lend-ul-two">
+                <ul class="lend-ul ">
+                    <li style="width: 20%">借款订单&nbsp;&nbsp;共<span>0</span>个</li>
+                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
+                    <li style="width: 40%">借款总额(含续投本金)<span>￥0.00</span></li>
+                </ul>
+            </div>
+            <div class="lend-ul-two-div">
+                <table class="lend-ul-two-div-table">
+                    <tr >
+                        <td>借款人</td>
+                        <td>(出/借）</td>
+                        <td>借款金额</td>
+                        <td>借款时间</td>
+                        <td>归还时间</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
         </div>
     </div>
@@ -204,4 +224,5 @@
     </div>
 </div>
 </body>
+
 </html>
