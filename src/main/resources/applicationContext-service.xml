@@ -9,6 +9,6 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 识别Server -->
-    <context:component-scan base-package="online.caomeng.server.Impl"/>
+    <context:component-scan base-package="online.caomeng.server.impl"/>
     
 </beans>

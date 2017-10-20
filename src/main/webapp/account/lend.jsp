@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>出借</title>
-    <link type="text/css" href="../css/lend.css" rel="stylesheet">
-    <link type="text/css" href="../css/style.css" rel="stylesheet">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/all.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/bg.css" rel="stylesheet">
-    <script src="../js/bg.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/footer.css" rel="stylesheet">
-    <link type="text/css" href="../css/top.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
-    <script type="text/javascript" src="../js/account-team.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>出借</title>
+    <link type="text/css" href="/My-Fund/css/lend.css" rel="stylesheet">
+    <link type="text/css" href="/My-Fund/css/style.css" rel="stylesheet">
+    <script src="/My-Fund/js/jquery.min.js"></script>
+    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
+    <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
+    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
+    <link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
+    <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
+    <script type="text/javascript" src="/My-Fund/js/account-team.js"></script>
+    <script type="text/javascript" src="/My-Fund/js/bg.js"></script>
 </head>
 <body>
 <div id="background">
@@ -183,7 +186,7 @@
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="../images/timg.jpg">
+                <img src="/My-Fund/images/timg.jpg">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
@@ -221,5 +224,5 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="../js/bg.js"></script>
+
 </html>

@@ -20,8 +20,8 @@
 </div>
 <div id="content">
     <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -111,14 +111,17 @@
         <div id="account-middle-left">
             <div id="account-middle-left-div"></div>
             <button onclick="account();">我的账号</button>
-            <button onclick="lend();">我的出错</button>
+            <button onclick="lend();">我的出借</button>
             <button onclick="AccountSetting();">账号设置</button>
             <button onclick="ModifyTheAccount();">修改账号</button>
+            <button onclick="LendParticulars();">当前借出</button>
+            <button onclick="borrow();">目前借款</button>
         </div>
         <div id="account-middle-right">
             <div id="account-middle-right-div">
                 <div id="account-middle-right-image"></div>
                 <div id="account-middle-right-text">Hello,<br>XXX</div>
+                <a id="pay">账号充值</a>
                 <hr>
             </div>
             <div id="account-middle-right-middle">
@@ -142,6 +145,10 @@
                     <p>●可提现总额：当前可进行提现操作的金额总数。</p>
                     <p>●期望回报总额：截至目前，无不确定事件发生的情况下，用户持有的所有出借计划的期望回报总额。（暂不统计精选标收益)</p>
                     <p>●已累计回报总额：用户所有已提现的出借计划的回报总额。（暂不统计精选标收益）</p>
+                    <hr>
+                    <div>
+                        <a href="withdrawal.html" id="account-middle-right-middle-text-p">提现</a>
+                    </div>
                 </div>
                 <hr>
             </div>

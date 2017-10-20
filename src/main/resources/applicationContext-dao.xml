@@ -30,7 +30,7 @@
        			hibernate.dialect=org.hibernate.dialect.MySQLDialect
                 hibernate.show_sql=true
                 hibernate.format_sql=true
-                hibernate.hbm2ddl.auto=create
+                hibernate.hbm2ddl.auto=update
        		</value>
        	</property>
        	<!-- hibernate扫描实体类 -->
@@ -51,12 +51,14 @@
         <tx:advice id="myAdvice" transaction-manager="transaction">
         	<tx:attributes>
         		<tx:method name="get*" propagation="REQUIRED" rollback-for="Exception"/>
+        		<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
+        		<tx:method name="*" propagation="SUPPORTS" read-only="true" />  
         	</tx:attributes>
         </tx:advice>
         
         <!-- 事务的切面 -->
         <aop:config>
-        	<aop:pointcut expression="execution(public * online.caomeng.server.**.*(..))" id="myPointcut"/>
+        	<aop:pointcut expression="execution(public * online.caomeng.server.impl.*.*(..))" id="myPointcut"/>
         	<aop:advisor advice-ref="myAdvice" pointcut-ref="myPointcut"/>
         </aop:config>
         

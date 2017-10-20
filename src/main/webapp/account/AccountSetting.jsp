@@ -1,25 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>出借</title>
-    <link type="text/css" href="../css/lend.css" rel="stylesheet">
-    <link type="text/css" href="../css/style.css" rel="stylesheet">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/all.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/bg.css" rel="stylesheet">
-    <script src="../js/bg.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/footer.css" rel="stylesheet">
-    <link type="text/css" href="../css/top.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
-    <script type="text/javascript" src="../js/account-team.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>账户设置</title>
+    <link type="text/css" href="/My-Fund/css/AccountSettings.css" rel="stylesheet">
+    <link type="text/css" href="/My-Fund/css/style.css" rel="stylesheet">
+    <script src="/My-Fund/js/jquery.min.js"></script>
+    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
+    <script src="/My-Fund/js/AccountSetting.js" type="text/javascript"></script>
+    <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
+    <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
+    <link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
+    <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
+    <script src="/My-Fund/js/account-team.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="background">
     <canvas id="Mycanvas"></canvas>
 </div>
 <div id="content">
-   <div id="menu_top">
+    <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
     </div>
@@ -111,79 +114,43 @@
         <div id="account-middle-left">
             <div id="account-middle-left-div"></div>
             <button onclick="account();">我的账号</button>
-            <button onclick="lend();">我的出借</button>
+            <button onclick="lend();">我的出错</button>
             <button onclick="AccountSetting();">账号设置</button>
             <button onclick="ModifyTheAccount();">修改账号</button>
             <button onclick="LendParticulars();">当前借出</button>
             <button onclick="borrow();">目前借款</button>
         </div>
         <div id="account-middle-right">
-            <h2>出借记录 </h2>
-            <ul class="lend-ul">
-                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span">0</span></li>
-                <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
-                <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
-            </ul>
-            <hr>
-            <div class="lend-ul-two">
-                <ul class="lend-ul ">
-                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
-                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">出借总额(含续投本金)<span>￥0.00</span></li>
-                </ul>
-            </div>
-            <div class="lend-ul-two-div">
-                <table class="lend-ul-two-div-table">
-                    <tr >
-                        <td>出借人</td>
-                        <td>(出/借）</td>
-                        <td>出借金额</td>
-                        <td>出借时间</td>
-                        <td>归还时间</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
-            </div>
-              <hr>
-            <div class="lend-ul-two">
-                <ul class="lend-ul ">
-                    <li style="width: 20%">借款订单&nbsp;&nbsp;共<span>0</span>个</li>
-                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">借款总额(含续投本金)<span>￥0.00</span></li>
-                </ul>
-            </div>
-            <div class="lend-ul-two-div">
-                <table class="lend-ul-two-div-table">
-                    <tr >
-                        <td>借款人</td>
-                        <td>(出/借）</td>
-                        <td>借款金额</td>
-                        <td>借款时间</td>
-                        <td>归还时间</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
+            <div id="AccountSetting-top-div">
+                <p id="AccountSetting-top-div-one">账号设置</p>
+                <form id="AccountSetting-form">
+                    <p class="AccountSetting-top-div-account">个人信息</p>
+                    <hr>
+                    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text"></p>
+                    <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text"></p>
+                    <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别： <input type="radio" name="user.gender" checked="checked" value="male">男
+                        <input type="radio" name="user.gender" value="female">女</p>
+                    <p>出生年月日：<input type="text" placeholder="yyyy/mm/dd"></p>
+                    <p class="AccountSetting-top-div-account">设置交易密码</p>
+                    <hr>
+                    <p class="AccountSetting-top-div-two">使用快捷支付进行账户资金提现时，需要验证交易密码。</p>
+                    <p class="AccountSetting-top-div-two">为保障您的账户资金安全，请您设置交易密码。交易密码需与微理财登录密码不一致。</p>
+                    <p>交&nbsp;易&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的密码" id="input2" name="user.password"></p>
+                    <p> 重&nbsp;复&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的确认秘密" id="input3" name="user.repeatPassword"></p>
+                   <p class="AccountSetting-top-div-account">设置银行卡号</p>
+                    <hr>
+                    <p class="AccountSetting-top-div-two">请谨慎输入您的银行卡号。</p>
+                    <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name=""></p>
+                    <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
+                </form>
             </div>
         </div>
+
     </div>
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="../images/timg.jpg">
+                <img src="/My-Fund/images/timg.jpg">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
@@ -221,5 +188,5 @@
     </div>
 </div>
 </body>
-<script type="text/javascript" src="../js/bg.js"></script>
+
 </html>

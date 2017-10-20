@@ -1,27 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>出借</title>
-    <link type="text/css" href="../css/lend.css" rel="stylesheet">
-    <link type="text/css" href="../css/style.css" rel="stylesheet">
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/all.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/bg.css" rel="stylesheet">
-    <script src="../js/bg.js" type="text/javascript"></script>
-    <link type="text/css" href="../css/footer.css" rel="stylesheet">
-    <link type="text/css" href="../css/top.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
-    <script type="text/javascript" src="../js/account-team.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>注册</title>
+    <link href="css/top.css" rel="stylesheet">
+    <link href="css/register.css" rel="stylesheet">
+    <link href="css/bg.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bg.js" type="text/javascript"></script>
+    <script src="js/team.js"></script>
 </head>
 <body>
 <div id="background">
     <canvas id="Mycanvas"></canvas>
 </div>
 <div id="content">
-   <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;xxxx&nbsp;</a>
+    <div id="menu_top">
+        <a href="javascript:void(0)" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -32,7 +32,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -107,83 +107,40 @@
             </div>
         </div>
     </div>
-    <div id="account-middle">
-        <div id="account-middle-left">
-            <div id="account-middle-left-div"></div>
-            <button onclick="account();">我的账号</button>
-            <button onclick="lend();">我的出借</button>
-            <button onclick="AccountSetting();">账号设置</button>
-            <button onclick="ModifyTheAccount();">修改账号</button>
-            <button onclick="LendParticulars();">当前借出</button>
-            <button onclick="borrow();">目前借款</button>
+    <div id="res_form">
+        <div id="res_form_fl">
+            <div id="res_form_logo">
+                <img src="images/timg.png" style="margin-left: 20%">
+            </div>
         </div>
-        <div id="account-middle-right">
-            <h2>出借记录 </h2>
-            <ul class="lend-ul">
-                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span">0</span></li>
-                <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
-                <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
-            </ul>
-            <hr>
-            <div class="lend-ul-two">
-                <ul class="lend-ul ">
-                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
-                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">出借总额(含续投本金)<span>￥0.00</span></li>
-                </ul>
-            </div>
-            <div class="lend-ul-two-div">
-                <table class="lend-ul-two-div-table">
-                    <tr >
-                        <td>出借人</td>
-                        <td>(出/借）</td>
-                        <td>出借金额</td>
-                        <td>出借时间</td>
-                        <td>归还时间</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
-            </div>
-              <hr>
-            <div class="lend-ul-two">
-                <ul class="lend-ul ">
-                    <li style="width: 20%">借款订单&nbsp;&nbsp;共<span>0</span>个</li>
-                    <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">借款总额(含续投本金)<span>￥0.00</span></li>
-                </ul>
-            </div>
-            <div class="lend-ul-two-div">
-                <table class="lend-ul-two-div-table">
-                    <tr >
-                        <td>借款人</td>
-                        <td>(出/借）</td>
-                        <td>借款金额</td>
-                        <td>借款时间</td>
-                        <td>归还时间</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-                <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
-            </div>
+        <div id="res_form_fr">
+            <form action="register" method="post" id="register_form">
+            <script type="text/javascript">
+    	var msg = "${msg}";
+    	if(msg!=""){
+    		alert(msg);
+    		msg="";
+    	}
+    </script>
+                <div id="input_username">
+                    <input type="text" placeholder="用户名" class="inputinfo" id="input_name" name="user.loginName">
+                </div>
+                <div id="input_password">
+                    <input type="password" placeholder="密码" class="inputinfo" id="input_pwd" name="user.password">
+                </div>
+                <div id="input_email">
+                    <input type="email" placeholder="邮箱" class="inputinfo" id="input_em" name="user.email">
+                </div>
+                <div id="input_btn_register">
+                    <input type="submit" value="注册" id="btn_register" class="btn">
+                </div>
+            </form>
         </div>
     </div>
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="../images/timg.jpg">
+                <img src="images/timg.png">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
@@ -217,9 +174,7 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 </body>
-<script type="text/javascript" src="../js/bg.js"></script>
 </html>
