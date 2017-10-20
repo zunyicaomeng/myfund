@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <title>我的账户</title>
+    <title>我的账户</title>
     <link type="text/css" href="/My-Fund/css/account.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/style.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
@@ -34,7 +35,7 @@
             <div style="position: relative;">
                 <ul class="navs">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
+                        <a href="/My-Fund/index.html" class="dropdown-toggle" data-toggle="dropdown" role="button">首页
                         </a>
                     </li>
                 </ul>
@@ -123,6 +124,7 @@
             <div id="account-middle-right-div">
                 <div id="account-middle-right-image"></div>
                 <div id="account-middle-right-text">Hello,<br>XXX</div>
+                <a id="pay">账号充值</a>
                 <hr>
             </div>
             <div id="account-middle-right-middle">
@@ -163,7 +165,7 @@
     <div id="footer">
         <div class="clearfix">
             <div class="fl">
-                <img src="../images/timg.jpg">
+                <img src="/My-Fund/images/timg.jpg">
                 <div>
                     <p style="color: #666369">联系邮箱：</p>
                     <p style="color: #666369">lxbh@vip.qq.com</p>
