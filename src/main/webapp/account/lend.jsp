@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
       <%@ taglib prefix="s" uri="/struts-tags"%>
+      <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,7 +26,7 @@
 <div id="content">
    <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="#session.loginName" />&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -133,7 +134,7 @@
                 <ul class="lend-ul ">
                     <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
                     <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">出借总额(含续投本金)<span>￥0.00</span></li>
+                    <li style="width: 40%">出借总额(含续投本金)<span>￥<s:property value="#session.loanMoney" /></span></li>
                 </ul>
             </div>
             <div class="lend-ul-two-div">
@@ -145,12 +146,13 @@
                         <td>出借时间</td>
                         <td>归还时间</td>
                     </tr>
+                 <%-- <c:forEach var="item" items="${sessionScope.loan}"> --%>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>${temp.loanname }</td>
+                        <td>${temp.loanname }</td>
+                        <td>${temp.loanname }</td>
+                        <td>${temp.loanname }</td>
+                        <td>${temp.loanname }</td>
                     </tr>
                 </table>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
@@ -160,7 +162,7 @@
                 <ul class="lend-ul ">
                     <li style="width: 20%">借款订单&nbsp;&nbsp;共<span>0</span>个</li>
                     <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
-                    <li style="width: 40%">借款总额(含续投本金)<span>￥0.00</span></li>
+                    <li style="width: 40%">借款总额(含续投本金)<span>￥<s:property value="#session.LendMoney" /></span></li>
                 </ul>
             </div>
             <div class="lend-ul-two-div">

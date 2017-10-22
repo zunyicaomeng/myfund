@@ -24,7 +24,7 @@
 <div id="content">
     <div id="top">
         <span id="login" class="top_style">&nbsp;欢迎&nbsp;</span>
-        <a href="/My-Fund/account/account.jsp"  class="top_style">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+        <a href="/My-Fund/account/account.jsp"  class="top_style">&nbsp;<s:property value="#session.loginName" />&nbsp;</a>
     </div>
     <div id="head">
         <div id="images"></div>

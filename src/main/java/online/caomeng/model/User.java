@@ -204,6 +204,22 @@ public class User {
 		this.userState = userState;
 	}
 
+	public Set<Lend> getLends() {
+		return lends;
+	}
+
+	public void setLends(Set<Lend> lends) {
+		this.lends = lends;
+	}
+
+	public Set<Loan> getLoans() {
+		return loans;
+	}
+
+	public void setLoans(Set<Loan> loans) {
+		this.loans = loans;
+	}
+
 	// 注册
 	public User(String loginName, String password, String email) {
 		super();

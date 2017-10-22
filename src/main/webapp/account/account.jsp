@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ taglib prefix="s" uri="/struts-tags"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,7 +26,7 @@
 <div id="content">
     <div id="menu_top">
         <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="#session.loginName" /></a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -124,7 +125,7 @@
         <div id="account-middle-right">
             <div id="account-middle-right-div">
                 <div id="account-middle-right-image"></div>
-                <div id="account-middle-right-text">Hello,<br><s:property value="user.loginName" /></div>
+                <div id="account-middle-right-text">Hello,<br><s:property value="#session.loginName" /></div>
                 <a id="pay">账号充值</a>
                 <hr>
             </div>
@@ -133,15 +134,15 @@
                 <div id="account-middle-right-middle-div">
                     <div class="account-div">
                         <div class="account-div-imageone"></div>
-                        <div class="account-div-text"><p>0.00</p><span>持有中出借本金</span></div>
+                        <div class="account-div-text"><p><s:property value="#session.balances" /></p><span>持有中出借本金</span></div>
                     </div>
                     <div class="account-div">
                         <div class="account-div-imagetwo"></div>
-                        <div class="account-div-text"><p>0.00</p><span>可提现总额</span></div>
+                        <div class="account-div-text"><p><s:property value="#session.balances" /></p><span>可提现总额</span></div>
                     </div>
                     <div class="account-div">
                         <div class="account-div-imagethree"></div>
-                        <div class="account-div-text"><p>0.00</p><span>借款总额</span></div>
+                        <div class="account-div-text"><p><s:property value="#session.LendMoney" /></p><span>借款总额</span></div>
                     </div>
                 </div>
                 <div id="account-middle-right-middle-text">
@@ -157,8 +158,8 @@
                 <div id="account-middle-right-right-image"></div>
                 <div id="account-middle-right-right-two">
                     <div><p>持有中出个数</p><span>0个</span></div>
-                    <div><p>出借总额(含续投本金)</p><span>￥0.00</span></div>
-                    <div><p>当前累计期望回报</p><span>￥0.00</span></div>
+                    <div><p>出借总额(含续投本金)</p><span>￥<s:property value="#session.LendMoney" /></span></div>
+                    <div><p>余额</p><span>￥<s:property value="#session.balances" /></span></div>
                 </div>
             </div>
         </div>

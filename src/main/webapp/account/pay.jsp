@@ -27,7 +27,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 	<div id="content">
 		<div id="menu_top">
 			<a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a> <a
-				href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="user.loginName" />&nbsp;</a>
+				href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="#session.loginName" />&nbsp;</a>
 		</div>
 		<div id="menu_head">
 			<div id="head_1">
