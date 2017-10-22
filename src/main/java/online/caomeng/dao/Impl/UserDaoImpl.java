@@ -47,7 +47,7 @@ public class UserDaoImpl {
 		Map<String, Object> session = ActionContext.getContext().getSession();
 		String loginName = (String) session.get("loginName");
 		List<User> list = (List<User>) userDao.getHibernateTemplate()
-				.find("from User where loginName =" + loginName + "");
+				.find("from User where loginName =" + "loginName" + "");
 		System.out.println(list);
 		return list;
 	}
@@ -58,7 +58,7 @@ public class UserDaoImpl {
 		System.out.println(loginName);
 
 		List<User> list = (List<User>) userDao.getHibernateTemplate()
-				.find("from User where loginName =" + loginName + "");
+				.find("from User where loginName =" + "loginName" + "");
 		System.out.println(list);
 		return list;
 	}
