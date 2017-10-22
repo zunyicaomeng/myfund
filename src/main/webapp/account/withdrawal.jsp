@@ -35,20 +35,20 @@
                 <ul class="menus">
                     <li></li>
                 </ul>
-                <li><a href="javascript:void(0)" class="fonts" id="loan">我要出借</a>
+                <li><a href="/My-Fund/Preferred lending plan.jsp" class="fonts" id="loan">我要出借</a>
                     <div class="my">
                         <ul class="menus">
-                            <li><a href="javascript:void(0)" class="fonts">优选出借计划</a></li>
-                            <li><a href="javascript:void(0)" class="fonts">精选标</a></li>
-                            <li><a href="javascript:void(0)" class="fonts">债券转让</a></li>
+                            <li><a href="/My-Fund/Preferred lending plan.jsp" class="fonts">优选出借计划</a></li>
+                            <li><a href="/My-Fund/Selection.jsp" class="fonts">精选标</a></li>
+                            <li><a href="/My-Fund/Bonds.jsp" class="fonts">债券转让</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a href="javascript:void(0)" class="fonts">我要借款</a>
                     <div class="my">
                         <ul class="menus">
-                            <li><a href="javascript:void(0)" class="fonts">玖富叮当</a></li>
-                            <li><a href="javascript:void(0)" class="fonts">蜡笔分期</a></li>
+                            <li><a href="https://f.alipay.com" class="fonts">西瓜分期</a></li>
+                            <li><a href="/My-Fund/Mmoney.jsp" class="fonts">蜡笔分期</a></li>
                         </ul>
                     </div>
                 </li>

@@ -20,8 +20,8 @@
 </div>
 <div id="content">
     <div id="menu_top">
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;登录&nbsp;</a>
-        <a href="javascript:void(0)" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
+        <a href="/My-Fund/login.jsp" class="menu_top_s">&nbsp;登录&nbsp;</a>
+        <a href="/My-Fund/register.jsp" class="menu_top_s">&nbsp;快速注册&nbsp;</a>
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -40,7 +40,7 @@
             <div style="position: relative;">
                 <ul class="nav" id="nav_x1">
                     <li id="menuEntryHome" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
+                        <a href="/My-Fund/Preferred lending plan.jsp" class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
                             <span class="caret">
                                 <img src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg" class="imgMenuCaretDown" alt="" title="">
                                 <img src="https://www.teamviewer.com/resources/images/icons/arrow-up-blue.svg" class="imgMenuCaretUp" alt="" title="">
@@ -64,8 +64,8 @@
                             </span>
                         </a>
                         <ul class="dropdown_menu" role="menu">
-                            <li><a href="/My-Fund/Mmoney.jsp">基金招财</a></li>
-                            <li><a href="/My-Fund/fenqi.jsp">傻瓜分期</a></li>
+                            <li><a href="https://f.alipay.com">西瓜分期</a></li>
+                            <li><a href="/My-Fund/Mmoney.jsp">傻瓜分期</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -30,6 +30,6 @@ $(document).ready(function(){
 		window.location.href="login.jsp";
 	})
 	$("#register").click(function(){
-		window.location.href="Register.jsp";
+		window.location.href="register.jsp";
 	})
 })
