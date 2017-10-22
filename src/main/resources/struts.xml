@@ -19,5 +19,9 @@
         <action name="updateUser" class="userAction" method="updateUser">
         	<result>/account/account.jsp</result>
         </action>
+        <action name="recharge" class="userAction" method="Recharge">
+        	<result>/account/account.jsp</result>
+        	<result name="false">/account/pay.jsp</result>
+        </action>
     </package>
 </struts>

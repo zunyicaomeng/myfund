@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	  <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -13,6 +13,7 @@
 <link type="text/css" href="/My-Fund/css/bg.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
 <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
+<link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/My-Fund/css/pay.css">
 <style type="text/css">
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
@@ -27,7 +28,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 	<div id="content">
 		<div id="menu_top">
 			<a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a> <a
-				href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="#session.loginName" />&nbsp;</a>
+				href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property
+					value="#session.loginName" />&nbsp;
+			</a>
 		</div>
 		<div id="menu_head">
 			<div id="head_1">
@@ -44,7 +47,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 				</div>
 				<div style="position: relative;">
 					<ul class="nav" id="nav_x1">
-						<li id="menuEntryHome" class="dropdown"><a href="/My-Fund/Preferred lending plan.jsp"
+						<li id="menuEntryHome" class="dropdown"><a
+							href="/My-Fund/Preferred lending plan.jsp"
 							class="dropdown-toggle" data-toggle="dropdown" role="button">我要出借
 								<span class="caret"> <img
 									src="https://www.teamviewer.com/resources/images/icons/arrow-down.svg"
@@ -118,47 +122,49 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 		</div>
 		<div id="pay_part">
 			<div id="part_p">
-				<p class="case">
-					充值金额：<input type="number" name=""
-						style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
-						placeholder="请输入充值金额：">
-				</p>
-				<p class="case">
-					交易密码：<input type="password" name=""
-						style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
-						placeholder="请输入交易密码：">
-				</p>
-				<p class="case">快捷支付</p>
-				<p id="case_p"></p>
-				<div id="part_t">
+				<form action="recharge" method="post">
 					<p class="case">
-						<img src="/My-Fund/images/E-bank.jpg" id="E-bank">
+						充值金额：<input type="number" name="rechartamount"
+							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
+							placeholder="请输入充值金额：">
 					</p>
-					<h2 id="part_h2">网银支付</h2>
-				</div>
-				<div id="part_a">
-					<div class="part_border">
-						<div id="part_a_1" class="part_all"></div>
+					<p class="case">
+						交易密码：<input type="password" name="user.transactionpassword"
+							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
+							placeholder="请输入交易密码：">
+					</p>
+					<p class="case">快捷支付</p>
+					<p id="case_p"></p>
+					<div id="part_t">
+						<p class="case">
+							<img src="/My-Fund/images/E-bank.jpg" id="E-bank">
+						</p>
+						<h2 id="part_h2">网银支付</h2>
 					</div>
-					<div class="part_border">
-						<div id="part_a_2" class="part_all"></div>
+					<div id="part_a">
+						<div class="part_border">
+							<div id="part_a_1" class="part_all"></div>
+						</div>
+						<div class="part_border">
+							<div id="part_a_2" class="part_all"></div>
+						</div>
+						<div class="part_border">
+							<div id="part_a_3" class="part_all"></div>
+						</div>
+						<div class="part_border">
+							<div id="part_a_4" class="part_all"></div>
+						</div>
+						<div class="part_border">
+							<div id="part_a_5" class="part_all"></div>
+						</div>
 					</div>
-					<div class="part_border">
-						<div id="part_a_3" class="part_all"></div>
+					<div id="part_r">
+						<input type="submit" value="充值" class="button">
+						<input type="button" value="返回" class="button" id="return">
 					</div>
-					<div class="part_border">
-						<div id="part_a_4" class="part_all"></div>
-					</div>
-					<div class="part_border">
-						<div id="part_a_5" class="part_all"></div>
-					</div>
-				</div>
-				<div id="part_r">
-					<button class="button">确定提交</button>
-					<button class="button" id="return">返回</button>
-				</div>
-
+				</form>
 			</div>
+
 		</div>
 		<div id="footer">
 			<div class="clearfix">

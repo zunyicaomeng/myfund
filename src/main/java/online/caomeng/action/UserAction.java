@@ -1,5 +1,6 @@
 package online.caomeng.action;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -40,6 +41,8 @@ public class UserAction extends ActionSupport {
 	private double lendMoney = 0;
 	private double loanMoney = 0;
 	private List<Loan> loanlist;
+	private String rechartamount;
+	private double balance;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -66,6 +69,14 @@ public class UserAction extends ActionSupport {
 		this.msg = msg;
 	}
 
+	public String getRechartamount() {
+		return rechartamount;
+	}
+
+	public void setRechartamount(String rechartamount) {
+		this.rechartamount = rechartamount;
+	}
+
 	public String register() {
 		String loginName = user.getLoginName(), password = user.getPassword(), email = user.getEmail();
 		list = userServiceImpl.getUsers();
@@ -89,13 +100,6 @@ public class UserAction extends ActionSupport {
 		if (Name != null) {
 			session.put("loginName", user.getLoginName());
 		}
-		// 查询用户余额
-		List<User> balance = userServiceImpl.getBalance();
-		for (User user1 : balance) {
-			Double balances = user1.getBalance();
-			System.out.println("查询数据库用户余额：" + balances);
-			session.put("balances", balances);
-		}
 		// 查询用户id
 		List<User> userId = userServiceImpl.getUserId();
 		for (User user : userId) {
@@ -104,10 +108,17 @@ public class UserAction extends ActionSupport {
 				session.put("userId", user.getId());
 			}
 		}
+		// 查询用户余额
+		Long id = (Long) session.get("userId");
+		List<Double> cbalance = userServiceImpl.getBalance(id);
+		for (Double temp : cbalance) {
+			System.out.println("登录查询余额："+temp);
+			balance = temp;
+		}
 		// 查询用户的借出金额
 		lendlist = lendServiceImpl.getLendMoney();
 		for (Lend lend : lendlist) {
-			System.out.println("数据库查询lend.getLendMoney："+lend.getLendMoney());
+			System.out.println("数据库查询lend.getLendMoney：" + lend.getLendMoney());
 			lendMoney = lendMoney + lend.getLendMoney();
 			System.out.println("查询借出金额lendMoney：" + lendMoney);
 			session.put("LendMoney", lendMoney);
@@ -156,5 +167,37 @@ public class UserAction extends ActionSupport {
 		userServiceImpl.updateUser(id, username, age, gender, birthday, transactionpassword, bankId);
 
 		return "success";
+	}
+
+	// 充值
+	public String Recharge() {
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		Long id = (Long) session.get("userId");
+
+		double ramount = Double.valueOf(rechartamount);
+		Integer tpwd = null;
+
+		List<Integer> transactionpassword = userServiceImpl.getUserTransactionpassword(id);
+		for (Integer temp : transactionpassword) {
+			tpwd = temp;
+		}
+		Boolean result = user.getTransactionpassword().equals(tpwd);
+		System.out.println("充值-页面输入交易密码：" + user.getTransactionpassword() + "数据库查询交易密码：" + tpwd + "返回值：" + result);
+		if (user.getTransactionpassword().equals(tpwd)) {
+			System.out.println("action界面余额："+balance);
+			System.out.println("action界面id："+id);
+			System.out.println("充值余额："+ramount);
+			
+			//讲double转换为大数值进行计算，避免精度的丢失
+			BigDecimal bRAmount = new BigDecimal(ramount);
+			BigDecimal bBalance = new BigDecimal(balance);
+			BigDecimal bRechargeAmount = bRAmount.add(bBalance);
+			Double rechargeAmount = bRechargeAmount.doubleValue();
+			
+			userServiceImpl.updateBalance(id, rechargeAmount);
+			return "success";
+		} else {
+			return "false";
+		}
 	}
 }
