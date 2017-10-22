@@ -52,6 +52,7 @@
         	<tx:attributes>
         		<tx:method name="get*" propagation="REQUIRED" rollback-for="Exception"/>
         		<tx:method name="save*" propagation="REQUIRED" rollback-for="Exception"/>
+        		<tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/>
         		<tx:method name="*" propagation="SUPPORTS" read-only="true" />  
         	</tx:attributes>
         </tx:advice>

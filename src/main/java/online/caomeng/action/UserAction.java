@@ -1,5 +1,6 @@
 package online.caomeng.action;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -36,8 +37,8 @@ public class UserAction extends ActionSupport {
 	private List<User> list;
 	private String msg = "";
 	private List<Lend> lendlist;
-	private double lendMoney=0;
-	private double loanMoney=0;
+	private double lendMoney = 0;
+	private double loanMoney = 0;
 	private List<Loan> loanlist;
 
 	public String getUsers() {
@@ -84,50 +85,55 @@ public class UserAction extends ActionSupport {
 		list = userServiceImpl.getLoginUser();
 		String Name = user.getLoginName();
 		Map<String, Object> session = ActionContext.getContext().getSession();
+
 		if (Name != null) {
 			session.put("loginName", user.getLoginName());
 		}
-		//查询用户余额
+		// 查询用户余额
 		List<User> balance = userServiceImpl.getBalance();
 		for (User user1 : balance) {
 			Double balances = user1.getBalance();
-			System.out.println(balances);
+			System.out.println("查询数据库用户余额：" + balances);
 			session.put("balances", balances);
 		}
-		//查询用户id
+		// 查询用户id
 		List<User> userId = userServiceImpl.getUserId();
-	    for (User user : userId) {
-		System.out.println(user.getId());
-		session.put("userId", user.getId());
-	}
-		//查询用户的借出金额
+		for (User user : userId) {
+			if (user.getLoginName().equals(Name)) {
+				System.out.println("查询userid：" + user.getId());
+				session.put("userId", user.getId());
+			}
+		}
+		// 查询用户的借出金额
 		lendlist = lendServiceImpl.getLendMoney();
 		for (Lend lend : lendlist) {
-			System.out.println(lend.getLendMoney());
+			System.out.println("数据库查询lend.getLendMoney："+lend.getLendMoney());
 			lendMoney = lendMoney + lend.getLendMoney();
-			System.out.println(lendMoney);
+			System.out.println("查询借出金额lendMoney：" + lendMoney);
 			session.put("LendMoney", lendMoney);
 		}
-	    //查询loan信息
-	    loanlist=loanServiceImpl.getLoan();
-	   for (Loan loan : loanlist) {
-		System.out.println(loan);
-		session.put("loan", loan);
-		loanMoney=loanMoney+loan.getLoanamount();
-		System.out.println(loanMoney);
-		session.put("loanMoney", loanMoney);
-		/*session.put("loanname", loan.getLoanname());
-		session.put("loantime", loan.getLoantime());
-		session.put("returntime", loan.getReturntime());
-		session.put("loanstatus", loan.getLoanstatus());
-		session.put("loanamount", loan.getLoanamount());*/
-	}
-		//登录查询
+		// 查询loan信息
+		loanlist = loanServiceImpl.getLoan();
+		for (Loan loan : loanlist) {
+			System.out.println("查询loan信息:" + loan);
+			session.put("loan", loan);
+			loanMoney = loanMoney + loan.getLoanamount();
+			System.out.println("loanMoney:" + loanMoney);
+			session.put("loanMoney", loanMoney);
+			/*
+			 * session.put("loanname", loan.getLoanname());
+			 * session.put("loantime", loan.getLoantime());
+			 * session.put("returntime", loan.getReturntime());
+			 * session.put("loanstatus", loan.getLoanstatus());
+			 * session.put("loanamount", loan.getLoanamount());
+			 */
+		}
+		// 登录查询
 		for (User users : list) {
 			String LoginName = users.getLoginName();
 			String password = users.getPassword();
-			System.out.println(LoginName + password);
-			System.out.println(Name + user.getPassword());
+			System.out.println("登录查询数据库值：" + LoginName + password);
+			System.out.println("登录查询页面获取：" + Name + user.getPassword());
 			if (LoginName.equals(Name) && password.equals(user.getPassword())) {
 				return "LoginSuccess";
 			}
@@ -135,4 +141,20 @@ public class UserAction extends ActionSupport {
 		return "LoigFail";
 	}
 
+	// 账户设置
+	public String updateUser() {
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		Long id = (Long) session.get("userId");
+		System.out.println("账户设置id：" + id);
+		String username = user.getUsername();
+		Integer age = user.getAge();
+		String gender = user.getGender();
+		Date birthday = user.getBirthday();
+		Integer transactionpassword = user.getTransactionpassword();
+		String bankId = user.getBankId();
+
+		userServiceImpl.updateUser(id, username, age, gender, birthday, transactionpassword, bankId);
+
+		return "success";
+	}
 }

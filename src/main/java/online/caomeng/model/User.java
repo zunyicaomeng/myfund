@@ -43,7 +43,7 @@ public class User {
 	private Integer age;
 
 	// 性别 1.男  2.女
-	private Integer gender;
+	private String gender;
 
 	// 出生年月
 	private Date birthday;
@@ -64,7 +64,7 @@ public class User {
 	private Integer transactionpassword;
 
 	// 银行卡号
-	private Integer bankId;
+	private String bankId;
 
 	// 解冻时间
 	private Date thawingTime;
@@ -119,7 +119,7 @@ public class User {
 	}
 
 	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
+			this.birthday = birthday;
 	}
 
 	public Date getCreateDate() {
@@ -154,11 +154,11 @@ public class User {
 		this.transactionpassword = transactionpassword;
 	}
 
-	public Integer getBankId() {
+	public String getBankId() {
 		return bankId;
 	}
 
-	public void setBankId(Integer bankId) {
+	public void setBankId(String bankId) {
 		this.bankId = bankId;
 	}
 	
@@ -186,11 +186,11 @@ public class User {
 		this.age = age;
 	}
 
-	public Integer getGender() {
+	public String getGender() {
 		return gender;
 	}
 
-	public void setGender(Integer gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
@@ -234,8 +234,8 @@ public class User {
 	}
 
 	// 设置账户信息
-	public User(String username, Integer age, Integer gender, Date birthday, Integer transactionpassword,
-			Integer bankId) {
+	public User(String username, Integer age, String gender, Date birthday, Integer transactionpassword,
+			String bankId) {
 		super();
 		this.username = username;
 		this.age = age;
@@ -246,7 +246,7 @@ public class User {
 	}
 
 	// 修改账户信息
-	public User(String username, String password, Integer age, Integer transactionpassword, Integer bankId) {
+	public User(String username, String password, Integer age, Integer transactionpassword, String bankId) {
 		super();
 		this.username = username;
 		this.password = password;
@@ -259,8 +259,8 @@ public class User {
 		super();
 	}
 
-	public User(String loginName, String username, String password, Integer age, Integer gender, Date birthday,
-			String email, Date createDate, String status, Double balance, Integer transactionpassword, Integer bankId,
+	public User(String loginName, String username, String password, Integer age, String gender, Date birthday,
+			String email, Date createDate, String status, Double balance, Integer transactionpassword, String bankId,
 			Date thawingTime, Integer userState) {
 		super();
 		this.loginName = loginName;

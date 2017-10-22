@@ -4,17 +4,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
-
-import online.caomeng.action.UserAction;
 import online.caomeng.common.UserDao;
 import online.caomeng.model.User;
 
@@ -56,10 +49,28 @@ public class UserDaoImpl {
 		Map<String, Object> session = ActionContext.getContext().getSession();
 		String loginName = (String) session.get("loginName");
 		System.out.println(loginName);
-
 		List<User> list = (List<User>) userDao.getHibernateTemplate()
 				.find("from User where loginName =" + "loginName" + "");
 		System.out.println(list);
 		return list;
 	}
+
+		@SuppressWarnings("unchecked")
+		public List<User> getRegisterUser(){
+			return (List<User>) userDao.getHibernateTemplate().find("select u.user_loginName,u.password,u.email,"
+					+ "from User u");
+			
+		}
+		
+		public void updateUser(Long id,String username,Integer age,String gender,Date birthday,Integer transactionpassword,String bankId) {
+			User user = userDao.getHibernateTemplate().get(User.class, id);
+			user.setUsername(username);
+			user.setAge(age);
+			user.setGender(gender);
+			user.setBirthday(birthday);
+			user.setTransactionpassword(transactionpassword);
+			user.setBankId(bankId);
+			userDao.getHibernateTemplate().update(user);
+		}
+
 }

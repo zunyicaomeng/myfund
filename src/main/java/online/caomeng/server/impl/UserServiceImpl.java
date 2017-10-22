@@ -1,11 +1,11 @@
 package online.caomeng.server.impl;
 
-import java.util.List;import javax.jws.soap.SOAPBinding.Use;
 
+import java.util.List;
+
+import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.opensymphony.xwork2.ActionSupport;
 
 import online.caomeng.dao.Impl.UserDaoImpl;
 import online.caomeng.model.User;
@@ -31,6 +31,15 @@ public class UserServiceImpl{
 //查询用户余额
 		public List<User> getBalance(){
 			return userDaoImpl.getBalance();
+		}
+		
+		public List<User> getRegisterUser(){
+			return userDaoImpl.getRegisterUser();
+			
+		}
+
+		public void updateUser(Long id,String username,Integer age,String gender,Date birthday,Integer transactionpassword,String bankId) {
+			userDaoImpl.updateUser(id,username,age,gender,birthday,transactionpassword,bankId);
 		}
 
 		public List<User> getUserId(){

@@ -124,24 +124,24 @@
         <div id="account-middle-right">
             <div id="AccountSetting-top-div">
                 <p id="AccountSetting-top-div-one">账号设置</p>
-                <form id="AccountSetting-form">
+                <form id="AccountSetting-form" action="updateUser" method="post">
                     <p class="AccountSetting-top-div-account">个人信息</p>
                     <hr>
-                    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text"></p>
-                    <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text"></p>
+                    <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" name="user.username"></p>
+                    <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text" name="user.age"></p>
                     <p>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别： <input type="radio" name="user.gender" checked="checked" value="male">男
                         <input type="radio" name="user.gender" value="female">女</p>
-                    <p>出生年月日：<input type="text" placeholder="yyyy/mm/dd"></p>
+                    <p>出生年月日：<input type="date" name="user.birthday"></p>
                     <p class="AccountSetting-top-div-account">设置交易密码</p>
                     <hr>
                     <p class="AccountSetting-top-div-two">使用快捷支付进行账户资金提现时，需要验证交易密码。</p>
                     <p class="AccountSetting-top-div-two">为保障您的账户资金安全，请您设置交易密码。交易密码需与微理财登录密码不一致。</p>
-                    <p>交&nbsp;易&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的密码" id="input2" name="user.password"></p>
-                    <p> 重&nbsp;复&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的确认秘密" id="input3" name="user.repeatPassword"></p>
+                    <p>交&nbsp;易&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的密码" id="input2" name="user.transactionpassword"></p>
+                    <p> 重&nbsp;复&nbsp;密&nbsp;码：<input type="password" placeholder="请输入您的确认秘密" id="input3"></p>
                    <p class="AccountSetting-top-div-account">设置银行卡号</p>
                     <hr>
                     <p class="AccountSetting-top-div-two">请谨慎输入您的银行卡号。</p>
-                    <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name=""></p>
+                    <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name="user.bankId"></p>
                     <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
                 </form>
             </div>
