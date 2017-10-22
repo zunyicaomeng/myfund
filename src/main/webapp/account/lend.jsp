@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
       <%@ taglib prefix="s" uri="/struts-tags"%>
-      <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+      <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -146,14 +146,15 @@
                         <td>出借时间</td>
                         <td>归还时间</td>
                     </tr>
-                 <%-- <c:forEach var="item" items="${sessionScope.loan}"> --%>
+                  <c:forEach var="item" items="${seesion.loan}">
                     <tr>
-                        <td>${temp.loanname }</td>
-                        <td>${temp.loanname }</td>
-                        <td>${temp.loanname }</td>
-                        <td>${temp.loanname }</td>
-                        <td>${temp.loanname }</td>
+                        <td><c:out value="${item.loanname}"></c:out></td>
+                        <td><c:out value="${item.loanstatus}"></c:out></td>
+                        <td><c:out value="${item.loanamount}"></c:out></td>
+                        <td><c:out value="${item.loantime}"></c:out></td>
+                        <td><c:out value="${item.returntime}"></c:out></td>
                     </tr>
+                    </c:forEach>
                 </table>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
