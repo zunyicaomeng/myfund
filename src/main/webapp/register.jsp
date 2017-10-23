@@ -13,6 +13,7 @@
     <script src="/My-Fund/js/jquery.min.js"></script>
     <script src="/My-Fund/js/bg.js" type="text/javascript"></script>
     <script src="/My-Fund/js/team.js"></script>
+    <script src="/My-Fund/js/check.js"></script>
 </head>
 <body>
 <div id="background">
@@ -132,7 +133,7 @@
                     <input type="email" placeholder="邮箱" class="inputinfo" id="input_em" name="user.email">
                 </div>
                 <div id="input_btn_register">
-                    <input type="submit" value="注册" id="btn_register" class="btn">
+                    <input type="submit" value="注册" id="btn_register" class="btn" onclick="return register()">
                 </div>
             </form>
         </div>
