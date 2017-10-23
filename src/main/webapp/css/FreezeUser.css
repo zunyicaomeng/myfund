@@ -1,0 +1,83 @@
+#freeze1{
+    border-radius:20px;
+    width: 20%;
+    height:25px;
+  background-color: #797A7C;
+}
+#freeze2{
+    margin-top:30px ;
+}
+#freeze3{
+    width: 20%;
+    height: 20px;
+    background-size: 100% 100%;
+
+}
+#freeze4{
+    width: 20%;
+    height: 20px;
+    background-size: 100% 100%;
+
+}
+
+
+#freeze5{
+    border-radius:20px;
+    background: url("../images/bank.jpg");
+    width: 20%;
+    height: 100px;
+    background-size: 100% 100%;
+    float: right;
+    margin-top: 150px;
+}
+#freeze6{
+    border-radius:20px;
+    width: 30%;
+    height: 20px;
+    background-size: 100% 100%;
+}
+#freeze7{
+    margin-top:30px ;
+}
+#freeze8{
+     border-radius:20px;
+     width: 20%;
+     height:40px;
+     background-color: #a7a7a7;
+
+ }
+#freeze9{
+    border-radius:20px;
+    width: 20%;
+    height:40px;
+   background-color: #bcaaa4;
+}
+#freeze-div1{
+    border-radius:20px;
+    width: 10%;
+    height:40px;
+  background-color: #bcaaa4;
+}
+#freeze-div2{
+    border-radius:20px;
+    width: 30%;
+    height:20px;
+    border-color: #00a2e8;
+
+}
+#freeze-div3{
+    border-radius:20px;
+    width: 10%;
+    height:40px;
+    background-color: #bcaaa4;
+}
+#freeze-div4{
+    border-radius:20px;
+    width: 30%;
+    height:20px;
+    border-color: #00a2e8;
+
+}
+
+
+
