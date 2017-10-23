@@ -18,4 +18,13 @@ public class LoanServiceImpl {
 
 	}
 
+	 public List<Loan> getLoanDemo(){
+		 return loanDaoImpl.getLoanDemo();
+	 }
+	 public Long getId(){
+		 return loanDaoImpl.getId();
+	 }
+	 public List<Long> getNumberLoan(){
+		 return loanDaoImpl.getNumberLoan();
+	 }
 }

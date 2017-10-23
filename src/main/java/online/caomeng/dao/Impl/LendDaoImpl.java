@@ -32,7 +32,6 @@ public class LendDaoImpl {
 	}
 
 
-
 	public void lendAmount(String lendName,Double lendMoney,Date returnTime,Long userId,Double loginBalance,Double lBalance,Long lendId) {
 		User user = userDao.getHibernateTemplate().get(User.class, userId);
 		user.getLends().add(new Lend(lendName, new Date(), returnTime, 2, lendMoney));
@@ -46,6 +45,20 @@ public class LendDaoImpl {
 		
 		
 	}
+	//查询Lend表的数据
+		 @SuppressWarnings("unchecked")
+		 public List<Lend> getLendDemo(){
+			 return (List<Lend>) userDao.getHibernateTemplate().find("from Lend ");
+		 }
+		 //查询数量
+		 @SuppressWarnings("unchecked")
+		 public List<Long> getNumberLend(){
+			 Map<String, Object> session=ActionContext.getContext().getSession();
+			 Long userId=(Long) session.get("userId");
+			List<Long>  numberlend=(List<Long>) userDao.getHibernateTemplate().find("select  count(id) from Lend where user_id="+userId+"");
+			System.out.println("lend的数量"+numberlend);
+			return numberlend;
+		 }
 	
 
 }

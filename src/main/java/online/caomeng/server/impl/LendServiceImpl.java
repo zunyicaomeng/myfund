@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import online.caomeng.dao.Impl.LendDaoImpl;
 import online.caomeng.model.Lend;
-import online.caomeng.model.User;
 
 @Service
 public class LendServiceImpl {
@@ -24,4 +23,10 @@ public class LendServiceImpl {
 		lendDaoImpl.lendAmount(lendName, lendMoney, returnTime,userId,loginBalance,lBalance,lendId);
 	}
 
+	 public List<Lend> getLendDemo(){
+		 return lendDaoImpl.getLendDemo();
+	 }
+	 public List<Long> getNumberLend(){
+		 return lendDaoImpl.getNumberLend();
+	 }
 }

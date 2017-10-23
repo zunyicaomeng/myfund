@@ -16,7 +16,7 @@ public class LoanDaoImpl {
 	@Autowired
 	private UserDao userDao;
 	
-	
+	//查询用户id为xx对应的loan表的数据
 	 @SuppressWarnings("unchecked")
 	public List<Loan> getLoan(){
 		Map<String, Object> session=ActionContext.getContext().getSession();
@@ -25,5 +25,30 @@ public class LoanDaoImpl {
 		System.out.println(list);
 		return list;
 	}
-
+//查询loan表的数据
+	 @SuppressWarnings("unchecked")
+	 public List<Loan> getLoanDemo(){
+		 Map<String, Object> session=ActionContext.getContext().getSession();
+		
+		 return (List<Loan>) userDao.getHibernateTemplate().find("from Loan ");
+	 }
+	 //查询数量
+	 @SuppressWarnings("unchecked")
+	 public List<Long> getNumberLoan(){
+		 Map<String, Object> session=ActionContext.getContext().getSession();
+		 Long userId=(Long) session.get("userId");
+		List<Long>  numberloan=(List<Long>) userDao.getHibernateTemplate().find("select  count(id) from Loan where user_id="+userId+"");
+		System.out.println("loan的数量"+numberloan);
+		return numberloan;
+	 }
+	 //总出借数
+	 public Long getId(){
+		 Map<String, Object> session=ActionContext.getContext().getSession();
+		 Long numberlend=(Long) session.get("numberlend");
+		 Long numberloan=(Long) session.get("numberloan");
+		 System.out.println("numberlend"+numberlend+"loanId"+numberloan);
+		 Long numberAll=numberlend+numberloan;
+		 System.out.println("总出借数："+numberAll);
+		 return numberAll;
+	 }
 }

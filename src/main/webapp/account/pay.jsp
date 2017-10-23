@@ -15,6 +15,7 @@
 <link type="text/css" href="/My-Fund/css/top.css" rel="stylesheet">
 <link type="text/css" href="/My-Fund/css/footer.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/My-Fund/css/pay.css">
+<link rel="stylesheet" type="text/css" href="/My-Fund/css/footer.css">
 <style type="text/css">
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 	-webkit-appearance: none !important;
@@ -123,18 +124,18 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 		<div id="pay_part">
 			<div id="part_p">
 				<form action="recharge" method="post">
-					<p class="case">
-						充值金额：<input type="number" name="rechartamount"
-							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
-							placeholder="请输入充值金额：">
-					</p>
-					<p class="case">
-						交易密码：<input type="password" name="user.transactionpassword"
-							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
-							placeholder="请输入交易密码：">
-					</p>
-					<p class="case">快捷支付</p>
-					<p id="case_p"></p>
+				<p class="case">
+					充值金额：<input type="number" name="rechartamount"
+						style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
+						placeholder="请输入充值金额：" id="pay_money">
+				</p>
+				<p class="case">
+					交易密码：<input type="password" name="user.transactionpassword"
+						style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
+						placeholder="请输入交易密码：" id="pay_password">
+				</p>
+				<p class="case">快捷支付</p>
+				<p id="case_p"></p>
 					<div id="part_t">
 						<p class="case">
 							<img src="/My-Fund/images/E-bank.jpg" id="E-bank">
@@ -159,10 +160,11 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 						</div>
 					</div>
 					<div id="part_r">
-						<input type="submit" value="充值" class="button">
+						<input type="submit" value="充值" class="button" onclick="return pay()">
 						<input type="button" value="返回" class="button" id="return">
 					</div>
 				</form>
+				</div>
 			</div>
 
 		</div>
