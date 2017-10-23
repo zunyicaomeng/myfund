@@ -67,6 +67,8 @@
 				rollback-for="Exception" />
 			<tx:method name="update*" propagation="REQUIRED"
 				rollback-for="Exception" />
+			<tx:method name="lend*" propagation="REQUIRED"
+				rollback-for="Exception" />
 			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
 		</tx:attributes>
 	</tx:advice>

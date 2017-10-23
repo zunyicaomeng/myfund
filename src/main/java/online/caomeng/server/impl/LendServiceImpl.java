@@ -1,5 +1,6 @@
 package online.caomeng.server.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import online.caomeng.dao.Impl.LendDaoImpl;
 import online.caomeng.model.Lend;
+import online.caomeng.model.User;
 
 @Service
 public class LendServiceImpl {
@@ -15,6 +17,11 @@ public class LendServiceImpl {
 	
 	public List<Lend> getLendMoney(){
 		return lendDaoImpl.getLendMoney();
+	}
+
+	public void lendAmount(String lendName,Double lendMoney,Date returnTime,Long userId,Double loginBalance,Double lBalance,Long lendId) {
+		
+		lendDaoImpl.lendAmount(lendName, lendMoney, returnTime,userId,loginBalance,lBalance,lendId);
 	}
 
 }
