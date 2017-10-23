@@ -42,7 +42,6 @@ public class UserAction extends ActionSupport {
 	private double loanMoney = 0;
 	private List<Loan> loanlist;
 	private String rechartamount;
-	private double balance;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -113,7 +112,7 @@ public class UserAction extends ActionSupport {
 		List<Double> cbalance = userServiceImpl.getBalance(id);
 		for (Double temp : cbalance) {
 			System.out.println("登录查询余额："+temp);
-			balance = temp;
+			session.put("balances", temp);
 		}
 		// 查询用户的借出金额
 		lendlist = lendServiceImpl.getLendMoney();
@@ -173,6 +172,7 @@ public class UserAction extends ActionSupport {
 	public String Recharge() {
 		Map<String, Object> session = ActionContext.getContext().getSession();
 		Long id = (Long) session.get("userId");
+		double balance = (double) session.get("balances");
 
 		double ramount = Double.valueOf(rechartamount);
 		Integer tpwd = null;
@@ -193,6 +193,7 @@ public class UserAction extends ActionSupport {
 			BigDecimal bBalance = new BigDecimal(balance);
 			BigDecimal bRechargeAmount = bRAmount.add(bBalance);
 			Double rechargeAmount = bRechargeAmount.doubleValue();
+			session.put("balances", rechargeAmount);
 			
 			userServiceImpl.updateBalance(id, rechargeAmount);
 			return "success";
@@ -200,4 +201,5 @@ public class UserAction extends ActionSupport {
 			return "false";
 		}
 	}
+	
 }

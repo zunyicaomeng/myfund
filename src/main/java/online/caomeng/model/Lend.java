@@ -22,7 +22,7 @@ public class Lend {
 	private Date lendTime;
 	//归还时间
 	private Date returnTime;
-	//状态
+	//状态 1、归还 2、为归还
 	private Integer lendState;
 	//借款金额
 	private Double lendMoney;

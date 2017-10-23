@@ -127,9 +127,9 @@
                 <form id="AccountSetting-form">
                     <p class="AccountSetting-top-div-account">借款信息</p>
                     <hr>
-                    <p>借&nbsp;款&nbsp;人&nbsp;：<input type="text" class="AccountSetting_pt"></p>
-                    <p>归还时间：<input type="text" placeholder="yyyy/mm/dd" class="AccountSetting_pt"></p>
-                    <p>借款金额：<input type="text" placeholder="yyyy/mm/dd" class="AccountSetting_pt"></p>
+                    <p>出&nbsp;款&nbsp;人&nbsp;：<input type="text" class="AccountSetting_pt"></p>
+                    <p>归还时间：<input type="date" class="AccountSetting_pt"></p>
+                    <p>出款金额：<input type="text" class="AccountSetting_pt"></p>
                     <p id="hidden"></p>
                     <hr>
                     <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
