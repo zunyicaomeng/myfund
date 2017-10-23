@@ -125,14 +125,14 @@
         <div id="account-middle-right">
             <h2>出借记录 </h2>
             <ul class="lend-ul">
-                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span">0</span></li>
+                <li style="width: 10%"><span>持有中</span><span class="lend-ul-span"><s:property value="#session.numberAll" /></span></li>
                 <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
                 <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
             </ul>
             <hr>
             <div class="lend-ul-two">
                 <ul class="lend-ul ">
-                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span>0</span>个</li>
+                    <li style="width: 20%">出借订单&nbsp;&nbsp;共<span><s:property value="#session.numberloan" /></span>个</li>
                     <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
                     <li style="width: 40%">出借总额(含续投本金)<span>￥<s:property value="#session.loanMoney" /></span></li>
                 </ul>
@@ -146,22 +146,25 @@
                         <td>出借时间</td>
                         <td>归还时间</td>
                     </tr>
-                  <c:forEach var="item" items="${seesion.loan}">
+                 
+          
+             
+               <c:forEach var="item" items="${session.loanlist}">  
                     <tr>
-                        <td><c:out value="${item.loanname}"></c:out></td>
-                        <td><c:out value="${item.loanstatus}"></c:out></td>
-                        <td><c:out value="${item.loanamount}"></c:out></td>
-                        <td><c:out value="${item.loantime}"></c:out></td>
-                        <td><c:out value="${item.returntime}"></c:out></td>
+                        <td>${item.loanname }</td>
+                      <td>${item.loanstatus }</td>
+                      <td>${item.loanamount}</td>
+                      <td>${item.loantime}</td>
+                      <td>${item.returntime}</td>
                     </tr>
-                    </c:forEach>
+              </c:forEach>
                 </table>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
               <hr>
             <div class="lend-ul-two">
                 <ul class="lend-ul ">
-                    <li style="width: 20%">借款订单&nbsp;&nbsp;共<span>0</span>个</li>
+                    <li style="width: 20%">借款订单&nbsp;&nbsp;共<span><s:property value="#session.numberlend" /></span>个</li>
                     <li style="width: 40%">当前累计期望回报&nbsp;&nbsp;<span>￥0.00</span></li>
                     <li style="width: 40%">借款总额(含续投本金)<span>￥<s:property value="#session.LendMoney" /></span></li>
                 </ul>
@@ -175,13 +178,15 @@
                         <td>借款时间</td>
                         <td>归还时间</td>
                     </tr>
+                    <c:forEach var="item" items="${session.lendlist}">  
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>${item.lendName }</td>
+                      <td>${item.lendState }</td>
+                      <td>${item.lendMoney }</td>
+                      <td>${item.lendTime }</td>
+                      <td>${item.returnTime }</td>
                     </tr>
+              </c:forEach>
                 </table>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>

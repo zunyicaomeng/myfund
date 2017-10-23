@@ -16,5 +16,10 @@ public class LendServiceImpl {
 	public List<Lend> getLendMoney(){
 		return lendDaoImpl.getLendMoney();
 	}
-
+	 public List<Lend> getLendDemo(){
+		 return lendDaoImpl.getLendDemo();
+	 }
+	 public List<Long> getNumberLend(){
+		 return lendDaoImpl.getNumberLend();
+	 }
 }

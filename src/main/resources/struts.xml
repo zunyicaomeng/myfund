@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
-	"http://struts.apache.org/dtds/struts-2.3.dtd">
+	"http://struts.apache.org/dtds/struts-2.3.dtd 
+
+">
 
 <struts>
     <package name="default" namespace="/" extends="struts-default">
@@ -22,6 +24,9 @@
         <action name="recharge" class="userAction" method="Recharge">
         	<result>/account/account.jsp</result>
         	<result name="false">/account/pay.jsp</result>
+        </action>
+        <action name="lendSettings" class="lendAction" method="lendAmount">
+        	<result>/account/account.jsp</result>
         </action>
     </package>
 </struts>

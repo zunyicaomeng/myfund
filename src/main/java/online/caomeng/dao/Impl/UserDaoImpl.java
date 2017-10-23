@@ -51,7 +51,7 @@ public class UserDaoImpl {
 		String loginName = (String) session.get("loginName");
 		System.out.println(loginName);
 		List<User> list = (List<User>) userDao.getHibernateTemplate()
-				.find("from User where loginName =" + "loginName" + "");
+				.find("from User where loginName =" + "loginName"+ "");
 		System.out.println(list);
 		return list;
 	}
