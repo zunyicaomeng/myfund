@@ -149,7 +149,7 @@
                  
           
              
-               <c:forEach var="item" items="${session.loanlist}">  
+               <c:forEach var="item" items="${session.listpageloan}">  
                     <tr>
                         <td>${item.loanname }</td>
                       <td>${item.loanstatus }</td>
@@ -159,6 +159,12 @@
                     </tr>
               </c:forEach>
                 </table>
+                <form action="getpageLoanAndLend">
+                <%int p=(int)session.getAttribute("pageloan"); %>
+                <%for(int i=1;i<=p;i++){ %>
+                <input type="submit" name="i" value="<%=i %>">
+                <%}; %>
+                </form>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
               <hr>
@@ -178,7 +184,7 @@
                         <td>借款时间</td>
                         <td>归还时间</td>
                     </tr>
-                    <c:forEach var="item" items="${session.lendlist}">  
+                    <c:forEach var="item" items="${session.listpagelend}">  
                     <tr>
                         <td>${item.lendName }</td>
                       <td>${item.lendState }</td>
@@ -188,6 +194,12 @@
                     </tr>
               </c:forEach>
                 </table>
+                <form action="getpageLoanAndLend">
+                <%int a=(int)session.getAttribute("pagelend"); %>
+                <%for(int x=1;x<=a;x++){ %>
+                <input type="submit" name="x" value="<%=x %>">
+                <%}; %>
+                </form>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
             </div>
         </div>

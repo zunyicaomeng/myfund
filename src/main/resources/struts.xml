@@ -38,7 +38,9 @@
         	<result name="success">/account/account.jsp</result>
         	<result name="false">/account/ Repayment.jsp</result>
         </action>
-       
+       <action name="getpageLoanAndLend" class="userAction" method="getpageLoanAndLend">
+        	<result name="success">/account/lend.jsp</result>
+        </action>
         
     </package>
 </struts>

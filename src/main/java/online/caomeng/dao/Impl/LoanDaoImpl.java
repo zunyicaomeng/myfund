@@ -4,11 +4,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import com.opensymphony.xwork2.ActionContext;
 
+import online.caomeng.action.UserAction;
 import online.caomeng.common.UserDao;
 import online.caomeng.model.Lend;
 import online.caomeng.model.Loan;
@@ -18,6 +22,8 @@ import online.caomeng.model.User;
 public class LoanDaoImpl {
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private UserAction useraction;
 	
 	//查询用户id为xx对应的loan表的数据
 	 @SuppressWarnings("unchecked")
@@ -75,4 +81,21 @@ public class LoanDaoImpl {
 			
 			
 		}
+	 //分页查询loan
+	 @SuppressWarnings("unchecked")
+	 public List<Loan> getpageloan(){
+		 int i=useraction.getI();
+		 System.out.println("获取到的i:"+i);
+		 List<Loan> list=(List<Loan>) userDao.getHibernateTemplate().execute(new HibernateCallback() {
+
+			@Override
+			public Object doInHibernate(Session session) throws HibernateException {
+				List result=session.createQuery("from Loan").setFirstResult((i-1)*2).setMaxResults(2).list();
+
+				return result;
+			}
+		});
+		 System.out.println(list);
+		 return list;
+	 }
 }

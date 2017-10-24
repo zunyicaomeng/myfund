@@ -5,8 +5,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.SessionAware;
@@ -44,6 +42,8 @@ public class UserAction extends ActionSupport {
 	private List<Loan> loanlist;
 	private String rechartamount;
 	private Long numberAll;
+	private int i=1;
+	private int x=1;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -76,6 +76,22 @@ public class UserAction extends ActionSupport {
 
 	public void setRechartamount(String rechartamount) {
 		this.rechartamount = rechartamount;
+	}
+
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
 	}
 
 	//注册
@@ -154,10 +170,33 @@ public class UserAction extends ActionSupport {
 				numberAll=loanServiceImpl.getId();
 				session.put("numberAll", numberAll);
 				
-				Long numberall=(Long) session.get("numberAll");
-				 Long pages= numberall/2+1;
-				 System.out.println("z总页数："+pages);
-				 session.put("pages", pages);
+				Long numberloan1=(Long) session.get("numberloan");
+				if (numberloan1%2==0) {
+					int pageloan=(int) (numberloan1/2);
+					System.out.println("pageloan页数："+pageloan);
+					session.put("pageloan", pageloan);
+				}else{
+					int pageloan=(int) (numberloan1/2+1);
+					System.out.println("pageloan页数："+pageloan);
+					session.put("pageloan", pageloan);
+				}
+				Long numberlend1=(Long) session.get("numberlend");
+				if (numberlend1%2==0) {
+					int pagelend=(int) (numberlend1/2);
+					System.out.println("pageloan页数："+pagelend);
+					session.put("pagelend", pagelend);
+				}else{
+					int pagelend=(int) (numberlend1/2+1);
+					System.out.println("pageloan页数："+pagelend);
+					session.put("pagelend", pagelend);
+				}
+				List<Loan> listpageloan=loanServiceImpl.getpageloan();
+				session.put("listpageloan", listpageloan);
+				
+				List<Lend> listpagelend=lendServiceImpl.getpagelend();
+				session.put("listpagelend", listpagelend);
+				
+				
 		// 登录查询
 		for (User users : list) {
 			String LoginName = users.getLoginName();
@@ -226,5 +265,15 @@ public class UserAction extends ActionSupport {
 		} else {
 			return "false";
 		}
+	}
+	public String getpageLoanAndLend(){
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		List<Loan> listpageloan=loanServiceImpl.getpageloan();
+		session.put("listpageloan", listpageloan);
+		
+		List<Lend> listpagelend=lendServiceImpl.getpagelend();
+		session.put("listpagelend", listpagelend);
+		
+		return "success";
 	}
 }

@@ -29,4 +29,7 @@ public class LendServiceImpl {
 	 public List<Long> getNumberLend(){
 		 return lendDaoImpl.getNumberLend();
 	 }
+	 public List<Lend> getpagelend(){
+		 return lendDaoImpl.getpagelend();
+	 }
 }

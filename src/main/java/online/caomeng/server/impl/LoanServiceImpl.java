@@ -34,4 +34,7 @@ public class LoanServiceImpl {
 	 public List<Long> getNumberLoan(){
 		 return loanDaoImpl.getNumberLoan();
 	 }
+	 public List<Loan> getpageloan(){
+		 return loanDaoImpl.getpageloan();
+	 }
 }
