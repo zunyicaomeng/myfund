@@ -53,9 +53,9 @@
         <hr>
         <div id="loginDemo">
             <div id="account-middle-middle">
-            <div id="login1" >管理员登陆系统后，对可以使用本系统的各类用户进行设置</div>
-            <div id="login2">管理员可以添加一个用户可以使用管理员后台系统进行管理</div>
-            <div id="login3">管理员可以修改登陆用户的用户名和密码、禁用用户登陆、删除登陆用户</div>
+            <p class="admin_p">一丶管理员登陆系统后，对可以使用本系统的各类用户进行设置</p>
+            <p class="admin_p">二丶管理员可以添加一个用户可以使用管理员后台系统进行管理</p>
+            <p class="admin_p">三丶管理员可以修改登陆用户的用户名和密码、禁用用户登陆、删除登陆用户</p>
         </div>
         </div>
 
