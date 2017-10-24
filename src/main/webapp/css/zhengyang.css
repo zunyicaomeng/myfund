@@ -1,0 +1,65 @@
+.chujieren{
+	width: 100%;
+    height: 259px;
+    border: 2px;
+ 
+
+}
+.chujieren-left{
+	float: left;
+	width: 30%;
+	height: 100%;
+	border:2px,solid;
+	color: black;
+	text-align: center;
+	margin-left: 30px;
+}
+.chujieren-right{
+	width: 50%;
+	height: 100%;
+	float:right;
+	margin-right: 100px;
+	border-left: 2px solid #fff;
+
+}
+h4{
+	text-align: left;
+	padding: 2px;
+
+}
+h3{
+	color: #fff;
+    font-size: 20px;
+    background-color: #6ABB78;
+}
+.arven{
+	height: 100px;
+	width: 100px;
+	
+}
+p{
+
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    
+}
+.yang{
+	width:1300px;
+	height:544px;
+	
+}
+.zy{
+	text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.yang p.pon{
+	text-indent: 2em;
+}
+.yang p{
+	font-size: 14px;
+    line-height: 22px;
+}
+
