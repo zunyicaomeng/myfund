@@ -54,8 +54,7 @@
                 <p>用户密码： <input type="password" value="" class="text2" name = "userpass" id = "border1"/></p>
                 <hr>
 
-                <button type="button"  id="freeze8"style="border-color: black"  onclick="testOne();">
-                    <B>登录</B></button>
+               
 
                 <hr>
               <div ><B>禁止转账：</B></div>

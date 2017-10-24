@@ -5,15 +5,38 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link type="text/css" href="css/Delete.css" rel="stylesheet">
+<style type="text/css">
+        table{
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+    <link type="text/css" href="/My-Fund/css/Delete.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/StyleDemo.css" rel="stylesheet">
-    <link type="text/css" href="/My-Fund/css/Mondify.css" rel="stylesheet">
     <link type="text/css" href="/My-Fund/css/FreezeUser.css" rel="stylesheet">
-<link type="text/css" href="/My-Fund/css/Delete.css" rel="stylesheet">
-    <script src="/My-Fund/plugins/jquery-3.2.1.min.js"></script>
-    <script src="/My-Fund/js/all.js" type="text/javascript"></script>
+    <link type="text/css" href="/My-Fund/css/Mondify.css" rel="stylesheet">
     <script src="/My-Fund/js/InterfaceJump.js" type="text/javascript"></script>
-</head>
+    <script type="text/javascript" src="/My-Fund/jquery-3.2.1.min.js"></script>
+    <script src="https://libs.baidu.com/jquery.min.js" type="text/javascript"></script>
+    <script  type="text/javascript">
+        function fun(){
+
+            $("input:checkbox:checked").each(function(){
+            n = $(this).parents("tr").index();
+            $("table#table").find("tr:eq(" + n + ")").remove();
+       })
+        }
+        $(function () {
+            $("#all").click(function () {
+                $('input[name="demo"]').prop("checked",this.checked);
+            });
+            var $subBox = $("input[name='demo']");
+            $subBox.click(function () {
+                $("#all").prop("checked",$subBox.length == $("input[name='demo']:checked").length ? true : false);
+            })
+        })
+    </script>
+
 </head>
 <body>
 <div id="account-backdrop">
@@ -34,74 +57,59 @@
         </div>
     </div>
     <div id="account-middle">
-        <div id="account-middle-little">
         <div id="account-middle-left">
             <div id="account-middle-left-div"></div>
-            <button onclick="anim();" >用户管理
-                </button>
-                    <button onclick=" MondifyUser();" >管理员
-                        </button>
-                            <button onclick=" FreezeUser();">用户权限
-                                </button>
-            <button onclick=" UserDelete();">用户删除
+            <button onclick="anim();">用户管理
+            </button>
+            <button onclick="MondifyUser();">管理员
+            </button>
+            <button onclick="FreezeUser();">用户权限
+            </button>
+            <button onclick="UserDelete();">用户权限
             </button>
 
         </div>
         <div id="account-middle-right">
-<div>
-    <div id="tableDemo">
-        <B>一、用户管理界面</B>
-        <hr>
-        <div id="loginDemo">
-            <div id="account-middle-middle">
-            <div id="login1" >管理员登陆系统后，对可以使用本系统的各类用户进行设置</div>
-            <div id="login2">管理员可以添加一个用户可以使用管理员后台系统进行管理</div>
-            <div id="login3">管理员可以修改登陆用户的用户名和密码、禁用用户登陆、删除登陆用户</div>
-        </div>
-        </div>
+            <div>
+                <hr>
+                <div id="delete2"></div>
+                <div id="delete8"><B>用户删除</B></div>
+                <hr>
+                <div id="delete7"></div>
+                <form id="formid"  name= "myform" method = 'post'  action = 'user_login_submit.action' onsubmit = "return checkUser();" >
+                    <div id="loginDemo9"></div>
+                    <p>用户账号：<input name="name"type="text" id="border" ></p>
+                    <div id="loginDemo7"></div>
+                    <p>用户密码： <input type="password" value="" class="text2" name = "userpass" id = "border1"/></p>
+                <div id="delete4"></div>
+                    <button onclick="" id="delete6"><B>登录</B></button>
+                    <hr>
+                <div>管理员可以在后台对用户的信息进行删除</div>
+<table border="1" width="300px" align="center" cellspacing="0" id="table">
+    <tr>
+        <th></th>
+        <th>用户ID</th>
+        <th>用户账号</th>
+        <th>用户密码</th>
+        <th>借出总金额</th>
+        <th>借入总金额</th>
+    </tr>
 
-    <table  border="1" width="600px" align="center" cellspacing="0">
-        <tr>
-            <div id="tableDemo1"><B>二、用户登录信息</B></div>
-            <hr>
-            <td height="60px" width="150px" align="center" valign="middle" ><B>账户名</B></td>
-            <td height="60px" width="150px" align="center" valign="middle" ><B>账户密码</B></td>
-            <td height="60px" width="150px" align="center" valign="middle" ><B>借出总金额</B></td>
-            <td height="60px" width="150px" align="center" valign="middle" ><B>借入总金额</B></td>
+    <tr>
+        <td><input type="checkbox" name="demo"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
 
-        </tr>
-        <tr>
-            <td  height="60px" width="100px" align="center" valign="middle"> </td>
-            <td  height="60px" width="100px" align="center" valign="middle"> </td>
-            <td  height="60px" width="100px" align="center" valign="middle"> </td>
-            <td  height="60px" width="100px" align="center" valign="middle"> </td>
+    </tr>
 
-        </tr>
-
-    </table>
-        <hr>
-        <hr>
-        <div id="tableDemo5"><B>三、用户权限管理</B></div>
-<div id="padding"></div>
-            <form method="post" action="">
-                <div id="account-div">
-                <button type="button"  id="account-Demo2"style="border-color: black"  onclick="MondifyUser();">
-                    <B>修改用户</B></button>
-                <button type="button" id="account-Demo3"style="border-color: black" onclick="UserDelete();">
-                    <B>删除用户</B></button>
-
-                <button type="button" id="account-Demo1" style="border-color: black" onclick="FreezeUser();">
-                    <B>冻结用户</B></button></div>
-        </form>
-    </div>
-</div>
-</div>
-
+    <tr>
+    <td colspan="7" input type="checkbox" id="all">
+        <p>管理员密码： <input type="password" placeholder="" id="border8"></p>
+    <button onclick="fun()" id="delete5"><B>删除</B></button></td>
+    </tr>
 </table>
-        </div>
-    </div>
-    <div id="account-underneath">
-    </div>
-</div>
 </body>
 </html>
