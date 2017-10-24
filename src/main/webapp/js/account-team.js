@@ -32,4 +32,7 @@ $(document).ready(function(){
     $("#pay").click(function(){
         window.location.href="/My-Fund/account/pay.jsp";
     })
+    $("#pay_money").click(function(){
+        window.location.href="/My-Fund/account/ Repayment.jsp";
+    })
 })

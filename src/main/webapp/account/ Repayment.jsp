@@ -124,12 +124,12 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 			<div id="part_p">
 				<form action="recharge" method="post">
 				    <p class="case">
-						还款户名：<input type="person" name="repaymentToWho"
+						还款户名：<input type="person" name="user.username"
 							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
 							placeholder="请输入还款用户名！">
 					</p>
 					<p class="case">
-						还款金额：<input type="number" name="rechartamount"
+						还款金额：<input type="number" name="user.balance"
 							style="width: 250px; height: 35px; border-radius: 5px; padding: 0 0 0 5px;"
 							placeholder="请输入充值金额！">
 					</p>

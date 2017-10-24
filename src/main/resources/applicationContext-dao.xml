@@ -71,6 +71,8 @@
 				rollback-for="Exception" />
 			<tx:method name="loan*" propagation="REQUIRED"
 				rollback-for="Exception" />
+			<tx:method name="repayment*" propagation="REQUIRED"
+				rollback-for="Exception" />
 			<tx:method name="*" propagation="SUPPORTS" read-only="true" />
 		</tx:attributes>
 	</tx:advice>

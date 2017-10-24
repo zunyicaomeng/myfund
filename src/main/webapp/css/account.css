@@ -134,6 +134,11 @@
     margin-top: -80px;
     border-bottom: 1px gray solid;
 }
+#pay_money{
+    float: right;
+    margin-top: -45px;
+    border-bottom: 1px gray solid;
+}
 .part_input{
     width: 200px;
     height: 35px;

@@ -126,8 +126,8 @@
             <div id="account-middle-right-div">
                 <div id="account-middle-right-image"></div>
                 <div id="account-middle-right-text">Hello,<br><s:property value="#session.loginName" /></div>
-                <a id="pay">账号充值</a><br>
-                <a id="pay">还款</a>
+                <a id="pay">账号充值</a>
+                <a id="pay_money">去还款</a>
                 <hr>
             </div>
             <div id="account-middle-right-middle">

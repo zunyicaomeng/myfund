@@ -34,5 +34,11 @@
         	<result name="success">/account/account.jsp</result>
         	<result name="false">/account/LendParticulars.jsp</result>
         </action>
+        <action name="recharge" class="repaymentAction" method="RepaymentAmount">
+        	<result name="success">/account/account.jsp</result>
+        	<result name="false">/account/ Repayment.jsp</result>
+        </action>
+       
+        
     </package>
 </struts>
