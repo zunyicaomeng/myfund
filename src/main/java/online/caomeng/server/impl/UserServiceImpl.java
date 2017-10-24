@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import online.caomeng.dao.Impl.UserDaoImpl;
 import online.caomeng.model.Admin;
+import online.caomeng.model.AdminUser;
 import online.caomeng.model.User;
 
 @Service
@@ -72,6 +73,11 @@ public class UserServiceImpl {
 	public void saveUserToAdmin(String loginName, String password) {
 		
 		userDaoImpl.saveUserToAdmin(loginName,password);
+	}
+
+	//获取管理员对象
+	public List<AdminUser> getAdminUsers() {
+		return userDaoImpl.getAdminUsers();
 	}
 
 }

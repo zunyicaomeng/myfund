@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 import com.opensymphony.xwork2.ActionContext;
 
+import online.caomeng.model.Admin;
 import online.caomeng.model.Lend;
 import online.caomeng.model.User;
 import online.caomeng.server.impl.AdminServiceImpl;
@@ -66,11 +67,19 @@ public class LendAction {
 		String lendName = lend.getLendName();
 		Double lendMoney = lend.getLendMoney();
 		Double lendAcount = 0.0;
+		Double alendAcount = lend.getLendMoney();
 		Date returnTime = lend.getReturnTime();
 		
 		//计算当前用户余额
 		double loginBalance = balance + lendMoney;
-		System.out.println("计算用户余额："+loginBalance);
+		
+		//获取admin表中的lend值
+		List<Double> admins = adminServiceImpl.getSumLend(LoginId);
+		for (Double admin : admins) {
+			alendAcount += admin;
+		}
+		System.out.println("lendAction alendAcount:"+alendAcount);
+		adminServiceImpl.updateLendAccount(LoginId,alendAcount);
 		
 		//查取当前登录用户所有借款金额，并计算总和
 		lendlist = lendServiceImpl.getLendMoney();
@@ -78,7 +87,6 @@ public class LendAction {
 			lendAcount = lendAcount + lend.getLendMoney();
 			System.out.println("借款总和："+lendAcount);
 		}
-		adminServiceImpl.updateLendAccount(LoginId,lendAcount);
 		
 		//插入lend表新的借款记录，并将新的余额传到session
 		List<User> users = userServiceImpl.getUsers();

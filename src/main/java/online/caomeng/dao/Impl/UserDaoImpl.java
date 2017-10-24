@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.opensymphony.xwork2.ActionContext;
 import online.caomeng.common.UserDao;
 import online.caomeng.model.Admin;
+import online.caomeng.model.AdminUser;
 import online.caomeng.model.User;
 
 @Repository
@@ -107,6 +108,7 @@ public class UserDaoImpl {
 		//更新admin用户借款总额
 		public void updateLendAccount(Long loginId, Double lendAcount) {
 			
+			System.out.println("userDao lenAcount:"+lendAcount);
 			Admin admin = userDao.getHibernateTemplate().get(Admin.class, loginId);
 			admin.setSumLend(lendAcount);
 			userDao.getHibernateTemplate().update(admin);
@@ -117,6 +119,30 @@ public class UserDaoImpl {
 			admin.setSumLoan(loanAcount);
 			userDao.getHibernateTemplate().update(admin);
 			
+		}
+
+		//获取出借总额
+		@SuppressWarnings("unchecked")
+		public List<Double> getSumLoan(Long loginId) {
+			return (List<Double>) userDao.getHibernateTemplate().find("select a.sumLoan from Admin a where a.id="+loginId+"");
+		}
+
+		//获取借款总额
+		@SuppressWarnings("unchecked")
+		public List<Double> getSumLend(Long loginId) {
+			return (List<Double>) userDao.getHibernateTemplate().find("select a.sumLend from Admin a where a.id="+loginId+"");
+		}
+		
+		//获取admin表所有数据
+		@SuppressWarnings("unchecked")
+		public List<Admin> getUsersInfo() {
+			return (List<Admin>) userDao.getHibernateTemplate().find("from Admin");
+		}
+
+		//获取管理员对象
+		@SuppressWarnings("unchecked")
+		public List<AdminUser> getAdminUsers() {
+			return (List<AdminUser>) userDao.getHibernateTemplate().find("from AdminUser");
 		}
 
 }
