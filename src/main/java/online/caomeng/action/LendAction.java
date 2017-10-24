@@ -53,7 +53,7 @@ public class LendAction {
 		
 		//通过session获取 登录用户id、余额
 		Long LoginId = (Long)session.get("userId");
-		double balance = (double) session.get("balances");
+		double balance = (Double) session.get("balances");
 		
 		//获取页面传值
 		String lendName = lend.getLendName();

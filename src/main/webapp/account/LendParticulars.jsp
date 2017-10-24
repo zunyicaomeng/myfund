@@ -125,12 +125,12 @@
         <div id="account-middle-right">
             <div id="AccountSetting-top-div">
                 <p id="AccountSetting-top-div-one">我的出借</p>
-                <form id="AccountSetting-form">
+                <form id="AccountSetting-form" action="loanSettings" method="post">
                     <p class="AccountSetting-top-div-account">出借信息</p>
                     <hr>
-                    <p>借&nbsp;款&nbsp;人&nbsp;：<input type="text" class="AccountSetting_pt"></p>
-                    <p>归还时间：<input type="date" class="AccountSetting_pt"></p>
-                    <p>借款金额：<input type="text" class="AccountSetting_pt"></p>
+                    <p>借&nbsp;款&nbsp;人&nbsp;：<input type="text" class="AccountSetting_pt" name="loan.loanname"></p>
+                    <p>归还时间：<input type="date" class="AccountSetting_pt" name="loan.returntime"></p>
+                    <p>借款金额：<input type="text" class="AccountSetting_pt" name="loan.loanamount"></p>
                     <p id="hidden"></p>
                     <hr>
                     <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>

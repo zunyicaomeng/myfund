@@ -29,5 +29,9 @@
         	<result>/account/account.jsp</result>
         	<result name="false">/account/borrow.jsp</result>
         </action>
+        <action name="loanSettings" class="loanAction" method="loanAmount">
+        	<result name="success">/account/account.jsp</result>
+        	<result name="false">/account/LendParticulars.jsp</result>
+        </action>
     </package>
 </struts>
