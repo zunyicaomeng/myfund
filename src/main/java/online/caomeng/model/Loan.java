@@ -80,6 +80,35 @@ public class Loan {
 	public void setLoanamount(Double loanamount) {
 		this.loanamount = loanamount;
 	}
+
+	public Loan(Long id, String loanname, Date loantime, Date returntime, Integer loanstatus, Double loanamount) {
+		super();
+		this.id = id;
+		this.loanname = loanname;
+		this.loantime = loantime;
+		this.returntime = returntime;
+		this.loanstatus = loanstatus;
+		this.loanamount = loanamount;
+	}
+
+	public Loan() {
+		super();
+	}
+
+	public Loan(String loanname, Date loantime, Date returntime, Integer loanstatus, Double loanamount) {
+		super();
+		this.loanname = loanname;
+		this.loantime = loantime;
+		this.returntime = returntime;
+		this.loanstatus = loanstatus;
+		this.loanamount = loanamount;
+	}
+
+	@Override
+	public String toString() {
+		return "Loan [id=" + id + ", loanname=" + loanname + ", loantime=" + loantime + ", returntime=" + returntime
+				+ ", loanstatus=" + loanstatus + ", loanamount=" + loanamount + "]";
+	}
 	
 	
 

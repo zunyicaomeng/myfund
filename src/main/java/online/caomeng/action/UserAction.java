@@ -187,7 +187,7 @@ public class UserAction extends ActionSupport {
 	public String Recharge() {
 		Map<String, Object> session = ActionContext.getContext().getSession();
 		Long id = (Long) session.get("userId");
-		double balance = (double) session.get("balances");
+		double balance = (Double) session.get("balances");
 
 		double ramount = Double.valueOf(rechartamount);
 		Integer tpwd = null;

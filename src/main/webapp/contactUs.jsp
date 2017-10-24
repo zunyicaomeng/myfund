@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/top.css">
 	<link rel="stylesheet" type="text/css" href="/My-Fund/css/home.css">
+	<script  type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=TlLa0n18Sxh0IHCFB3rPSMkvir7AFap4"></script>
 </head>
 <body>
 <div>
@@ -178,7 +179,27 @@
             </div>
         </div>
 </div>
+//百度地图功能Js
+<script type="text/javascript">
+    localSearch();
+    //根据关键这搜索区域
+    function localSearch() {
+        var map = new BMap.Map("ad_map"); // 创建地图实例
+        map.addControl(new BMap.NavigationControl()); //地图控制插件，该插件可以控制地图的位置地图的显示比例
+        map.addControl(new BMap.ScaleControl()); //显示在地图下方，告诉你地图上1cm对应的真实距离
+        //map.addControl(new BMap.OverviewMapControl());
+        map.addControl(new BMap.MapTypeControl()); //地图的显示类型：包括地图和卫星
+        //确定搜索对象
+        var local = new BMap.LocalSearch(map, {
+            renderOptions: { map: map }
+        });
+        //根据关键字定义到相应的区域
+        local.search("遵遵义市软件园区管理委员会");
+    }
+    </script>
+
 </body>
 <script type="text/javascript" src="/My-Fund/js/jquery.min.js"></script>
 <script src="/My-Fund/js/team.js" type="text/javascript"></script>
+
 </html>
