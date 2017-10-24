@@ -10,12 +10,12 @@
         } else if (password == "" ) {
             alert("密码不允许为空！");
             return false;
-        } else if (password.length >20 || password.length <=6) {
+        } else if (password.length >20 || password.length < 6) {
             alert("密码长度应该在 6 - 20 位");
             return false;
         }
     }
-function register(str ) {
+function register() {
         var username=document.getElementById("input_name").value;
         var password = document.getElementById("input_pwd").value;
         var email=document.getElementById("input_em").value;
@@ -26,7 +26,7 @@ function register(str ) {
         } else if (password == "" ) {
             alert("密码不允许为空！");
             return false;
-        } else if (password.length >20 || password.length <=6) {
+        } else if (password.length >20 || password.length < 6) {
             alert("密码长度应该在 6 - 20 位");
             return false;
         }else if (email == ""){

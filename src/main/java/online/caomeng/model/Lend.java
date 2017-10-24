@@ -72,6 +72,15 @@ public class Lend {
 		this.lendMoney = lendMoney;
 	}
 	
+	
+	public Lend(String lendName, Date lendTime, Date returnTime, Integer lendState, Double lendMoney) {
+		super();
+		this.lendName = lendName;
+		this.lendTime = lendTime;
+		this.returnTime = returnTime;
+		this.lendState = lendState;
+		this.lendMoney = lendMoney;
+	}
 	public Lend() {
 		super();
 	}

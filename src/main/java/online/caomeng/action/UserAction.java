@@ -42,6 +42,7 @@ public class UserAction extends ActionSupport {
 	private double loanMoney = 0;
 	private List<Loan> loanlist;
 	private String rechartamount;
+	private Long numberAll;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -95,7 +96,6 @@ public class UserAction extends ActionSupport {
 		list = userServiceImpl.getLoginUser();
 		String Name = user.getLoginName();
 		Map<String, Object> session = ActionContext.getContext().getSession();
-
 		if (Name != null) {
 			session.put("loginName", user.getLoginName());
 		}
@@ -116,28 +116,43 @@ public class UserAction extends ActionSupport {
 		}
 		// 查询用户的借出金额
 		lendlist = lendServiceImpl.getLendMoney();
+		session.put("lendlist", lendlist);
 		for (Lend lend : lendlist) {
 			System.out.println("数据库查询lend.getLendMoney：" + lend.getLendMoney());
 			lendMoney = lendMoney + lend.getLendMoney();
 			System.out.println("查询借出金额lendMoney：" + lendMoney);
+			System.out.println(lend.getId());
 			session.put("LendMoney", lendMoney);
+			
 		}
 		// 查询loan信息
 		loanlist = loanServiceImpl.getLoan();
+		session.put("loanlist", loanlist);
 		for (Loan loan : loanlist) {
 			System.out.println("查询loan信息:" + loan);
-			session.put("loan", loan);
 			loanMoney = loanMoney + loan.getLoanamount();
 			System.out.println("loanMoney:" + loanMoney);
-			session.put("loanMoney", loanMoney);
-			/*
-			 * session.put("loanname", loan.getLoanname());
-			 * session.put("loantime", loan.getLoantime());
-			 * session.put("returntime", loan.getReturntime());
-			 * session.put("loanstatus", loan.getLoanstatus());
-			 * session.put("loanamount", loan.getLoanamount());
-			 */
+			session.put("loanMoney", loanMoney);	
 		}
+		//查询loan数量
+		List<Long> numberloan=loanServiceImpl.getNumberLoan();
+		for (Long long1 : numberloan) {
+			System.out.println("loan的数量："+long1);
+			session.put("numberloan",long1);
+		}
+		//查询loan数量
+				List<Long> numberlend=lendServiceImpl.getNumberLend();
+				for (Long long2 : numberlend) {
+					System.out.println("lend的数量"+long2);
+					session.put("numberlend", long2);
+				}
+				numberAll=loanServiceImpl.getId();
+				session.put("numberAll", numberAll);
+				
+				Long numberall=(Long) session.get("numberAll");
+				 Long pages= numberall/2+1;
+				 System.out.println("z总页数："+pages);
+				 session.put("pages", pages);
 		// 登录查询
 		for (User users : list) {
 			String LoginName = users.getLoginName();
@@ -201,5 +216,4 @@ public class UserAction extends ActionSupport {
 			return "false";
 		}
 	}
-	
 }

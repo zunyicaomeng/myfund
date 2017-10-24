@@ -1,0 +1,55 @@
+#delete1{
+    width: 20%;
+    height:25px;
+    background-color:lightseagreen;
+}
+#delete2{
+    border-radius:40px;
+    width: 20%;
+    height: 90px;
+    background-size: 100% 100%;
+
+}
+#delete3{
+    width: 20%;
+    height: 50px;
+    background-size: 100% 100%;
+  float: right;
+
+}
+#delete4{
+    margin-top:30px ;
+}
+#delete5{
+    border-radius:20px;
+    width: 60px;
+    height: 40px;
+   background-color: #bcaaa4;
+}
+#delete6{
+    border-radius:20px;
+    width: 60px;
+    height: 40px;
+    background-color: #bcaaa4;
+}
+#delete7{
+    background: url("../images/oon.jpg");
+    width: 30%;
+    height:60px;
+    background-size: 100% 100%;
+    float: right;
+}
+#delete8{
+  position:relative ;
+   text-align: center;
+    width: 80px;
+    height: 30px;
+
+}
+#border8{
+    border-radius:20px;
+    width: 30%;
+    height:20px;
+    border-color: #00a2e8;
+
+}

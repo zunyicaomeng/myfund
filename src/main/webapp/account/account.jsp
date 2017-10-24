@@ -157,7 +157,7 @@
                 <div id="account-middle-right-right-one"><p>持有中出借服务计划</p></div>
                 <div id="account-middle-right-right-image"></div>
                 <div id="account-middle-right-right-two">
-                    <div><p>持有中出个数</p><span>0个</span></div>
+                    <div><p>持有中出个数</p><span><s:property value="#session.numberAll" />个</span></div>
                     <div><p>出借总额(含续投本金)</p><span>￥<s:property value="#session.LendMoney" /></span></div>
                     <div><p>余额</p><span>￥<s:property value="#session.balances" /></span></div>
                 </div>

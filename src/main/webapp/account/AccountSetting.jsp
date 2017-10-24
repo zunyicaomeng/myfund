@@ -142,7 +142,7 @@
                     <hr>
                     <p class="AccountSetting-top-div-two">请谨慎输入您的银行卡号。</p>
                     <p> 银&nbsp;行&nbsp;卡&nbsp;号：<input type="tel" placeholder="请输入银行卡号" id="bankCard" name="user.bankId"></p>
-                    <p><input type="submit" value="保存" class="AccountSetting-button" ><input type="reset" value="重置" class="AccountSetting-button"></p>
+                    <p><input type="submit" value="保存" class="AccountSetting-button" onclick="return setting()"><input type="reset" value="重置" class="AccountSetting-button"></p>
                 </form>
             </div>
         </div>
