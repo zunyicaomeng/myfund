@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.opensymphony.xwork2.ActionContext;
 import online.caomeng.common.UserDao;
+import online.caomeng.model.Admin;
 import online.caomeng.model.User;
 
 @Repository
@@ -23,7 +24,6 @@ public class UserDaoImpl {
 
 	// 注册
 	public void saveUser(String loginName, String password, String email) {
-		System.out.println("name:" + loginName + "password:" + password + "email:" + email);
 		userDao.getHibernateTemplate().save(new User(loginName, null, password, null, null, null, email, new Date(),
 				"2", 0.0, null, null, null, 2));
 
@@ -90,6 +90,33 @@ public class UserDaoImpl {
 		public List<Integer> getUserTransactionpassword(Long id){
 			return (List<Integer>) userDao.getHibernateTemplate().find("select u.transactionpassword from User u "
 					+ "where u.id="+ id+"");
+		}
+		
+		//user与lend联查
+		@SuppressWarnings("unchecked")
+		public List<Admin> getUserAndLend(){
+			return (List<Admin>) userDao.getHibernateTemplate().find("select u.loginName,le.lendMoney from User as u,"
+					+ "Lend as le where u.id = le.id ");
+		}
+
+		//保存用户信息到admin表
+		public void saveUserToAdmin(String loginName, String password) {
+			userDao.getHibernateTemplate().save(new Admin(loginName, password, 0.0, 0.0));
+		}
+		
+		//更新admin用户借款总额
+		public void updateLendAccount(Long loginId, Double lendAcount) {
+			
+			Admin admin = userDao.getHibernateTemplate().get(Admin.class, loginId);
+			admin.setSumLend(lendAcount);
+			userDao.getHibernateTemplate().update(admin);
+		}
+
+		public void updateLoanAccount(Long loginId, Double loanAcount) {
+			Admin admin = userDao.getHibernateTemplate().get(Admin.class, loginId);
+			admin.setSumLoan(loanAcount);
+			userDao.getHibernateTemplate().update(admin);
+			
 		}
 
 }

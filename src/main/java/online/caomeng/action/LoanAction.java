@@ -11,6 +11,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 import online.caomeng.model.Loan;
 import online.caomeng.model.User;
+import online.caomeng.server.impl.AdminServiceImpl;
 import online.caomeng.server.impl.LoanServiceImpl;
 import online.caomeng.server.impl.UserServiceImpl;
 
@@ -20,6 +21,8 @@ public class LoanAction {
 	private UserServiceImpl userServiceImpl;
 	@Autowired
 	private LoanServiceImpl loanServiceImpl;
+	@Autowired
+	private AdminServiceImpl adminServiceImpl;
 	
 	private Loan loan;
 	private List<Loan> loanlist;
@@ -30,6 +33,9 @@ public class LoanAction {
 	}
 	public LoanServiceImpl getLoanServiceImpl() {
 		return loanServiceImpl;
+	}
+	public AdminServiceImpl getAdminServiceImpl() {
+		return adminServiceImpl;
 	}
 	public Loan getLoan() {
 		return loan;
@@ -50,7 +56,7 @@ public class LoanAction {
 			String loanName = loan.getLoanname();
 			Double loanamount = loan.getLoanamount();
 			Double loanAcount = 0.0;
-			Date returntime = loan.getLoantime();
+			Date returntime = loan.getReturntime();
 			System.out.println(loanName+loanamount+returntime);
 			
 			//计算当前用户余额
@@ -58,9 +64,12 @@ public class LoanAction {
 			
 			//查取当前登录用户所有借款金额，并计算总和
 			loanlist = loanServiceImpl.getLoanamount();
-			for (Loan loan : loanlist) {
-				loanAcount = loanAcount + loan.getLoanamount();
+			System.out.println("LoanAction list:"+ loanlist);
+			for (Loan loans : loanlist) {
+				loanAcount = loanAcount + loans.getLoanamount();
 			}
+			System.out.println(loanAcount);
+			adminServiceImpl.updateLoanAccount(LoginId,loanAcount);
 			
 			//插入lend表新的借款记录，并将新的余额传到session
 			List<User> users = userServiceImpl.getUsers();

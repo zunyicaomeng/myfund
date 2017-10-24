@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import online.caomeng.model.Admin;
 import online.caomeng.model.Lend;
 import online.caomeng.model.Loan;
 import online.caomeng.model.User;
@@ -77,6 +78,7 @@ public class UserAction extends ActionSupport {
 		this.rechartamount = rechartamount;
 	}
 
+	//注册
 	public String register() {
 		String loginName = user.getLoginName(), password = user.getPassword(), email = user.getEmail();
 		list = userServiceImpl.getUsers();
@@ -87,7 +89,10 @@ public class UserAction extends ActionSupport {
 				return "fail";
 			}
 		}
+		//保存用户
 		userServiceImpl.saveUser(loginName, password, email);
+		//保存用户到admin表
+		userServiceImpl.saveUserToAdmin(loginName,password);
 		return "success";
 	}
 
@@ -140,7 +145,7 @@ public class UserAction extends ActionSupport {
 			System.out.println("loan的数量："+long1);
 			session.put("numberloan",long1);
 		}
-		//查询loan数量
+		//查询lend数量
 				List<Long> numberlend=lendServiceImpl.getNumberLend();
 				for (Long long2 : numberlend) {
 					System.out.println("lend的数量"+long2);
@@ -159,6 +164,12 @@ public class UserAction extends ActionSupport {
 			String password = users.getPassword();
 			System.out.println("登录查询数据库值：" + LoginName + password);
 			System.out.println("登录查询页面获取：" + Name + user.getPassword());
+			
+			if(Name.equals("admin")&&user.getPassword().equals(password)){
+				List<User> aUsers = userServiceImpl.getUsers();
+				session.put("aUser", aUsers);
+				return "admin";
+			}
 			if (LoginName.equals(Name) && password.equals(user.getPassword())) {
 				return "LoginSuccess";
 			}

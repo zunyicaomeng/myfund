@@ -64,7 +64,7 @@ public class LoanDaoImpl {
 		}
 	 public void loanAmount(String loanname,Double loanamount,Date returntime,Long userId,Double loginBalance,Double lBalance,Long locanId) {
 			User user = userDao.getHibernateTemplate().get(User.class, userId);
-			user.getLends().add(new Lend(loanname, new Date(), returntime, 2, loanamount));
+			user.getLoans().add(new Loan(loanname, new Date(), returntime, 2, loanamount));
 			user.setBalance(loginBalance);
 			userDao.getHibernateTemplate().save(user);
 			

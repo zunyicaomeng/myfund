@@ -17,6 +17,7 @@
          <action name="getLoginUser" class="userAction" method="getLoginUser">
         	<result name="LoginSuccess">/account/account.jsp</result>
         	<result name="LoigFail">/login.jsp</result>
+        	<result name="admin">/admin/admin.jsp</result>
         </action>
         <action name="updateUser" class="userAction" method="updateUser">
         	<result>/account/account.jsp</result>

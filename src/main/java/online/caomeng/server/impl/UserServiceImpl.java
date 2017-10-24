@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import online.caomeng.dao.Impl.UserDaoImpl;
+import online.caomeng.model.Admin;
 import online.caomeng.model.User;
 
 @Service
@@ -60,6 +61,17 @@ public class UserServiceImpl {
 	// 查询用户交易密码
 	public List<Integer> getUserTransactionpassword(Long id) {
 		return (List<Integer>) userDaoImpl.getUserTransactionpassword(id);
+	}
+	
+	//user与lend联查
+	public List<Admin> getUserAndLend(){
+		return userDaoImpl.getUserAndLend();
+	}
+	
+	//保存用户信息到admin表
+	public void saveUserToAdmin(String loginName, String password) {
+		
+		userDaoImpl.saveUserToAdmin(loginName,password);
 	}
 
 }

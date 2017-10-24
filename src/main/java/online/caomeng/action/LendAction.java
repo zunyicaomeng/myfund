@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 import online.caomeng.model.Lend;
 import online.caomeng.model.User;
+import online.caomeng.server.impl.AdminServiceImpl;
 import online.caomeng.server.impl.LendServiceImpl;
 import online.caomeng.server.impl.UserServiceImpl;
 
@@ -26,6 +27,8 @@ public class LendAction {
 	private LendServiceImpl lendServiceImpl;
 	@Autowired
 	private UserServiceImpl userServiceImpl;
+	@Autowired
+	private AdminServiceImpl adminServiceImpl;
 
 	private Lend lend;
 	private List<Lend> lendlist;
@@ -36,6 +39,10 @@ public class LendAction {
 
 	public UserServiceImpl getUserServiceImpl() {
 		return userServiceImpl;
+	}
+
+	public AdminServiceImpl getAdminServiceImpl() {
+		return adminServiceImpl;
 	}
 
 	public Lend getLend() {
@@ -63,12 +70,15 @@ public class LendAction {
 		
 		//计算当前用户余额
 		double loginBalance = balance + lendMoney;
+		System.out.println("计算用户余额："+loginBalance);
 		
 		//查取当前登录用户所有借款金额，并计算总和
 		lendlist = lendServiceImpl.getLendMoney();
 		for (Lend lend : lendlist) {
 			lendAcount = lendAcount + lend.getLendMoney();
+			System.out.println("借款总和："+lendAcount);
 		}
+		adminServiceImpl.updateLendAccount(LoginId,lendAcount);
 		
 		//插入lend表新的借款记录，并将新的余额传到session
 		List<User> users = userServiceImpl.getUsers();
@@ -76,8 +86,10 @@ public class LendAction {
 			if (user.getLoginName().equals(lendName)) {
 				Double lBalance = user.getBalance()-lendMoney;
 				Long lendId = user.getId();
+				lendAcount = lendAcount + lendMoney;
 				session.put("balances", loginBalance);
 				session.put("LendMoney",lendAcount);
+				System.out.println("sessionLendMoney:"+lendAcount);
 				lendServiceImpl.lendAmount(lendName, lendMoney, returnTime,LoginId,loginBalance,lBalance,lendId);
 				return "success";
 			}
