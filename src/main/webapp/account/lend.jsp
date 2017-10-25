@@ -159,10 +159,10 @@
                     </tr>
               </c:forEach>
                 </table>
-                <form action="getpageLoanAndLend">
+                <form action="getpageLoanAndLend" method="post">
                 <%int p=(int)session.getAttribute("pageloan"); %>
                 <%for(int i=1;i<=p;i++){ %>
-                <input type="submit" name="i" value="<%=i %>">
+                <input type="submit" name="i" value="<%=i %>" class="lend-btn">
                 <%}; %>
                 </form>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>
@@ -194,10 +194,10 @@
                     </tr>
               </c:forEach>
                 </table>
-                <form action="getpageLoanAndLend">
+                <form action="getpageLoanAndLend" method="post">
                 <%int a=(int)session.getAttribute("pagelend"); %>
                 <%for(int x=1;x<=a;x++){ %>
-                <input type="submit" name="x" value="<%=x %>">
+                <input type="submit" name="x" value="<%=x %>" class="lend-btn">
                 <%}; %>
                 </form>
                 <p>如需修改到期处理方式，请在到期日之前（不包括到期当天），至少提前七个自然日修改。</p>

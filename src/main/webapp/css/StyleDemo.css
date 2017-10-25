@@ -170,3 +170,14 @@ a {
 .admin_p{
 	    margin:40px auto;
 }
+#account-middle-left .anim-input{
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    border: none;
+    border-radius: 15%;
+}
+#account-middle-left .anim-input:hover{
+	background-color: deepskyblue;
+}
+

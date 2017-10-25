@@ -48,3 +48,12 @@
 #account-middle-right .lend-ul-span{
     color: #ffaf78;
 }
+#account-middle-right .lend-btn{
+	width:30px;
+	/*  background: transparent; */
+	 background-color: #9b976a;
+    border: none;
+    border-radius: 15%;
+    margin-left:5%;
+}
+

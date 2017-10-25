@@ -80,6 +80,15 @@ public class UserDaoImpl {
 			user.setBankId(bankId);
 			userDao.getHibernateTemplate().update(user);
 		}
+		//修改账户信息
+		public void updateAccount(Long id,String username,Integer age,Integer transactionpassword,String bankId){
+			User user = userDao.getHibernateTemplate().get(User.class, id);
+			user.setUsername(username);
+			user.setAge(age);
+			user.setTransactionpassword(transactionpassword);
+			user.setBankId(bankId);
+			userDao.getHibernateTemplate().update(user);
+		}
 		
 		//更新用户余额
 		public void updateBalance(Long id,Double balance){
@@ -112,14 +121,16 @@ public class UserDaoImpl {
 		//更新admin用户借款总额
 		public void updateLendAccount(Long loginId, Double lendAcount) {
 			
-			System.out.println("userDao lenAcount:"+lendAcount);
+			System.out.println("userDao lenAcount:"+lendAcount+"loginId"+loginId);
 			Admin admin = userDao.getHibernateTemplate().get(Admin.class, loginId);
+			System.out.println("admin:"+admin);
 			admin.setSumLend(lendAcount);
 			userDao.getHibernateTemplate().update(admin);
 		}
 
 		public void updateLoanAccount(Long loginId, Double loanAcount) {
 			Admin admin = userDao.getHibernateTemplate().get(Admin.class, loginId);
+			System.out.println("loanAcount:"+loanAcount);
 			admin.setSumLoan(loanAcount);
 			userDao.getHibernateTemplate().update(admin);
 			

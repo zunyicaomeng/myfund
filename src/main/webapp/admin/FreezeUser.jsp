@@ -41,33 +41,36 @@
             </button>
             <button onclick="FreezeUser();">用户权限
             </button>
-            <button onclick="UserDelete();">用户删除
-            </button>
+           	<form action="getNumberUser" method="post">
+					<input type="submit" onclick=" UserDelete();" value="用户删除" class="anim-input">
+					</form>
 
         </div>
         <div id="account-middle-right">
-            <body>
+            <body> 
               <div id="freeze1"> <B>用户冻结</B></div>
                     <hr>
-                <p>用户账号：<input name="name"type="text" id="border" ></p>
+                    <form action="updateUserStatus" method="post">
+                <p>用户账号：<input name="user.loginName"type="text" id="border" ></p>
+                <input type="submit" value="确定" id="freeze-div5">
+                </form>
                 <div id="loginDemo7"></div>
-                <p>用户密码： <input type="password" value="" class="text2" name = "userpass" id = "border1"/></p>
                 <hr>
-
-               
-
                 <hr>
               <div ><B>禁止转账：</B></div>
-
-              <input type="password" placeholder="" id="freeze-div2">
-             <div><button id="freeze-div1">用户管理密码</button></div>
+            <form action="updateUserState" method="post">
+              <input type="text" placeholder="" id="freeze-div2" name="user.loginName">
+             <div><input type="submit" value="确定" id="freeze-div1"></div>
+              </form>
               <div>冻结后的账户无法进行转账功能</div>
                 <hr>
                 <div id="freeze2"></div>
                 <div></div>
               <div ><B>禁止登录：</B></div>
-              <input type="password" placeholder="" id="freeze-div4">
-              <div><button id="freeze-div3">用户管理密码</button></div>
+               <form action="updateUserStateLogin" method="post">
+              <input type="text"  id="freeze-div4" name="user.loginName">
+              <div><input type="submit" value="确定" id="freeze-div3"></div>
+               </form>
               <div id="freeze3"></div>
               <div>用户在被冻结之后，无法再进行登录</div>
                 <hr>

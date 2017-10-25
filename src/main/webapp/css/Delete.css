@@ -53,3 +53,12 @@
     border-color: #00a2e8;
 
 }
+#account-middle-right .lend-btn{
+	width:30px;
+	 background-color: #9b976a;
+    border: none;
+    border-radius: 15%;
+    margin-left:5%;
+}
+
+

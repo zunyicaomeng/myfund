@@ -88,5 +88,9 @@ public class UserServiceImpl {
 	public List<User> getaUserId(String loginName) {
 		return userDaoImpl.getaUserId(loginName);
 	}
+	//修改账户信息
+	public void updateAccount(Long id,String username,Integer age,Integer transactionpassword,String bankId){
+		userDaoImpl.updateAccount(id, username, age, transactionpassword, bankId);
+	}
 
 }

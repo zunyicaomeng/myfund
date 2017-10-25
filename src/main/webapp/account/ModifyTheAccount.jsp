@@ -124,21 +124,21 @@
         <div id="account-middle-right">
             <div id="ModifyTheAccount-div">
         <p id="ModifyTheAccount-div-onep">账户修改</p>
-            <form id="ModifyTheAccount-form">
+            <form id="ModifyTheAccount-form" action="updateAccount" method="post">
                 <p class="ModifyTheAccount-form-p">修改个人信息</p>
                 <hr>
-                <p>用&nbsp;&nbsp;户&nbsp;&nbsp;ID<input name="" type="hidden" value=""></p>
-                <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input name="" type="text" value=""></p>
-                <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input name="" type="text" value=""></p>
-                <p>登陆密码：<input type="text" name="" value=""></p>
+                <p>用&nbsp;&nbsp;户&nbsp;&nbsp;ID<input type="hidden" value=""></p>
+                <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：<input name="user.username" type="text" value=""></p>
+                <p>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：<input name="user.age" type="text" value=""></p>
+                <p>登陆密码：<input type="text" name="user.password" value=""></p>
                 <p class="ModifyTheAccount-form-p">修改交易密码</p>
                 <hr>
                 <p class="ModifyTheAccount-form-p ModifyTheAccount-form-two" >请谨慎修改！！！</p>
-                <p>交易密码：<input name="" type="text" value="" placeholder="请记住您的密码！"></p>
+                <p>交易密码：<input name="user.transactionpassword" type="text" value="" placeholder="请记住您的密码！"></p>
                 <p class="ModifyTheAccount-form-p">修改银行卡密码</p>
                 <hr>
                 <p class="ModifyTheAccount-form-p ModifyTheAccount-form-two">请谨慎修改！！！</p>
-                <p>银行卡号：<input value="" name="" type="text" placeholder="请核对您的银行号！"></p>
+                <p>银行卡号：<input value="" name="user.bankId" type="text" placeholder="请核对您的银行号！"></p>
                 <p><input type="submit" value="保存" class="ModifyTheAccount-button" ><input type="reset" value="重置" class="ModifyTheAccount-button"></p>
             </form>
             </div>

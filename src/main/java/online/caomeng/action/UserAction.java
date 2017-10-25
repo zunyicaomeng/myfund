@@ -286,6 +286,20 @@ public class UserAction extends ActionSupport {
 
 		return "success";
 	}
+	//修改账户信息
+	public String updateAccount() {
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		Long id = (Long) session.get("userId");
+		System.out.println("账户设置id：" + id);
+		String username = user.getUsername();
+		Integer age = user.getAge();
+		Integer transactionpassword = user.getTransactionpassword();
+		String bankId = user.getBankId();
+
+		userServiceImpl.updateAccount(id, username, age,transactionpassword, bankId);
+
+		return "success";
+	}
 
 	// 充值
 	public String Recharge() {

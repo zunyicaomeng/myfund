@@ -15,13 +15,14 @@ import com.opensymphony.xwork2.ActionContext;
 
 import online.caomeng.model.Admin;
 import online.caomeng.model.AdminUser;
+
 import online.caomeng.model.User;
 import online.caomeng.server.impl.AdminServiceImpl;
 import online.caomeng.server.impl.UserServiceImpl;
 
 @Component("adminAction")
 public class AdminAction {
-	
+
 	@Autowired
 	private UserServiceImpl userServiceImpl;
 	@Autowired
@@ -34,6 +35,8 @@ public class AdminAction {
 	private User user;
 	private AdminUser adminUser;
 	private int pageUser = 0;
+	private int y=1;
+	private Long userId=1l;
 	
 	public int getUsersPage() {
 		return usersPage;
@@ -63,12 +66,28 @@ public class AdminAction {
 		this.user = user;
 	}
 
+
 	public AdminUser getAdminUser() {
 		return adminUser;
 	}
 
 	public void setAdminUser(AdminUser adminUser) {
 		this.adminUser = adminUser;
+	}
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public Long getUserId() {
+		return userId;
+	}
+
+	public void setUserId(Long userId) {
+		this.userId = userId;
 	}
 
 	public UserServiceImpl getUserServiceImpl() {
@@ -124,5 +143,93 @@ public class AdminAction {
 		}
 		return "success";
 	}
-	
+
+ // 冻结用户
+	public String updateUserStatus() {
+		String loginName = user.getLoginName();
+		System.out.println("loginName:"+loginName);
+		list = adminServiceImpl.getAdminUserID(loginName);
+		for (User users : list) {
+			if (users.getLoginName().equals(user.getLoginName())) {
+				System.out.println("查询userid：" + users.getId());
+				Long AdminUserID=users.getId();
+				adminServiceImpl.updateUserStatus(AdminUserID);
+				return "success";
+			}
+		}
+		
+		return "flase";
+		
+	}
+	//禁止登陆
+	public String updateUserStateLogin() {
+		String loginName = user.getLoginName();
+		System.out.println("loginName:"+loginName);
+		list = adminServiceImpl.getAdminUserID(loginName);
+		for (User users : list) {
+			if (users.getLoginName().equals(user.getLoginName())) {
+				System.out.println("查询userid：" + users.getId());
+				Long AdminUserID=users.getId();
+				adminServiceImpl.updateUserStateLogin(AdminUserID);
+				return "success";
+			}
+		}
+		
+		return "flase";
+	}
+	//禁止转账
+	public String updateUserState() {
+		String loginName = user.getLoginName();
+		System.out.println("loginName:"+loginName);
+		list = adminServiceImpl.getAdminUserID(loginName);
+		for (User users : list) {
+			if (users.getLoginName().equals(user.getLoginName())) {
+				System.out.println("查询userid：" + users.getId());
+				Long AdminUserID=users.getId();
+				adminServiceImpl.updateUserState(AdminUserID);
+				return "success";
+			}
+		}
+		
+		return "flase";
+	}
+	//查询用户总数，并分页
+	 public String getNumberUser(){
+		 Map<String, Object> session = ActionContext.getContext().getSession();
+		 List<Long> numberUser=adminServiceImpl.getNumberUser();
+		 for (Long long1 : numberUser) {
+			System.out.println(long1);
+			session.put("numberUser", long1);
+		}
+		 Long NumberUser=(Long) session.get("numberUser");
+		 if (NumberUser%5==0) {
+			 int pageUser=(int) (NumberUser/5);
+			 System.out.println("listPageUser"+pageUser);
+			 session.put("listPageUser", pageUser);
+		}else {
+			int pageUser=(int) (NumberUser/5+1);
+			 System.out.println("listPageUser"+pageUser);
+			 session.put("listPageUser", pageUser);
+		}
+		 List<User> pageUserDemo=adminServiceImpl.getpageUser();
+		 System.out.println("pageUserDemo:"+pageUserDemo);
+		 session.put("pageUserDemo", pageUserDemo);
+		 
+		return "NumberUserSucces";
+		 
+	 }
+	 //跟新表数据
+	 public String getpageUserDemo(){
+			Map<String, Object> session = ActionContext.getContext().getSession();
+			List<User> pageUserDemo=adminServiceImpl.getpageUser();
+			session.put("pageUserDemo", pageUserDemo);
+			
+			return "success";
+		}
+	 //删除用户
+	 public String delete() {
+			adminServiceImpl.deleteUser(userId);
+			return "delete";
+		}
+
 }

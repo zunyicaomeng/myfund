@@ -46,6 +46,30 @@
         </action>
         <action name="updateUserstate" class="adminAction" method="updateUserstate">
         	<result>/admin/admin.jsp</result>
+        	</action>
+         <action name="updateAccount" class="userAction" method="updateAccount">
+        	<result>/account/account.jsp</result>
+        </action>
+         <action name="updateUserStatus" class="adminAction" method="updateUserStatus">
+        	<result name="success">/admin/admin.jsp</result>
+        	<result name="flase">/admin/FreezeUser.jsp</result>
+        </action>
+         <action name="updateUserStateLogin" class="adminAction" method="updateUserStateLogin">
+        	<result name="success">/admin/admin.jsp</result>
+        	<result name="flase">/admin/FreezeUser.jsp</result>
+        </action>
+         <action name="updateUserState" class="adminAction" method="updateUserState">
+        	<result name="success">/admin/admin.jsp</result>
+        	<result name="flase">/admin/FreezeUser.jsp</result>
+        </action>
+        <action name="getNumberUser" class="adminAction" method="getNumberUser">
+        	<result name="NumberUserSucces">/admin/UserDelete.jsp</result>
+        </action>
+         <action name="getpageUserDemo" class="adminAction" method="getpageUserDemo">
+        	<result name="success">/admin/UserDelete.jsp</result>
+        </action>
+        <action name="delete" class="adminAction" method="delete">
+            <result name="delete">/admin/admin.jsp</result>
         </action>
     </package>
 </struts>

@@ -39,7 +39,10 @@
 					<button onclick="anim();">用户管理</button>
 					<button onclick=" MondifyUser();">管理员</button>
 					<button onclick=" FreezeUser();">用户权限</button>
-					<button onclick=" UserDelete();">用户删除</button>
+					<form action="getNumberUser" method="post">
+					<input type="submit" onclick=" UserDelete();" value="用户删除" class="anim-input">
+					</form>
+					
         </div>
         <div id="account-middle-right">
 <div>
@@ -110,8 +113,6 @@
 						</div>
 					</div>
 				</div>
-
-				</table>
 			</div>
 		</div>
 		<div id="account-underneath"></div>
