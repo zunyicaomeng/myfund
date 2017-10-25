@@ -41,6 +41,11 @@
        <action name="getpageLoanAndLend" class="userAction" method="getpageLoanAndLend">
         	<result name="success">/account/lend.jsp</result>
         </action>
-        
+        <action name="getAdminPage" class="adminAction" method="getAdminPage">
+        	<result>/admin/admin.jsp</result>
+        </action>
+        <action name="updateUserstate" class="adminAction" method="updateUserstate">
+        	<result>/admin/admin.jsp</result>
+        </action>
     </package>
 </struts>

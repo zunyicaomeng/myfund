@@ -16,7 +16,6 @@ import com.opensymphony.xwork2.ActionContext;
 import online.caomeng.action.UserAction;
 import online.caomeng.common.UserDao;
 import online.caomeng.model.Lend;
-import online.caomeng.model.Loan;
 import online.caomeng.model.User;
 
 @Repository
@@ -67,7 +66,7 @@ public class LendDaoImpl {
 			return numberlend;
 		 }
 		 //分页查询loan
-		 @SuppressWarnings("unchecked")
+		 @SuppressWarnings({ "unchecked", "rawtypes" })
 		 public List<Lend> getpagelend(){
 			 int x=useraction.getX();
 			 System.out.println("获取到的x:"+x);

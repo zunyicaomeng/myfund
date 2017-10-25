@@ -79,5 +79,14 @@ public class UserServiceImpl {
 	public List<AdminUser> getAdminUsers() {
 		return userDaoImpl.getAdminUsers();
 	}
+	
+	//修改用户状态  //1、优质用户 2、普通用户 3、失信用户
+	public void updateUserState(Integer userState, Long id) {
+		userDaoImpl.updateUserState(userState,id);
+	}
+	//admin获取用户id
+	public List<User> getaUserId(String loginName) {
+		return userDaoImpl.getaUserId(loginName);
+	}
 
 }

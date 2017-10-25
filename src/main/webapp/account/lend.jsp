@@ -128,7 +128,7 @@
                 <li style="width: 10%"><span>持有中</span><span class="lend-ul-span"><s:property value="#session.numberAll" /></span></li>
                 <li style="width: 10%"><span>已退出</span><span class="lend-ul-span">0</span></li>
                 <li style="width: 10%"><span>待确认</span><span class="lend-ul-span">0</span></li>
-            </ul>
+            </ul><br>
             <hr>
             <div class="lend-ul-two">
                 <ul class="lend-ul ">

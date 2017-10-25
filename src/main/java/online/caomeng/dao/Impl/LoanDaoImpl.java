@@ -82,7 +82,7 @@ public class LoanDaoImpl {
 			
 		}
 	 //分页查询loan
-	 @SuppressWarnings("unchecked")
+	 @SuppressWarnings({ "unchecked", "rawtypes" })
 	 public List<Loan> getpageloan(){
 		 int i=useraction.getI();
 		 System.out.println("获取到的i:"+i);

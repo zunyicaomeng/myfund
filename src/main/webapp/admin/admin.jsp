@@ -66,20 +66,24 @@
 									<td height="60px" width="150px" align="center" valign="middle"><B>借入总金额</B></td>
 
 								</tr>
-								<c:forEach items="${session.admins}" var="session">
+								<c:forEach items="${aList}" var="admin">
 									<tr>
-										<td height="60px" width="100px" align="center" valign="middle">${session.loginName }
+										<td height="60px" width="100px" align="center" valign="middle">${admin.loginName }
 										</td>
-										<td height="60px" width="100px" align="center" valign="middle">${session.password  }
+										<td height="60px" width="100px" align="center" valign="middle">${admin.password  }
 										</td>
-										<td height="60px" width="100px" align="center" valign="middle">${session.sumLend   }
+										<td height="60px" width="100px" align="center" valign="middle">${admin.sumLend   }
 										</td>
-										<td height="60px" width="100px" align="center" valign="middle">${session.sumLoan   }
+										<td height="60px" width="100px" align="center" valign="middle">${admin.sumLoan   }
 										</td>
 									</tr>
 								</c:forEach>
-
 							</table>
+							<form action="" method="post">
+								<c:forEach begin="1" end="${pageUser }" var="i">
+								<input type="submit" name="usersPage" value="${i }">
+								</c:forEach>
+							</form>
 							<hr>
 							<hr>
 							<div id="tableDemo5">

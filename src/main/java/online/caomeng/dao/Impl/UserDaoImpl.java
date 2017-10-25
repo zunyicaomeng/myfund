@@ -4,7 +4,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import org.hibernate.HibernateException;
+import org.hibernate.Query;
+import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate4.HibernateCallback;
 import org.springframework.stereotype.Repository;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -143,6 +147,20 @@ public class UserDaoImpl {
 		@SuppressWarnings("unchecked")
 		public List<AdminUser> getAdminUsers() {
 			return (List<AdminUser>) userDao.getHibernateTemplate().find("from AdminUser");
+		}
+		
+		//修改用户状态  //1、优质用户 2、普通用户 3、失信用户
+		public void updateUserState(Integer userState, Long id) {
+			
+			User user = userDao.getHibernateTemplate().get(User.class, id);
+			user.setUserState(userState);
+			userDao.getHibernateTemplate().update(user);
+		}
+		
+		//admin获取用户id
+		@SuppressWarnings("unchecked")
+		public List<User> getaUserId(String loginName) {
+			return (List<User>) userDao.getHibernateTemplate().find("from User u where u.loginName = "+"loginName"+"");
 		}
 
 }

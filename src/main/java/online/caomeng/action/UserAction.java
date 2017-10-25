@@ -39,6 +39,7 @@ public class UserAction extends ActionSupport {
 
 	private User user;
 	private List<User> list;
+	private List<Admin> aList;
 	private String msg = "";
 	private List<Lend> lendlist;
 	private double lendMoney = 0;
@@ -48,6 +49,8 @@ public class UserAction extends ActionSupport {
 	private Long numberAll;
 	private int i=1;
 	private int x=1;
+	private int usersPage = 1;
+	private int pageUser = 0;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -56,6 +59,10 @@ public class UserAction extends ActionSupport {
 
 	public List<User> getList() {
 		return list;
+	}
+
+	public List<Admin> getaList() {
+		return aList;
 	}
 
 	public void setUser(User user) {
@@ -96,6 +103,18 @@ public class UserAction extends ActionSupport {
 
 	public void setX(int x) {
 		this.x = x;
+	}
+
+	public int getUsersPage() {
+		return usersPage;
+	}
+
+	public void setUsersPage(int usersPage) {
+		this.usersPage = usersPage;
+	}
+
+	public int getPageUser() {
+		return pageUser;
 	}
 
 	// 注册
@@ -183,8 +202,22 @@ public class UserAction extends ActionSupport {
 		List<AdminUser> adminUsers = userServiceImpl.getAdminUsers();
 		for (AdminUser adminUser : adminUsers) {
 			if (Name.equals(adminUser.getLoginName()) && user.getPassword().equals(adminUser.getPassword())) {
-				List<Admin> admins = adminServiceImpl.getUsersInfo();
-				session.put("admins", admins);
+				aList = adminServiceImpl.getUserPageList(usersPage);
+				
+				//获取admin表所有记录和
+				List<Long> numberUsers = adminServiceImpl.getAmountUsers();
+				Long countUser = 0L;
+				for (Long numberUser : numberUsers) {
+					countUser = numberUser;
+				}
+				//判断总共多少页
+				if(countUser%5==0){
+					pageUser = (int) (countUser/5);
+					System.out.println("pageUser:"+pageUser);
+				}else{
+					pageUser = (int) (countUser/5+1);
+					System.out.println("pageUser:"+pageUser);
+				}
 				return "admin";
 			}
 		}
@@ -297,4 +330,5 @@ public class UserAction extends ActionSupport {
 		
 		return "success";
 	}
+	
 }
