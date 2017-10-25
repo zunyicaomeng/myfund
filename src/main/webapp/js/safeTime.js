@@ -4,6 +4,18 @@ function getTime(){
         setInterval("safeHour.innerHTML=getTheHour();", 1000);
         setInterval("safeDay.innerHTML=getTheDay();", 1000);
         setInterval("safeYear.innerHTML=getTheYear();", 1000);
+        
+        $(window).ready(function () {
+            $.ajax({
+                type:"post",
+                url:"loadUser",
+                contentType:"application/json",
+                success:function (data) {
+//                	alert(data);
+                	 $('#loadUser').html(data.loadUsers)
+                }
+            })
+        })
     }
      //获取Year
     function getTheYear() {
@@ -62,3 +74,19 @@ function getTime(){
         }
         return s;
     }
+    
+    
+    function loadNumUser() {
+        $(window).ready(function () {
+            $.ajax({
+                type:"post",
+                url:"loadUser",
+                contentType:"text",
+                success:function (data) {
+                	 $('loadUser').innerHTML(data.loadUsers)
+                }
+            })
+        })
+    }
+    
+    

@@ -93,4 +93,8 @@ public class UserServiceImpl {
 		userDaoImpl.updateAccount(id, username, age, transactionpassword, bankId);
 	}
 
+	public List<Long> getLoadUser() {
+		return userDaoImpl.getLoadUser();
+	}
+
 }

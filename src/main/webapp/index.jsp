@@ -137,7 +137,7 @@
                     <span id="botton_accounts">
                     <img src="images/accountsvg.png" class="botton_img">
                     </span>
-                    <span class="botton_info">7</span>
+                    <span class="botton_info" id="loadUser"></span>
                     <span class="botton_info">人</span>
                 </p>
             </li>

@@ -173,5 +173,10 @@ public class UserDaoImpl {
 		public List<User> getaUserId(String loginName) {
 			return (List<User>) userDao.getHibernateTemplate().find("from User u where u.loginName = "+"loginName"+"");
 		}
+		
+		@SuppressWarnings("unchecked")
+		public List<Long> getLoadUser() {
+			return (List<Long>) userDao.getHibernateTemplate().find("select count(id) from Admin");
+		}
 
 }

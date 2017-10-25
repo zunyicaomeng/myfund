@@ -6,7 +6,7 @@
 ">
 
 <struts>
-    <package name="default" namespace="/" extends="struts-default">
+    <package name="default" namespace="/" extends="json-default">
         <action name="getUser" class="userAction" method="getUsers">
             <result name="success">/list.jsp</result>
         </action>
@@ -70,6 +70,11 @@
         </action>
         <action name="delete" class="adminAction" method="delete">
             <result name="delete">/admin/admin.jsp</result>
+        </action>
+        <action name="loadUser" class="userAction" method="getLoadUser">
+        	<result name="loadUsers" type="json">
+        		<param name="includeProperties">loadUsers</param>
+        	</result>
         </action>
     </package>
 </struts>

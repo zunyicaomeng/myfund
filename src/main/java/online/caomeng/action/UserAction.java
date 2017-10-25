@@ -51,6 +51,7 @@ public class UserAction extends ActionSupport {
 	private int x=1;
 	private int usersPage = 1;
 	private int pageUser = 0;
+	private Long loadUsers = 0L;
 
 	public String getUsers() {
 		list = userServiceImpl.getUsers();
@@ -115,6 +116,10 @@ public class UserAction extends ActionSupport {
 
 	public int getPageUser() {
 		return pageUser;
+	}
+
+	public Long getLoadUsers() {
+		return loadUsers;
 	}
 
 	// 注册
@@ -343,6 +348,14 @@ public class UserAction extends ActionSupport {
 		session.put("listpagelend", listpagelend);
 		
 		return "success";
+	}
+	
+	public String getLoadUser(){
+		List<Long> list = userServiceImpl.getLoadUser();
+		for (Long long1 : list) {
+			loadUsers = long1;
+		}
+		return "loadUsers";
 	}
 	
 }
