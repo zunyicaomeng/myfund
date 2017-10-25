@@ -152,7 +152,7 @@ public class UserAction extends ActionSupport {
 		List<User> userId = userServiceImpl.getUserId();
 		for (User user : userId) {
 			if (user.getLoginName().equals(Name)) {
-				System.out.println("查询userid：" + user.getId());
+				System.err.println("查询userid：" + user.getId());
 				session.put("userId", user.getId());
 			}
 		}
@@ -357,5 +357,10 @@ public class UserAction extends ActionSupport {
 		}
 		return "loadUsers";
 	}
-	
+	//清除session 退出
+	public String secedeAmount(){
+		Map<String, Object> session = ActionContext.getContext().getSession();
+		 session.remove("userId");
+		return "success";
+	}
 }

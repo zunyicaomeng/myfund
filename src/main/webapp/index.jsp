@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="s" uri="/struts-tags"%>
+    <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,8 +21,19 @@
 </head>
 <body onload="getTime()">
 <div id="menu_top">
+      <c:if test="${empty session.userId}">
         <a href="/My-Fund/login.jsp" class="menu_top_s" id="login">&nbsp;登录&nbsp;</a>
         <a href="/My-Fund/register.jsp" class="menu_top_s" id="register">&nbsp;快速注册&nbsp;</a>
+        </c:if>
+        <c:if test="${not empty session.userId}">
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;欢迎&nbsp;</a>
+        <a href="javascript:void(0)" class="menu_top_s">&nbsp;<s:property value="#session.loginName" /></a>
+        <a href="/My-Fund/account/account.jsp" class="menu_top_s">&nbsp;个人中心</a>
+        <form action="secede" method="post">
+        <button id="secede">&nbsp;退出</button>
+        </form>
+        </c:if>
+
     </div>
     <div id="menu_head">
         <div id="head_1">
@@ -114,6 +127,7 @@
             <a class="item"><img src="images/4.jpg" alt=""></a>
             <a class="item"><img src="images/5.jpg" alt=""></a>
         </div>
+        <c:if test="${empty session.userId}">
         <div id="ben_login">
             <div id="ben_login_top">
                 <p>My·基金</p>
@@ -129,6 +143,17 @@
                 <a href="/My-Fund/login.jsp" id="ben_login_btn_login">已有账号，立即登陆</a>
             </div>
         </div>
+        </c:if>
+        <c:if test="${not empty session.userId}">
+        <div id="ben_login">
+        <div id="picture"></div>
+        <p id="name"><s:property value="#session.loginName" /></p>
+        <p id="name_money">余额：<s:property value="#session.balances" /></p>
+         <p id="watchword">My·Fund Your most carefree choice</p>
+         <a id="Recharges" href="/My-Fund/account/pay.jsp">账号充值</a>
+        </div>
+        </c:if>
+    </div>
     </div>
     <div id="botton">
         <ul>

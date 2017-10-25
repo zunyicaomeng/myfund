@@ -62,3 +62,51 @@ a:hover{color: red;}
     margin-left: 45px;
     font-family: "Microsoft YaHei",sans-serif;
 }
+#picture{
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    width:80px;
+    height:80px;
+    background:url("../images/timg.png");
+    background-size:100% 100%;
+    border-radius:50%;
+}
+#name{
+    float: right;
+    margin-right:150px;
+    margin-top: 50px;
+    color: white;
+    
+}
+#name_money{
+    float: right;
+    margin-right:100px;
+    margin-top: 20px;
+    color: white;
+}
+#watchword{
+    float: right;
+    margin-right:30px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+}
+#Recharges{
+    margin-left: 60px;
+    height: 50px;
+    text-decoration: none;
+    color: #F1EFF1;
+    background-color: #FA7C2F;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+#picture:hover{
+    border:2px green solid;
+}

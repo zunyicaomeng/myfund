@@ -3,3 +3,4 @@
 .project
 target
 document/~$袁廷汉-源代码-理财精灵开发进度表.xlsx
+src/main/resources/db.properties

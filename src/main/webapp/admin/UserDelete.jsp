@@ -111,7 +111,7 @@ table {
 							</tr>
 						</c:forEach>
 					</table>
-                <form action="getpageLoanAndLend" method="post">
+                <form action="getpageUserDemo" method="post">
                 <c:forEach begin="1" end="${listPageUser}" var="y">
                 <input type="submit" value="${y}" class="lend-btn">
                 

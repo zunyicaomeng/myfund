@@ -34,7 +34,7 @@
         	<result name="success">/account/account.jsp</result>
         	<result name="false">/account/LendParticulars.jsp</result>
         </action>
-        <action name="recharge" class="repaymentAction" method="RepaymentAmount">
+        <action name="rePay" class="repaymentAction" method="RepaymentAmount">
         	<result name="success">/account/account.jsp</result>
         	<result name="false">/account/ Repayment.jsp</result>
         </action>
@@ -75,6 +75,9 @@
         	<result name="loadUsers" type="json">
         		<param name="includeProperties">loadUsers</param>
         	</result>
+        </action>
+        <action name="secede" class="userAction" method="secedeAmount">
+            <result name="success">/index.jsp</result>
         </action>
     </package>
 </struts>

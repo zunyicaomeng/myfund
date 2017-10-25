@@ -32,4 +32,7 @@ $(document).ready(function(){
 	$("#register").click(function(){
 		window.location.href="register.jsp";
 	})
+	$("#picture").click(function(){
+		window.location.href="/My-Fund/account/account.jsp";
+	})
 })

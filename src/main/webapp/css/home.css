@@ -176,3 +176,12 @@ img{
 	color: #4a4a4a;
 	/* white-space: nowrap; */
 }
+#secede{
+	float: right;
+	line-height: 35px;
+	color: white;
+	margin-right: 24px;
+	border:none;
+	background-color:#293231;
+}
+

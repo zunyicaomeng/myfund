@@ -59,7 +59,7 @@ public class AdminDaoImpl {
 		public void updateUserStatus(Long AdminUserID){
 			System.out.println("AdminUserID:"+AdminUserID);
 			User user=userDao.getHibernateTemplate().get(User.class,AdminUserID);
-			user.setStatus("2");
+			user.setStatus("1");
 			userDao.getHibernateTemplate().update(user);
 			
 		}
